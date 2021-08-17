@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture notes</title>
+    <link>https://james-d-mitchell.github.io/</link>
+    <description>Recent content on Lecture notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© J. D. Mitchell</copyright><atom:link href="https://james-d-mitchell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MT3501 - lecture notes</title>
+      <link>https://james-d-mitchell.github.io/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://james-d-mitchell.github.io/</guid>
+      <description>This is the webpage of the lecture notes for MT3501 at the University of St Andrews.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MT3501 Lecture Notes"
+theme = "accessible-minimalism"
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Section 1 - Intro"
+  url = "/01-intro"
+  weight = 2
+
+[[menu.main]]
+  name = "Section 2 - Vector spaces"
+  url = "/02-vector-spaces"
+  weight = 3
