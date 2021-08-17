@@ -1,9 +1,7 @@
-+++
-title = "Section 1 - Introduction"
-alias = "01-intro"
-+++
+# Introduction
+{{< chapter 0 >}}
 
-### What is linear mathematics?
+## What is linear mathematics?
 
 The aims of this module are stated on the School website as:
 
@@ -18,20 +16,22 @@ The aims of this module are stated on the School website as:
 
 The study of linear algebra comprises three central components:
 
-(1) mathematical underpinnings (i.e. theorems and their proofs);
+1.  mathematical underpinnings (i.e. theorems and their proofs);
 
-(2) computation (for instance, computing the eigenvectors of a linear
+2.  computation (for instance, computing the eigenvectors of a linear
     transformation);
 
-(3) geometric understanding (for example, finding answers to: why is
+3.  geometric understanding (for example, finding answers to: why is
     matrix multiplication defined the way it is, what is the meaning of
     the determinant of a matrix, and so on?).
 
-After MT2501, you are probably most familiar with item (2). In this module, we
-will concentrate in equal parts on (1) and (2), and, to a somewhat lesser
-extent (3).
+After MT2501, you are probably most familiar with the computational
+aspects of linear algebra. In this module, we will concentrate in equal
+parts on the mathematical underpinnings and computation (although not
+exactly in the same sense as you did in MT2501), and, to a somewhat
+lesser extent to geometric understanding.
 
-### Why is linear mathematics important?
+## Why is linear mathematics important?
 
 Linear algebra arises out of the study of matrices and vectors. In
 MT1002, or equivalent previous mathematical studies, we have seen how
@@ -53,72 +53,68 @@ range of different settings:
 
 -   etc.
 
-### Overview of course content
+## Overview of course content
 
 1.  **Review of the prerequisites from MT2501**
 
-    a. [vector spaces](/02-vector-spaces),
-        [subspaces](/02-vector-spaces#subspaces),
-    elementary row operations;
+    -   vector spaces, elementary row operations, subspaces;
 
-    b.  linear independence and bases: spanning sets, linear
+    -   linear independence and bases: spanning sets, linear
         independence, bases, dimension;
 
-    c.  linear transformations: matrix of a linear transformation, rank
+    -   linear transformations: matrix of a linear transformation, rank
         and nullity, change of basis; isomorphisms of vector spaces;
 
-    d.  eigenvalues, eigenvectors, and diagonalisation.
+    -   eigenvalues, eigenvectors, and diagonalisation.
 
 2.  **Vector space constructions (new vector spaces from old)**
 
-    a.  the vector space $\mathop{\mathrm{Hom}}(V, W)$ of linear
-        transformations from a vector space $V$ to another vector space
-        $W$;
+    -   the vector space $\mathcal{L}(V, W)$ of linear transformations
+        from a vector space $V$ to another vector space $W$;
 
-    b.  direct sums, projection maps;
+    -   direct sums, projection maps;
 
-    c.  the dual space $V ^ * = \mathop{\mathrm{Hom}}(V,F)$;
+    -   the dual space $V ^ * = \mathcal{L}(V,F)$;
 
-    d.  the transpose of a linear transformation;
+    -   the transpose of a linear transformation;
 
-    e.  the quotient space and quotient linear transformation.
+    -   the quotient space and quotient linear transformation.
 
 3.  **Invariants of vector spaces under change of basis**
 
-    a.  more about eigenvalues, eigenvectors, and eigenspaces;
+    -   more about eigenvalues, eigenvectors, and eigenspaces;
 
-    b.  characteristic polynomial;
+    -   characteristic polynomial;
 
-    c.  the Cayley-Hamilton theorem;
+    -   the Cayley-Hamilton theorem;
 
-    d.  diagonalizability;
+    -   diagonalizability;
 
-    e.  minimum polynomial;
+    -   minimum polynomial;
 
-    f.  Jordan normal form: method for determining the Jordan normal
+    -   Jordan normal form: method for determining the Jordan normal
         form.
 
 4.  **Advanced material**
 
-    a. TODO
+    -   Inner products
 
-### Comment about lecture content
+    -   Maybe more $\ldots$
 
-The lecture notes are available online. TODO more about accessibility
+## Comment about lecture content
 
-The notes contain a number of
-examples that will not be covered in any classes. This is an attempt to
-provide more examples, while not decreasing the amount of material
-covered. These omitted examples are numbered in the form "**1A**" (etc.)
-in these notes.
+The lecture notes are available on moodle in PDF and HTML format. The
+notes contain a number of examples that will not be covered in any
+classes. This is an attempt to provide more examples, while not
+decreasing the amount of material covered. These omitted examples are
+numbered in the form "**2.1A**" (etc.) in these notes.
 
-### Recommended texts
+## Recommended texts
 
 The following texts are recommended for further reading and further
 problems to solve.
 
--   S. Axler, *Linear Algebra Done Right*, Undergraduate Texts in
-    Mathematics, Springer (2015).
+-   [S. Axler, *Linear Algebra Done Right*, Undergraduate Texts in
+    Mathematics, Springer (2015).](https://bit.ly/3BqR6BG)
 
 This book is available electronically via the library.
-

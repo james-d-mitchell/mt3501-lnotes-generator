@@ -1,11 +1,11 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
 
 {{ if ne .Params.Type "page" }}
   {{ partial "metadata.html" . }}
 {{ end }}
 
 {{ .Content }}
+{{ .TableOfContents }}
 
 {{ if .Params.categories }}
 

@@ -1,9 +1,17 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
+baseURL = "https://jdbm.me/mt3501-lnotes/"
+languageCode = "en"
 title = "MT3501 Lecture Notes"
 theme = "accessible-minimalism"
+copyright = "© J. D. Mitchell"
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = [":fileModTime", ":default"]
+
+[markup]
+  defaultMarkdownHandler = 'pandoc'
 
 [[menu.main]]
   name = "Home"
@@ -11,11 +19,63 @@ enableRobotsTXT = true
   weight = 1
 
 [[menu.main]]
-  name = "Section 1 - Intro"
-  url = "/01-intro"
+  name = "Problems"
+  url = "/problems/"
   weight = 2
 
 [[menu.main]]
-  name = "Section 2 - Vector spaces"
-  url = "/02-vector-spaces"
+  name = "Section 1 - Intro"
+  url = "/01-intro/"
   weight = 3
+
+[[menu.main]]
+  name = "Section 2 - Vector spaces"
+  url = "/02-vector-spaces/"
+  weight = 4
+
+[[menu.main]]
+  name = "Section 3 - Algorithms to live by"
+  url = "/03-algorithms-to-live-by/"
+  weight = 4
+
+[[menu.main]]
+  name = "Section 4 - Linear transformations"
+  url = "/04-linear-transf/"
+  weight = 5
+
+[[menu.main]]
+  name = "Section 5 - The vector space of linear transformations"
+  url = "/05-L-V-W/"
+  weight = 6
+
+[[menu.main]]
+  name = "Section 6 - Direct sums"
+  url = "/06-direct-sums/"
+  weight = 7
+
+[[menu.main]]
+  name = "Section 7 - The dual space"
+  url = "/07-dual-space/"
+  weight = 8
+
+[[menu.main]]
+  name = "Section 8 - Eigenvectors, eigenvalues, and the characteristic polynomial"
+  url = "/08-eigen-stuff/"
+  weight = 9
+
+[[menu.main]]
+  name = "Section 9 - Diagonalisation"
+  url = "/09-diagonal/"
+  weight = 10
+
+[[menu.main]]
+  name = "Section 10 - Jordan normal form"
+  url = "/10-jnf/"
+  weight = 11
+
+[[menu.main]]
+  name = "Section 11 - Inner products"
+  url = "/11-inner-products/"
+  weight = 12
+
+

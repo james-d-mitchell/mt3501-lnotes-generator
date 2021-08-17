@@ -1,3 +1,0 @@
-User-agent: *
-
-https://james-d-mitchell.github.io/sitemap.xml

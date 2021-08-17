@@ -1,15 +1,242 @@
-div.theorem {
-    background-color: #E6F2FF;
+ol>li::marker {
+    content: "(" counter(list-item) ") ";
 }
 
-div.def {
-    background-color: #FFCCF9;
+table {
+    margin: 0 auto; 
+    caption-side: bottom;
+    border-collapse: collapse;
+    border: none;
 }
 
-div.ex {
-    background-color: #FFF5BA;
+tr {
+  border: solid;
+  border-width: 1px 0;
 }
 
-div.omex {
-    background-color: #FFCBC1;
+td {
+  border: 1px solid black;
+  border-left: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
+  border-left: 1px solid black;
+}
+
+div.defn:before {
+  content: "Definition " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.defn {
+  counter-increment: css-counter 1;
+  background-color: #FEF0F0;
+  border-left: 5px solid #F54C4E;
+  padding-left: 10px;
+}
+
+div.algorithm:before {
+  content: "Algorithm " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.algorithm {
+  counter-increment: css-counter 1;
+  background-color: #FEF0F0;
+  border-left: 5px solid #F54C4E;
+  padding-left: 10px;
+}
+
+div.example:before {
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.example {
+  counter-increment: css-counter 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+div.examp:before {
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.examp {
+  counter-increment: css-counter 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+div.omittedexamp:before {
+  content: "Example " counter(chapter) "." counter(section) counter(omitted, upper-latin) ".";
+  font-weight: bold;
+}
+
+div.omittedexamp {
+  counter-increment: omitted 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+div.exampjupyter:before {
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ". 💻";
+  font-weight: bold;
+}
+
+div.exampjupyter {
+  counter-increment: css-counter 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+div.examplejupyter:before {
+  content: "Example " counter(chapter) "." counter(section) "." counter(css-counter) ". 💻";
+  font-weight: bold;
+}
+
+div.examplejupyter {
+  counter-increment: css-counter 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+
+div.omittedexampjupyter:before {
+  content: "Example " counter(chapter) "." counter(section) counter(omitted, upper-latin) ". 💻";
+  content:;
+  font-weight: bold;
+}
+
+div.omittedexampjupyter {
+  counter-increment: omitted 1;
+  background-color: #FEFCF1;
+  border-left: 5px solid #FADA4D;
+  padding-left: 10px;
+}
+
+div.prop:before {
+  content: "Proposition " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.prop {
+  background-color: #F0F8FF;
+  counter-increment: css-counter 1;
+  border-left: 5px solid #4EB5FF;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+div.cor:before {
+  content: "Corollary " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.cor {
+  background-color: #F0F8FF;
+  counter-increment: css-counter 1;
+  border-left: 5px solid #4EB5FF;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+div.lemma:before {
+  content: "Lemma " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.lemma {
+  counter-increment: css-counter 1;
+  background-color: #F0F8FF;
+  border-left: 5px solid #4EB5FF;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+div.thm:before {
+  content: "Theorem " counter(chapter) "." counter(section) "." counter(css-counter) ".";
+  font-weight: bold;
+}
+
+div.thm {
+  counter-increment: css-counter 1;
+  background-color: #F0F8FF;
+  border-left: 5px solid #4EB5FF;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+div.proof {
+    background-color: #E8ECEF;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+
+div.solution:before {
+  content: "SOLUTION.";
+  font-weight: bold;
+}
+
+div.solution {
+    background-color: #E8ECEF;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+
+h1::before {
+  content: "Section " counter(chapter) " -x ";
+}
+
+h1 {
+  counter-increment: chapter 1;
+}
+
+h2::before {
+  content: counter(chapter) "." counter(section) ". ";
+}
+
+h2 {
+  counter-increment: section 1;
+  counter-reset: omitted css-counter;
+}
+
+h1.title::before {
+  content: "";
+}
+
+h1#problems::before {
+  content: "";
+}
+
+h1#course-info::before {
+  content: "";
+}
+
+h1.title {}
+h1#problems {} 
+h1#course-info {}
+
+div.question ol li::marker {
+  content: "(" counter(list-item, lower-alpha) ") ";
+}
+
+div.questionjupyter p:before {
+  content: "💻 ";
+}
+
+div.questionjupyter ol li::marker {
+  content: "(" counter(list-item, lower-alpha) ") ";
+}
+
+div.questionjupyter ol p:before {
+  content: "";
 }
