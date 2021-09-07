@@ -193,7 +193,7 @@ div.solution {
 }
 
 h1::before {
-  content: "Section " counter(chapter) " -x ";
+  content: "Section " counter(chapter) " - ";
 }
 
 h1 {
