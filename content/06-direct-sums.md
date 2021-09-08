@@ -409,7 +409,7 @@ $u_{1} + u_{2} +
 
 Problems marked with a 💻 (if any) can probably be solved more
 easily using a Jupyter notebook:
-<https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=801479>
+<https://moody.st-andrews.ac.uk/moodle/mod/lti/view.php?id=806990>
 
 1.  []{#problem-06-01 label="problem-06-01"}
 
