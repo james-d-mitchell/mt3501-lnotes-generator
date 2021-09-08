@@ -68,15 +68,16 @@ $P^{-1}AP$ is in Jordan normal form.
 ::: {.proof}
 *Proof.* Suppose that $T: \mathbb{C} ^ n \to \mathbb{C} ^ n$ and
 $\mathscr{B}$ is a basis for $\mathbb{C} ^ n$ such that
-$\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A$. Then by
+$\operatorname{Mat}_{\mathscr{B},
+  \mathscr{B}}(T) = A$. Then by
 [Theorem 10.1.3]({{< ref "10-jnf#thm-JNF" >}}) there
 exists a basis $\mathscr{C}$ for $\mathbb{C} ^ n$ such that
 $\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)$ is in Jordan normal
-form. Hence if
-$P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)_{\mathbb{C} ^ n}}$
-is the change of basis matrix from
-[Theorem 4.3.1]({{< ref "04-linear-transf#thm-change-basis" >}}), then $P ^ {-1} A P
-    = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)$. ◻
+form. Hence if $P = \operatorname{Mat}_{\mathscr{C},
+  \mathscr{B}}(\operatorname{id}_{\mathbb{C} ^ n})$ is the change of
+basis matrix from
+[Theorem 4.3.1]({{< ref "04-linear-transf#thm-change-basis" >}}), then $P ^ {-1} A P =
+  \operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(T)$. ◻
 :::
 
 We shall not prove [Theorem 10.1.3]({{< ref "10-jnf#thm-JNF" >}}). It is reasonably hard to prove and is most easily

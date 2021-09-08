@@ -57,8 +57,7 @@ transformation $T : V \to W$ can be expressed as
 $$T = \sum_{\substack{1 \leq \ell \leq n,\\1 \leq k \leq
         m}} \alpha_{k\ell} T_{k\ell}$$ for some
 scalars $\alpha_{k\ell} \in F$. It follows that
-$\operatorname{Span}{\mathscr{E}}
-    = \mathcal{L}(V, W)$.
+$\operatorname{Span}(\mathscr{E}) = \mathcal{L}(V, W)$.
 
 In Problem [7]({{< ref "04-linear-transf#problem-04-07" >}})(b) in
 [Section 4.5]({{< ref "04-linear-transf#problems-04-linear-transf" >}}), we showed that $\mathscr{E}$ is

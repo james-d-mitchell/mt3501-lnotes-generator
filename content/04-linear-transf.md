@@ -231,7 +231,7 @@ Fix vectors $y_{1}$, $y_{2}$, ..., $y_{n}$ in $W$ and let $T : V \to W$
 be the unique linear transformation given by $T(v_{i}) = y_{i}$ for
 $i = 1$, $2$, ..., $n$. Then
 
-1.  $\operatorname{im} T = \operatorname{Span}{y_{1},y_{2},\dots,y_{n}}$.
+1.  $\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\dots,y_{n})$.
 
 2.  $\ker T = \{\vec{0}\}$ if and only if
     $\{y_{1},y_{2},\dots,y_{n}\}$ is a linearly independent set.
@@ -244,34 +244,34 @@ some $\alpha_{i} \in
     F$. Then
 $$x = T(v) = T\biggl( \sum_{i=1}^{n} \alpha_{i}v_{i} \biggr) =
     \sum_{i=1}^{n} \alpha_{i} T(v_{i}) = \sum_{i=1}^{n} \alpha_{i}y_{i} \in
-    \operatorname{Span}{y_1, y_2, \ldots, y_n}.$$ Hence
-$\operatorname{im} T \subseteq \operatorname{Span}{y_1, y_2, \ldots, y_n}$.
-On the other hand, since $y_i = T(v_i)\in \operatorname{im} T$ for all
-$i$, and $\operatorname{im} T$ is a subspace of $W$
+    \operatorname{Span}(y_1, y_2, \ldots, y_n).$$ Hence
+$\operatorname{im} T \subseteq \operatorname{Span}(y_1, y_2, \ldots,
+  y_n)$. On the other hand, since $y_i = T(v_i)\in \operatorname{im} T$
+for all $i$, and $\operatorname{im} T$ is a subspace of $W$
 ([Proposition 4.1.5]({{< ref "04-linear-transf#prop-image-kernel-subspaces" >}})), it follows that
-$\operatorname{Span}{y_1, y_2, \ldots, y_n} \subseteq \operatorname{im} T$.
-Thus $\operatorname{im} T = \operatorname{Span}{y_1, y_2,
-      \ldots, y_n}$.
+$\operatorname{Span}(y_1, y_2, \ldots, y_n) \subseteq \operatorname{im} T$.
+Thus $\operatorname{im} T = \operatorname{Span}(y_1, y_2, \ldots, y_n)$.
 
 **(2)** ($\Rightarrow$) Suppose that $\ker T = \{\vec{0}\}$. By part
-(1), $\operatorname{im} T =
-    \operatorname{Span}{y_{1},y_{2},\dots,y_{n}}$ and so by
-[Corollary 2.4.10]({{< ref "02-vector-spaces#thm-basis-subset" >}}), $\{y_1, y_2, \ldots, y_n\}$ contains a
+(1),
+$\operatorname{im} T = \operatorname{Span}(y_{1},y_{2},\dots,y_{n})$ and
+so by [Corollary 2.4.10]({{< ref "02-vector-spaces#thm-basis-subset" >}}), $\{y_1, y_2, \ldots, y_n\}$ contains a
 linearly independent subset $\mathscr{B}$ such that
-$\operatorname{Span}{\mathscr{B}} = \operatorname{Span}{y_1, y_2, \ldots, y_n} = \operatorname{im} T$.
+$\operatorname{Span}(\mathscr{B})
+  = \operatorname{Span}(y_1, y_2, \ldots, y_n) = \operatorname{im} T$.
 It follows that
-$|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank} T$. By
-the Rank-Nullity Theorem, $\dim V = n =
-    \operatorname{rank} T + \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T$,
-since $\operatorname{null} T = \dim \ker T =
-    0$. Therefore $\mathscr{B} = \{y_1, y_2, \ldots, y_n\}$ and so
-$\{y_1, y_2,
-    \ldots, y_n\}$ is a basis for $\operatorname{im} T$ and, in
-particular, it is linearly independent.
+$|\mathscr{B}| = \dim \operatorname{im} T = \operatorname{rank}
+  T$. By the Rank-Nullity Theorem, $\dim V = n = \operatorname{rank} T +
+  \operatorname{null} T = \operatorname{rank} T = \dim \operatorname{im} T$,
+since $\operatorname{null} T = \dim \ker T = 0$. Therefore
+$\mathscr{B} =
+  \{y_1, y_2, \ldots, y_n\}$ and so $\{y_1, y_2, \ldots, y_n\}$ is a
+basis for $\operatorname{im} T$ and, in particular, it is linearly
+independent.
 
 ($\Leftarrow$) If $\{y_{1},y_{2},\dots,y_{n}\}$ is linearly independent,
 then since
-$\operatorname{Span}{y_{1},y_{2},\dots,y_{n}} = \operatorname{im} T$, it
+$\operatorname{Span}(y_{1},y_{2},\dots,y_{n}) = \operatorname{im} T$, it
 follows that $\{y_{1},y_{2},\dots,y_{n}\}$ is a basis for
 $\operatorname{im} T$
 ([Theorem 2.4.8]({{< ref "02-vector-spaces#thm-3-conditions" >}})) and so $\operatorname{rank} T = n$.
@@ -335,9 +335,9 @@ dimension.
         \vec{y}_{2}, \vec{y}_{3} \}$ is linearly independent, this set
 must be a basis for $\mathbb{R}^{3}$ (see
 [Theorem 2.4.8]({{< ref "02-vector-spaces#thm-3-conditions" >}})). Therefore, by
-[Proposition 4.1.8]({{< ref "04-linear-transf#prop-surj-inj" >}})(1),
-$$\operatorname{im} T = \operatorname{Span}{\vec{y}_{1},\vec{y}_{2},\vec{y}_{3}} = \mathbb{R}^{3},$$
-once again.\]
+[Proposition 4.1.8]({{< ref "04-linear-transf#prop-surj-inj" >}})(1), $$\operatorname{im} T =
+        \operatorname{Span}(\vec{y}_{1},\vec{y}_{2},\vec{y}_{3}) =
+      \mathbb{R}^{3},$$ once again.\]
 :::
 
 ::: {.omittedexamp}
@@ -358,8 +358,8 @@ This is the linear transformation considered in
 $\dim \operatorname{im} T =
     \operatorname{rank} T = 2$. We also know from
 [Proposition 4.1.8]({{< ref "04-linear-transf#prop-surj-inj" >}}) that
-$$\operatorname{im} T = \operatorname{Span}{ \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3},
-      \vec{y}_{4} },$$ so we conclude that $\operatorname{im} T$ has a
+$$\operatorname{im} T = \operatorname{Span}( \vec{y}_{1}, \vec{y}_{2}, \vec{y}_{3},
+    \vec{y}_{4} ),$$ so we conclude that $\operatorname{im} T$ has a
 basis $\mathscr{C}$ containing $2$ vectors and satisfying
 $\mathscr{C} \subseteq \{ \vec{y}_{1},
     \vec{y}_{2}, \vec{y}_{3}, \vec{y}_{4} \}$. Note that
@@ -591,13 +591,13 @@ $T : V \to V$ be a linear transformation, let $\mathscr{B} = \{
 $A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)$ and
 $B = \operatorname{Mat}_{\mathscr{C},\mathscr{C}}(T)$. Then there is an
 invertible matrix $P$ such that
-$$B = P^{-1} A P = \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(\operatorname{id)} \operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)
-    \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)}$$
+$$B = P^{-1} A P = \operatorname{Mat}_{\mathscr{B},
+    \mathscr{C}}(\operatorname{id})\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)
+  \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id})$$
 where $\operatorname{id}: V \to V$ is the linear transformation defined
-by $\operatorname{id}(v) = v$ for all $v\in V$. Specifically, if
-$w_j\in \mathscr{C}$, then $w_j\in V =
-    \operatorname{Span}{\mathscr{B}}$ and so $w_j$ is a linear
-combination of vectors in $\mathscr{B}$:
+by $\operatorname{id}(v) = v$ for all $v\in V$. Specifically, if $w_j\in
+  \mathscr{C}$, then $w_j\in V = \operatorname{Span}(\mathscr{B})$ and
+so $w_j$ is a linear combination of vectors in $\mathscr{B}$:
 $$w_{j} = \operatorname{id}(w_j) = \sum_{i=1}^{n} \alpha_{ij}v_{i}$$ for
 some $\alpha_{ij} \in F$, and $$P = [\alpha_{kj}] =
     \begin{pmatrix}
@@ -607,7 +607,7 @@ some $\alpha_{ij} \in F$, and $$P = [\alpha_{kj}] =
       \alpha_{n1} & \alpha_{n2} & \cdots & \alpha_{nn}
     \end{pmatrix}
     =
-    \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)}.$$
+    \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id}).$$
 :::
 
 The more general version of
@@ -619,23 +619,23 @@ for interest.
 vector spaces over a field $F$ and let $T: V \to W$ be a linear
 transformation. If $\mathscr{B}$ and $\mathscr{B}'$ are bases for $V$
 and $\mathscr{C}$ and $\mathscr{C}'$ are basis for $W$, then
-$$\operatorname{Mat}_{\mathscr{B}', \mathscr{C}'}(T) = \operatorname{Mat}_{\mathscr{C}, \mathscr{C}'}(\operatorname{id)_W}
-    \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)
-    \operatorname{Mat}_{\mathscr{B}', \mathscr{B}}(\operatorname{id)_V},$$
+$$\operatorname{Mat}_{\mathscr{B}', \mathscr{C}'}(T) =
+  \operatorname{Mat}_{\mathscr{C}, \mathscr{C}'}(\operatorname{id}_W)
+  \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)
+  \operatorname{Mat}_{\mathscr{B}', \mathscr{B}}(\operatorname{id}_V),$$
 where $\operatorname{id}_V : V \to V$ and $\operatorname{id}_W: W \to W$
 are the identity linear transformations.
 :::
 
 If $\dim V = n$ and $\dim W = m$ in
 [Theorem 4.3.2]({{< ref "04-linear-transf#thm-general-base-change" >}}), then
-$\operatorname{Mat}_{\mathscr{C}, \mathscr{C}'}(\operatorname{id)_W}$ is
+$\operatorname{Mat}_{\mathscr{C}, \mathscr{C}'}(\operatorname{id}_W)$ is
 an $m\times m$ matrix,
 $\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)$ is an $m\times n$
-matrix, and
-$\operatorname{Mat}_{\mathscr{B}, \mathscr{B}'}(\operatorname{id)_V}$ is
-an $n \times n$ matrix, and so
-$\operatorname{Mat}_{\mathscr{B}', \mathscr{C}'}(T)$ is an $m \times
-  n$ matrix.
+matrix, and $\operatorname{Mat}_{\mathscr{B},
+\mathscr{B}'}(\operatorname{id}_V)$ is an $n \times n$ matrix, and so
+$\operatorname{Mat}_{\mathscr{B}', \mathscr{C}'}(T)$ is an $m \times n$
+matrix.
 
 Let us illustrate
 [Theorem 4.3.1]({{< ref "04-linear-transf#thm-change-basis" >}}) with an example.
@@ -661,7 +661,7 @@ $$A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) =
       -30 & -17
     \end{pmatrix}.$$ The formula in the example expresses the $w_{j}$ in
 terms of the $v_{i}$. Hence, the change of basis matrix is
-$$P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id)} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} .$$
+$$P = \operatorname{Mat}_{\mathscr{C}, \mathscr{B}}(\operatorname{id}) = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix} .$$
 Then $$\det P = 3 \times 2 - (-1 \times -5) = 6 - 5 = 1,$$ so
 $$P^{-1} = \frac{1}{\det P} \begin{pmatrix} 2 & 1 \\ 5 &
       3\end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix} .$$
@@ -685,10 +685,13 @@ As a check, observe $$\begin{aligned}
   \end{aligned}$$ and similarly for $T(w_{1})$.
 :::
 
-::: {.omittedexamp}
-$\dagger$ Let
-$$\mathscr{B} = \left\{ \begin{pmatrix} 0 \\ 1 \\ -1 \\ \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
-    \begin{pmatrix} 2 \\ -1 \\ 0 \\ \end{pmatrix} \right\}.$$
+::: {.omittedexampjupyter}
+Let $$\mathscr{B} = 
+    \left\{ 
+      \begin{pmatrix} 0 \\ 1 \\ -1 \\ \end{pmatrix}, 
+      \begin{pmatrix} 1 \\ 0 \\ -1 \\ \end{pmatrix},
+      \begin{pmatrix} 2 \\ -1 \\ 0 \\ \end{pmatrix} 
+    \right\}.$$
 
 1.  Show that $\mathscr{B}$ is a basis for $\mathbb{R}^{3}$.
 
@@ -701,8 +704,9 @@ $$\mathscr{B} = \left\{ \begin{pmatrix} 0 \\ 1 \\ -1 \\ \end{pmatrix}, \begin{pm
                   1  & 1  & 2  \\
                   -1 & -2 & -2
                 \end{pmatrix}$$ and view $A$ as a linear transformation
-    $\mathbb{R}^{3} \to \mathbb{R}^{3}$. Find the matrix of $A$ with
-    respect to the basis $\mathscr{B}$.
+    $\mathbb{R}^{3} \to
+              \mathbb{R}^{3}$. Find the matrix of $A$ with respect to
+    the basis $\mathscr{B}$.
 :::
 
 ::: {.solution}
