@@ -244,12 +244,12 @@ vector space and let $W$ be a subspace of $V$. Then:
 :::
 
 ::: {.proof}
-*Proof.* **1.** Since $W$ is non-empty, there exists at least one vector
-$u \in W$. Since $W$ is closed under scalar multiplication (it is a
-vector space), it follows that $\vec{0}=0u \in W$ (by
+*Proof.* **(1)** Since $W$ is non-empty, there exists at least one
+vector $u \in W$. Since $W$ is closed under scalar multiplication (it is
+a vector space), it follows that $\vec{0}=0u \in W$ (by
 [Proposition 2.1.5]({{< ref "02-vector-spaces#prop-vectorbasic" >}})(1)).
 
-**2.** If $v\in W$, then $W$ contains $(-1)v = -1v = -v$ (by
+**(2)** If $v\in W$, then $W$ contains $(-1)v = -1v = -v$ (by
 [Proposition 2.1.5]({{< ref "02-vector-spaces#prop-vectorbasic" >}})(4)). ◻
 :::
 
@@ -548,6 +548,83 @@ choice of vectors.
 $\mathscr{A}$ is a linearly independent subset of a vector space $V$,
 then there exists a basis $\mathscr{B}$ for $V$ such that
 $\mathscr{A} \subseteq \mathscr{B}$.
+:::
+
+::: {.omittedexampjupyter}
+Let $V = \mathbb{R}^{4}$. Show that the set
+$$\mathscr{A} = \left\{ \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix},
+    \begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix} \right\}$$ is a
+linearly independent set of vectors. Find a basis for $\mathbb{R}^{4}$
+containing $\mathscr{A}$.
+:::
+
+::: {.solution}
+To show $\mathscr{A}$ is linearly independent, we suppose
+$$\alpha_{1} \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix} 
+    + \alpha_{2} \begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix}
+    = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 0 \end{pmatrix}.$$ This yields four
+equations: $$3\alpha_{1} + \alpha_{2} = 0, \quad \alpha_{1} = 0, \quad
+    3\alpha_{2} = 0, \quad 4\alpha_{2} = 0.$$ Hence
+$\alpha_{1} = \alpha_{2} = 0$. Thus $\mathscr{A}$ is linearly
+independent.
+
+We now seek to extend $\mathscr{A}$ to a basis of $\mathbb{R}^{4}$. We
+do so by first attempting to add the first vector of the standard basis
+for $\mathbb{R}^{4}$ to $\mathscr{A}$: Set
+$$\mathscr{B} = \left\{ \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix},
+    \begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 0
+\\ 0 \end{pmatrix} \right\}.$$ Suppose
+$$\alpha_{1} \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix} + \alpha_{2}
+    \begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix} + \alpha_{3} \begin{pmatrix}
+    1 \\ 0 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 0
+  \end{pmatrix}.$$ Therefore
+$$3\alpha_{1} + \alpha_{2} + \alpha_{3} = 0, \quad \alpha_{1} = 0,
+    \quad 3\alpha_{2} = 0, \quad 4\alpha_{2} = 0.$$ So
+$\alpha_{1} = \alpha_{2} = 0$ (from the second and third equations) and
+we deduce $\alpha_{3} = -3\alpha_{1} - \alpha_{2}
+    = 0$. Hence our new set $\mathscr{B}$ is linearly independent.
+
+If we now attempt to adjoin
+$\begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix}$ to $\mathscr{B}$ and
+repeat the above, we would find that we were unable to prove the
+corresponding $\alpha_{i}$ are non-zero. Indeed,
+$$\begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} 
+    = \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix} 
+      - 3\begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}
+      \in \operatorname{Span}(\mathscr{B}).$$ Thus there is no need to
+adjoin the second standard basis vector to $\mathscr{B}$.
+
+Now let us attempt to
+adjoin $\begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}$
+to $\mathscr{B}$: $$\mathscr{C} 
+    = 
+    \left\{ 
+      \begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix}, 
+      \begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix},
+      \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, 
+      \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix} 
+    \right\}.$$ Suppose
+$$\alpha_{1}\begin{pmatrix} 3 \\ 1 \\ 0 \\ 0 \end{pmatrix} 
+    + \alpha_{2}\begin{pmatrix} 1 \\ 0 \\ 3 \\ 4 \end{pmatrix} 
+    + \alpha_{3}\begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix} 
+    + \alpha_{4}\begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix} 
+    =
+    \begin{pmatrix} 0 \\ 0 \\ 0 \\ 0 \end{pmatrix}.$$ Hence
+
+::: {.center}
+  --------------- ------------------- ------------------- ------------------ --------- --
+    $3\alpha_{1}$   ${} + \alpha_{2}$  ${} + \alpha_{3}$                      ${}=0$   
+     $\alpha_{1}$                                                             ${}=0$   
+                        $3\alpha_{2}$                      ${} +\alpha_{4}$   ${}= 0$  
+                        $4\alpha_{2}$                                         ${}=0$   
+  --------------- ------------------- ------------------- ------------------ --------- --
+:::
+
+Therefore $\alpha_{1} = \alpha_{2} = 0$, from which we deduce
+$\alpha_{3} = \alpha_{4} = 0$. Thus we have produced a linearly
+independent set $\mathscr{C}$ of size $4$. But
+$\operatorname{dim} \mathbb{R}^{4} = 4$ and hence $\mathscr{C}$ must now
+be a basis for $\mathbb{R}^{4}$.
 :::
 
 ::: {.lemma}

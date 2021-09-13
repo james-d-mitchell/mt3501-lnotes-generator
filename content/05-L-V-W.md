@@ -351,8 +351,8 @@ easily using a Jupyter notebook:
     ::: {.question}
     Let $\mathbb{R}[x]$ denote the vector space of polynomials with
     coefficients in $\mathbb{R}$, and let $\mathbb{R}_n[x]$ denote those
-    polynomials in $\mathbb{R}[x]$ with degree at most $n$. If
-    $q \in \mathbb{R}[x]$ is any polynomial, then we denote the
+    polynomials in $\mathbb{R}[x]$ with degree at most $n$. If $q \in
+          \mathbb{R}[x]$ is any polynomial, then we denote the
     derivative of $q$ by $q'$.
 
     1.  Show that $T: \mathbb{R}_m[x] \to \mathbb{R}_m[x]$ defined by
@@ -382,11 +382,11 @@ easily using a Jupyter notebook:
     ::: {.question}
     Let $V$ be a finite-dimensional vector space over a field $F$ and
     let $T\in
-        \mathcal{L}(V, V)$. Prove that there exists $\lambda\in F$ such
-    that $T(v) =
-        \lambda v$ for all $v\in V$ if and only if $ST = TS$ for all
-    $S\in \mathcal{L}(V,
-        V)$.
+          \mathcal{L}(V, V)$. Prove that there exists $\lambda\in F$
+    such that $T(v) =
+          \lambda v$ for all $v\in V$ if and only if $ST = TS$ for all
+    $S\in
+          \mathcal{L}(V, V)$.
     :::
 
 5.  []{#problem-05-05 label="problem-05-05"}
@@ -394,7 +394,8 @@ easily using a Jupyter notebook:
     ::: {.question}
     Let $V$ be a finite-dimensional vector space and let $W$ be a
     subspace of $\mathcal{L}(V, V)$ such that $ST, TS\in W$ for every
-    $S\in \mathcal{L}(V, V)$ and for every $T\in W$.
+    $S\in
+          \mathcal{L}(V, V)$ and for every $T\in W$.
 
     1.  Suppose that there exists $T\in W$ such that
         $\operatorname{rank} T
@@ -418,8 +419,8 @@ easily using a Jupyter notebook:
 
     ::: {.question}
     Let $V$ be a vector space over a field $F$, and let
-    $\mathscr{B} = \{v_1, v_2,
-        \ldots, v_n\}$ be a basis for $V$.
+    $\mathscr{B} = \{v_1,
+          v_2, \ldots, v_n\}$ be a basis for $V$.
 
     1.  Suppose that, for every $i$, $T_i : F \to V$ is the unique
         linear transformation such that $T_i(1) = v_i$. Show that

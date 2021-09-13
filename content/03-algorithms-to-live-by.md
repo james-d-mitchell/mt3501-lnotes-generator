@@ -116,8 +116,8 @@ obtained from $A$ by a finite sequence of elementary row operations.
 :::
 
 ::: {.prop}
-[]{#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2 label="HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2"} If $A$ is a
-non-zero matrix, then:
+[]{#prop-row-echelon label="prop-row-echelon"} If
+$A$ is a non-zero matrix, then:
 
 1.  $A$ is row-equivalent to a row-echelon matrix;
 
@@ -130,7 +130,7 @@ matrix, but only one reduced row-echelon matrix.
 ***Elementary column operations***, ***column-equivalent***,
 ***column-echelon***, and ***reduced column-echelon*** are defined
 analogously to their "row" counterparts, and the analogue of
-[Proposition 3.2.2]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2" >}}) holds too.
+[Proposition 3.2.2]({{< ref "03-algorithms-to-live-by#prop-row-echelon" >}}) holds too.
 
 ::: {.defn}
 If $A$ is an $m \times n$ matrix with entries from a field $F$, then the
@@ -144,8 +144,8 @@ $F ^ m$ and is denoted $\operatorname{Col}(A)$.
 :::
 
 ::: {.prop}
-[]{#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4 label="HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4"} Let $A$ and $B$
-be $m \times n$ matrices with entries from a field $F$. Then the
+[]{#prop-row-equiv label="prop-row-equiv"} Let $A$ and
+$B$ be $m \times n$ matrices with entries from a field $F$. Then the
 following hold:
 
 1.  $A$ and $B$ are row-equivalent if and only if
@@ -156,14 +156,14 @@ following hold:
 :::
 
 Another way of stating
-[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4" >}})(1) is to say
-that the row-space of a matrix is *invariant* (i.e. does not change)
-under elementary row operations. Similarly, the column-space of a matrix
-is invariant under elementary column operations.
+[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#prop-row-equiv" >}})(1) is to say that the row-space of a matrix
+is *invariant* (i.e. does not change) under elementary row operations.
+Similarly, the column-space of a matrix is invariant under elementary
+column operations.
 
 ::: {.examp}
-[]{#HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5 label="HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5"}
-Show that the column space of the matrix $$A =
+[]{#examp-row-ops-do-not-preserve-col-space label="examp-row-ops-do-not-preserve-col-space"} Show that the column
+space of the matrix $$A =
     \begin{pmatrix}
       1 & 0 \\
       1 & 0
@@ -186,9 +186,8 @@ and so $\operatorname{Col}(E) \not=\operatorname{Col}(A)$.
 :::
 
 ::: {.prop}
-[]{#HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6 label="HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6"} The
-non-zero rows in a row echelon form matrix $E$ form a basis for the
-row-space $\operatorname{Row}(E)$.
+[]{#prop-row-echelon-basis label="prop-row-echelon-basis"} The non-zero rows in a row echelon form
+matrix $E$ form a basis for the row-space $\operatorname{Row}(E)$.
 
 The non-zero columns in a column echelon form matrix $E$ form a basis
 for the column-space $\operatorname{Col}(E)$.
@@ -196,15 +195,15 @@ for the column-space $\operatorname{Col}(E)$.
 
 We end this section by stating a theorem that you might not have see
 before, but which in any case you might have used. We saw in
-[Example 3.2.5]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_examp-row-ops-do-not-preserve-col-space_Example-3.2.5" >}})
-that row-operations do not preserve the column-space of a matrix, but
-they do preserve its null-space.
+[Example 3.2.5]({{< ref "03-algorithms-to-live-by#examp-row-ops-do-not-preserve-col-space" >}}) that row-operations
+do not preserve the column-space of a matrix, but they do preserve its
+null-space.
 
 ::: {.thm}
-[]{#HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7 label="HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7"} Let
-$A$ and $B$ be row-equivalent $m \times n$ matrices with entries in a
-field $F$, and let $\vec{v}\in F ^ n$. Then $A\vec{v} = \vec{0}$ if and
-only if $B\vec{v} = \vec{0}$.
+[]{#thm-row-ops-preserve-null-space label="thm-row-ops-preserve-null-space"} Let $A$ and $B$ be
+row-equivalent $m \times n$ matrices with entries in a field $F$, and
+let $\vec{v}\in F ^ n$. Then $A\vec{v} = \vec{0}$ if and only if
+$B\vec{v} = \vec{0}$.
 :::
 
 ::: {.proof}
@@ -333,8 +332,8 @@ multiplied by $\alpha\in F$ to the first row. Then $$B =
 ## Algorithm 1: Show that a set of vectors is linearly (in)dependent
 
 ::: {.algorithm}
-[]{#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1 label="HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1"} Show
-that the collection $$\mathscr{A} = 
+[]{#algorithm-lin-independence label="algorithm-lin-independence"} Show that the collection
+$$\mathscr{A} = 
     \left\{
       \begin{pmatrix}
       v_{1,1}  \\
@@ -379,9 +378,8 @@ that the collection $$\mathscr{A} =
 :::
 
 ::: {.thm}
-[]{#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2 label="HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2"}
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}}) is
-valid.
+[]{#thm-algorithm-1 label="thm-algorithm-1"}
+[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}}) is valid.
 :::
 
 ::: {.proof}
@@ -389,11 +387,10 @@ valid.
 in $\mathscr{A}$ as columns in a matrix $A$ in part (1), and perform
 elementary column operations in part (2) to obtain a matrix $E$ in
 column echelon form. Then, by
-[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4" >}}), $A$ and $E$
-are column-equivalent, and so
+[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#prop-row-equiv" >}}), $A$ and $E$ are column-equivalent, and so
 $\operatorname{Col}(A) = \operatorname{Col}(E)$. Hence, by
-[Proposition 3.2.6]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-echelon-basis_Proposition-3.2.6" >}}), the
-non-zero columns in $E$ are a basis for $\operatorname{Col}(E)$. But
+[Proposition 3.2.6]({{< ref "03-algorithms-to-live-by#prop-row-echelon-basis" >}}), the non-zero columns in $E$ are a
+basis for $\operatorname{Col}(E)$. But
 $\operatorname{Col}(A) = \operatorname{Span}(\mathscr{A})$ by definition
 and $\mathscr{A}$ is linearly independent if and only if the
 $\operatorname{dim}\operatorname{Span}(\mathscr{A}) = |\mathscr{A}|$ if
@@ -402,12 +399,10 @@ $\operatorname{dim}\operatorname{Col}(E) = \operatorname{dim}\operatorname{Span}
     = |\mathscr{A}|$.
 
 If we perform row operations rather than column operations in
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}})(2)
-or obtain the row echelon form for $A$, then we must use the fact that
-the row and column rank of a matrix (see Theorem 7.5.3) are equal to
-prove that
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}}) is
-valid. ◻
+[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(2) or obtain the row echelon
+form for $A$, then we must use the fact that the row and column rank of
+a matrix (see Theorem 7.5.3) are equal to prove that
+[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}}) is valid. ◻
 :::
 
 ::: {.exampjupyter}
@@ -427,9 +422,8 @@ non-zero rows in the echelon form of $A$ is $3$.
 
 Do we enter the vectors as rows or columns of $A$? Do we perform row
 operations or column operations? What is valid here exactly? The
-argument in
-[Theorem 3.3.2]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2" >}}) says that it
-does not matter, and that all approaches are valid here.
+argument in [Theorem 3.3.2]({{< ref "03-algorithms-to-live-by#thm-algorithm-1" >}}) says that it does not matter, and that all
+approaches are valid here.
 
 Set $A$ to be the matrix with rows equal to $\mathscr{A}$: $$A =
     \begin{pmatrix}
@@ -492,7 +486,7 @@ form of $A$ is $3 =
     |\mathscr{A}|$ and so $\mathscr{A}$ is linearly independent.
 :::
 
-::: {.omittedexamp}
+::: {.omittedexampjupyter}
 Determine whether the set $\{ x+x^{2}, 1-2x^{2}, 3+6x \}$ is linearly
 independent in the vector space $\mathcal{P}$ of all real polynomials.
 :::
@@ -510,14 +504,16 @@ Equating coefficients yields the system of equations $$\begin{aligned}
       1 & 0  & 6 \\
       1 & -2 & 0
     \end{pmatrix}
-    \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.$$
-A sequence of row operations ([Check!]{.smallcaps}) converts this to
-$$\begin{pmatrix}
+    \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} 
+    = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.$$ A sequence of row
+operations ([Check!]{.smallcaps}) converts this to $$\begin{pmatrix}
       1 & -2 & 0 \\
       0 & 1  & 3 \\
       0 & 0  & 0
-    \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.$$
-Hence the original equation is equivalent to $$\begin{aligned}
+    \end{pmatrix} 
+    \begin{pmatrix} \alpha \\ \beta \\ \gamma \end{pmatrix} 
+    = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.$$ Hence the original
+equation is equivalent to $$\begin{aligned}
     \alpha - 2\beta \qquad\, & = 0  \\
     \beta + 3\gamma          & = 0.
   \end{aligned}$$ Since there are fewer equations remaining than the
@@ -527,7 +523,7 @@ set $\gamma = 1$, then $\beta = -3\gamma = -3$ and $\alpha
 *linearly dependent*.
 :::
 
-::: {.omittedexamp}
+::: {.omittedexampjupyter}
 Is the collection: $$\mathscr{A} =
     \left\{
     \begin{pmatrix} -61 \\ -6 \\ -60 \\ -16 \end{pmatrix},
@@ -538,13 +534,20 @@ Is the collection: $$\mathscr{A} =
 :::
 
 ::: {.solution}
-TODO
+We enter the vectors as the rows in a matrix $A$: $$\begin{pmatrix}
+    -61 & -6  & -60 & -16 \\
+    91  & 12  & 46  & 58 \\
+    31  & -97 & 54  & -48\\
+    0   & 97  & 20  & 22
+  \end{pmatrix}$$ and compute an echelon form of $A$:
+$$\begin{pmatrix}-61 & -6 & -60 & -16\\0 & -186 & 2654 & -2082\\0 & 0 &
+-15930638 & 12069582\\0 & 0 & 0 & 0\end{pmatrix}.$$
 :::
 
 ## Algorithm 2: Find the dimension of a subspace
 
 ::: {.algorithm}
-[]{#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1 label="HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1"} Find
+[]{#algorithm-dim-of-subspace label="algorithm-dim-of-subspace"} Find
 $\operatorname{dim}\operatorname{Span}(\mathscr{A})$ where $\mathscr{A}$
 is:
 $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
@@ -556,12 +559,12 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 1.  Make an $n\times m$ matrix whose columns are the vectors in
     $\mathscr{A}$ or whose rows are the vectors in $\mathscr{A}$; this
     is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}})(1).
+    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(1).
 
 2.  Perform elementary row operations or elementary column operations to
     the matrix from step (1) until it is in row or column echelon form;
     this is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}})(2).
+    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(2).
 
 3.  The number of non-zero rows in the row echelon form of the matrix
     from step (1) is the dimension of the subspace spanned by
@@ -571,16 +574,15 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 :::
 
 ::: {.thm}
-[]{#HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2 label="HUGO_REPLACE_thm-algorithm-2_Theorem-3.4.2"}
-[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1" >}}) is
-valid.
+[]{#thm-algorithm-2 label="thm-algorithm-2"}
+[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#algorithm-dim-of-subspace" >}}) is valid.
 :::
 
 ::: {.proof}
 *Proof.* In the proof of
-[Theorem 3.3.2]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_thm-algorithm-1_Theorem-3.3.2" >}}) we showed that
-if $E$ is the column echelon form of the matrix $A$ with columns equal
-to the vectors in $\mathscr{A}$, then
+[Theorem 3.3.2]({{< ref "03-algorithms-to-live-by#thm-algorithm-1" >}}) we showed that if $E$ is the column echelon
+form of the matrix $A$ with columns equal to the vectors in
+$\mathscr{A}$, then
 $\operatorname{dim} \operatorname{Col}(E) = \operatorname{dim} \operatorname{Span}(\mathscr{A})$
 and that $\operatorname{dim} \operatorname{Col}(E)$ is the number of
 non-zero columns in $E$. ◻
@@ -721,9 +723,8 @@ $\operatorname{dim}\operatorname{Span}(\mathscr{A}) = 3$.
 ## Algorithm 3: Find a basis for a subspace
 
 ::: {.algorithm}
-[]{#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1 label="HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1"} Find a
-basis for the subspace $\operatorname{Span}(\mathscr{A})$ where
-$\mathscr{A}$ is:
+[]{#algorithm-subspace-basis label="algorithm-subspace-basis"} Find a basis for the subspace
+$\operatorname{Span}(\mathscr{A})$ where $\mathscr{A}$ is:
 $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
       \end{pmatrix}, \ldots,
     \begin{pmatrix} v_{1,m} \\  v_{2, m}\\\vdots \\vec{v}_{n, m} \end{pmatrix}  \right\}
@@ -732,7 +733,7 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 1.  Make an $n\times m$ matrix whose columns are the vectors in
     $\mathscr{A}$ or whose rows are the vectors in $\mathscr{A}$; this
     is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-lin-independence_Algorithm-3.3.1" >}})(1).
+    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(1).
 
 2.  If in step (1) you entered $\mathscr{A}$ as rows, then perform
     elementary row operations to obtain the matrix in row echelon form.
@@ -750,9 +751,8 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 :::
 
 ::: {.thm}
-[]{#HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2 label="HUGO_REPLACE_thm-algorithm-3_Theorem-3.5.2"}
-[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1" >}}) is
-valid.
+[]{#thm-algorithm-3 label="thm-algorithm-3"}
+[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#algorithm-subspace-basis" >}}) is valid.
 :::
 
 ::: {.proof}
@@ -760,17 +760,16 @@ valid.
 rows in a matrix $A$. Then part (2) of the algorithm says that we must
 perform elementary row operations to $A$ to obtain a matrix $E$ in
 row-echelon form for $A$. It follows by
-[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-equiv_Proposition-3.2.4" >}}) that
-$\operatorname{Row}(A) =
-    \operatorname{Row}(E)$ and by
-[Proposition 3.2.2]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_prop-row-echelon_Proposition-3.2.2" >}}) that the
-non-zero rows of $E$ form a basis for $\operatorname{Row}(E)$.
+[Proposition 3.2.4]({{< ref "03-algorithms-to-live-by#prop-row-equiv" >}}) that $\operatorname{Row}(A) =
+  \operatorname{Row}(E)$ and by
+[Proposition 3.2.2]({{< ref "03-algorithms-to-live-by#prop-row-echelon" >}}) that the non-zero rows of $E$ form a basis
+for $\operatorname{Row}(E)$.
 
 The proof using columns instead of rows is similar. ◻
 :::
 
 ::: {.omittedexampjupyter}
-[]{#HUGO_REPLACE_omittedexamp-5a_Example-3.5A label="HUGO_REPLACE_omittedexamp-5a_Example-3.5A"} Let
+[]{#omittedexamp-5a label="omittedexamp-5a"} Let
 $$\vec{v}_{1} = \begin{pmatrix} 1 \\
       -1 \\
       0 \\
@@ -873,18 +872,18 @@ some $\alpha, \beta, \gamma \in \mathbb{R}$. Then $$\begin{aligned}
   \end{aligned}$$ and so $\alpha = \beta = \gamma = 0$, and the vectors
 $\vec{w}_1$, $\vec{w}_2$, and $\vec{w}_3$ are linearly independent. It
 follows from
-[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-subspace-basis_Algorithm-3.5.1" >}}) that
+[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#algorithm-subspace-basis" >}}) that
 $\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}$ is a basis for $U$ and that
 $\operatorname{dim} U = 3$.
 
-It is possible to double check that
-$\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3) = U$ by showing
-that
-$\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4, \vec{v}_5\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)$.
-Since $\vec{v}_4 =
-    \vec{w}_2$ and $\vec{v}_5 = \vec{w}_3$, it suffices to show that
-$\vec{v}_1, \vec{v}_2, \vec{v}_3\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)$.
-This follows because: $$\begin{aligned}
+It is possible to double check that $\operatorname{Span}(\vec{w}_1,
+  \vec{w}_2, \vec{w}_3) = U$ by showing that
+$\vec{v}_1, \vec{v}_2, \vec{v}_3,
+  \vec{v}_4, \vec{v}_5\in\operatorname{Span}(\vec{w}_1, \vec{w}_2, \vec{w}_3)$.
+Since $\vec{v}_4 = \vec{w}_2$ and $\vec{v}_5 = \vec{w}_3$, it suffices
+to show that
+$\vec{v}_1, \vec{v}_2, \vec{v}_3\in\operatorname{Span}(\vec{w}_1,
+  \vec{w}_2, \vec{w}_3)$. This follows because: $$\begin{aligned}
     \vec{v}_1 & = & \begin{pmatrix} 1 \\ -1 \\ 0 \\ 3 \end{pmatrix} = \vec{w}_1 - 3 \vec{w}_2 \\
     \vec{v}_2 & = & \begin{pmatrix} 2 \\ 1 \\ 1 \\ 0 \end{pmatrix}  = \vec{w}_1 - \vec{w}_3 \\
     \vec{v}_3 & = & \begin{pmatrix} 0 \\ 3 \\ 1 \\ -6 \end{pmatrix} = -\vec{w}_1 + 6\vec{w}_2 - \vec{w}_3,
@@ -894,7 +893,7 @@ This follows because: $$\begin{aligned}
 ## Algorithm 4: Find a linear combination of vectors equal a given vector
 
 ::: {.algorithm}
-[]{#HUGO_REPLACE_algorithm-linear-combo_Algorithm-3.6.1 label="HUGO_REPLACE_algorithm-linear-combo_Algorithm-3.6.1"} If
+[]{#algorithm-linear-combo label="algorithm-linear-combo"} If
 $$\mathscr{A} = \left\{\vec{v}_1=\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots
       \\v_{n, 1} \end{pmatrix}, \ldots,
       \vec{v}_m=\begin{pmatrix} v_{1,m} \\ v_{2, m} \\ \vdots \\v_{n, m}
@@ -945,9 +944,8 @@ equals $u$.
     is similar.
 
 4.  By
-    [Theorem 3.2.7]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_thm-row-ops-preserve-null-space_Theorem-3.2.7" >}}),
-    since $A$ and $E$ are row-equivalent, $A \vec{\alpha} = \vec{0}$
-    also. In particular,
+    [Theorem 3.2.7]({{< ref "03-algorithms-to-live-by#thm-row-ops-preserve-null-space" >}}), since $A$ and $E$ are
+    row-equivalent, $A \vec{\alpha} = \vec{0}$ also. In particular,
     $$\alpha_1\vec{v}_1 + \alpha_2\vec{v}_2 + \cdots + \alpha_m\vec{v}_m -
                 \alpha_{m + 1} \vec{u} = \vec{0},$$ and so rearranging,
     we obtain, $$\vec{u} = \frac{\alpha_1}{\alpha_{m + 1}}\vec{v}_1 +
@@ -956,8 +954,8 @@ equals $u$.
 :::
 
 That
-[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#HUGO_REPLACE_algorithm-dim-of-subspace_Algorithm-3.4.1" >}}) is
-valid, was shown in the statement of the algorithm.
+[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#algorithm-dim-of-subspace" >}}) is valid, was shown in the
+statement of the algorithm.
 
 ::: {.exampjupyter}
 Suppose that $$\vec{v}_1 = 
