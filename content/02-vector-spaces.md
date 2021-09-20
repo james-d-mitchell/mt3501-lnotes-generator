@@ -75,11 +75,11 @@ The following are examples of fields:
 :::
 
 The latter example is important in the context of pure mathematics. For
-the purposes many applications of linear algebra in applied mathematics
-and the physical sciences, the examples $\mathbb{R}$ and $\mathbb{C}$
-are the most important. For those of a pure mathematical bent, however,
-it is worth noting that much of what is done in this course will work
-over an arbitrary field.
+the purposes of many applications of linear algebra in applied
+mathematics and the physical sciences, the examples
+$\mathbb{R}$ and $\mathbb{C}$ are the most important. For those of a
+pure mathematical bent, however, it is worth noting that much of what is
+done in this course will work over an arbitrary field.
 
 ::: {.defn}
 []{#def-vspace label="def-vspace"} Let $F$ be a field. A
@@ -143,18 +143,31 @@ be familiar (not least from MT2501).
 
 1.  Let $n$ be a positive integer and let $F^{n}$ denote the set of
     column vectors of length $n$ with entries from the field $F$:
-    $$F^{n} = \left\{ \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} \,\middle|\, x_{1},x_{2},\dots,x_{n} \in
-                F \right\}.$$ This is an example of a vector space
+    $$F^{n} 
+                = 
+                \left\{ 
+                  \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+                  \end{pmatrix} 
+                  \,\middle|\, \alpha_{1},\alpha_{2},\dots,\alpha_{n} \in
+                  F 
+                \right\}.$$ This is an example of a vector space
     over $F$. Addition in $F^{n}$ is given by
-    $$\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} + \begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{pmatrix} = \begin{pmatrix}
-                  x_{1}+y_{1} \\ x_{2}+y_{2} \\ \vdots \\ x_{n}+y_{n} \end{pmatrix},$$
-    while scalar multiplication is similarly given by
-    $$\alpha \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} \alpha x_1 \\ \alpha x_2 \\ \vdots \\ \alpha x_n \end{pmatrix}.$$
+    $$\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} 
+                + \begin{pmatrix} \beta_1 \\ \beta_2 \\ \vdots \\ \beta_n \end{pmatrix} 
+                = \begin{pmatrix} 
+                  \alpha_{1}+\beta_{1} \\ \alpha_{2}+\beta_{2} \\ \vdots \\
+                  \alpha_{n}+\beta_{n} 
+                \end{pmatrix},$$ while scalar multiplication is
+    similarly given by
+    $$\gamma \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+                  \end{pmatrix} = \begin{pmatrix} \gamma \alpha_1 \\ \gamma
+                \alpha_2 \\ \vdots \\ \gamma \alpha_n \end{pmatrix}.$$
     The zero vector is
     $$\vec{0} = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$$
-    and
-    $$-\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} -x_1 \\ -x_2 \\ \vdots \\ -x_n \end{pmatrix}$$
-    specifies the negative of a vector.
+    and $$-\begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n
+                  \end{pmatrix} = \begin{pmatrix} -\alpha_1 \\ -\alpha_2 \\ \vdots
+                \\ -\alpha_n \end{pmatrix}$$ specifies the negative of a
+    vector.
 
 2.  The complex numbers $\mathbb{C}$ can be viewed as a vector space
     over $\mathbb{R}$. Addition is the usual addition of complex
@@ -194,10 +207,10 @@ be familiar (not least from MT2501).
     functions $f$ and $g$ by
     $$(f+g)(x) = f(x) + g(x) \quad \text{(for $x \in \mathbb{R}$)}$$ and
     scalar multiplication of $f$ by $\alpha \in \mathbb{R}$ by
-    $$(\alpha f)(x) = \alpha \cdot f(x) \quad \text{(for $x \in \mathbb{R}$)}.$$
-    Then $\mathcal{F}_{\mathbb{R}}$ is a real vector space with
-    $$(-f)(x) = -f(x)$$ and the zero is the function given by
-    $x \mapsto 0$ for all $x \in
+    $$(\alpha f)(x) = \alpha \cdot f(x) \quad \text{(for $x \in
+                \mathbb{R}$)}.$$ Then $\mathcal{F}_{\mathbb{R}}$ is a
+    real vector space with $$(-f)(x) = -f(x)$$ and the zero is the
+    function given by $x \mapsto 0$ for all $x \in
                 \mathbb{R}$.
 :::
 
@@ -207,7 +220,7 @@ that you probably remember from MT2501.
 ::: {.prop}
 []{#prop-vectorbasic label="prop-vectorbasic"} Let
 $V$ be a vector space over a field $F$, let $v \in V$, and let $\alpha
-    \in F$. Then
+  \in F$. Then
 
 1.  $\alpha \vec{0} = \vec{0}$;
 

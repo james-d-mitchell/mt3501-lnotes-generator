@@ -28,7 +28,7 @@ being tweaked as the situation evolves.
 
 #### Assessment:
 
-20% Continuous assessment, 80% exam
+10% Continuous assessment, 90% exam
 
 There will be two continuous assessment assignments for this module in
 2021, they consist of "exam style" questions:
