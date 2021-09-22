@@ -119,7 +119,7 @@ also. ◻
 ::: {.cor}
 If $V = U_{1} \oplus U_{2}$ is a finite-dimensional vector space
 expressed as a direct sum of two subspaces, then
-$$\dim V = \dim U_{1} + \dim U_{2}.$$ 0◻
+$$\dim V = \dim U_{1} + \dim U_{2}.$$ ◻
 :::
 
 ::: {.exampjupyter}

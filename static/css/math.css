@@ -187,9 +187,52 @@ div.solution:before {
 }
 
 div.solution {
+    counter-increment: part;
     background-color: #E8ECEF;
     border-left: 5px solid black;
     padding-left: 10px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.active, .collapsible:hover {
+  background-color: black;
+}
+
+div.solution02 {
+  counter-increment: part;
+  border-left: 5px solid black;
+  padding-left: 10px;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #E8ECEF;
+}
+
+div.solution02 ol li::marker {
+  content: counter(part) "(" counter(subpart, lower-alpha) ") ";
+}
+
+div.solution02 ol li li::marker {
+  content: "(" counter(list-item) ") ";
+}
+
+div.solution02 ol {
+  counter-reset: subpart;
+}
+
+div.solution02 ol li {
+  counter-increment: subpart;
 }
 
 h1::before {
@@ -207,6 +250,7 @@ h2::before {
 h2 {
   counter-increment: section 1;
   counter-reset: omitted css-counter;
+  counter-reset: part -1;
 }
 
 h1.title::before {
@@ -225,6 +269,13 @@ h1.title {}
 h1#problems {} 
 h1#course-info {}
 
+div.question, div.questionjupyter {
+    background-color: #ffdfbf;
+    border-left: 5px solid orange;
+    padding-left: 10px;
+    counter-increment: part;
+}
+
 div.question ol li::marker {
   content: "(" counter(list-item, lower-alpha) ") ";
 }
@@ -233,10 +284,16 @@ div.questionjupyter p:before {
   content: "💻 ";
 }
 
+div.questionjupyter ol p:before {
+  content: "";
+}
+
 div.questionjupyter ol li::marker {
   content: "(" counter(list-item, lower-alpha) ") ";
 }
 
-div.questionjupyter ol p:before {
-  content: "";
+hr {
+  border: 2px solid;
+  width: 50%;
 }
+

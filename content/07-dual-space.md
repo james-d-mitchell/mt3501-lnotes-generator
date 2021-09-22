@@ -125,8 +125,7 @@ $i$th coordinate.
 :::
 
 You might also remember from
-[\[chapter-vector-space-linear-transf\]](#chapter-vector-space-linear-transf){reference-type="ref"
-reference="chapter-vector-space-linear-transf"} that it's much easier to
+[Chapter 5]({{< ref "07-dual-space#chapter-vector-space-linear-transf" >}}) that it's much easier to
 deal with the basis $\mathscr{B}$ consisting of the matrices:
 $$\begin{pmatrix}
         1 & 0 & 0 \\

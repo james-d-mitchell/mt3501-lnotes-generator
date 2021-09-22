@@ -266,7 +266,7 @@ for $E_{\lambda}$ and extend to a basis $\mathscr{B} = \{
     v_{1},v_{2},\dots,v_{g_{\lambda}},v_{g_{\lambda}+1},\dots,v_{n} \}$
 for $V$. Since $v_1, \ldots, v_{g_{\lambda}}\in E_{\lambda}$ it follows
 that
-$$T(v_{i}) = \lambda v_{i} \qquad \text{for $i = 1$,~$2$, \dots,~$g_{\lambda}$}.$$
+$$T(v_{i}) = \lambda v_{i} \qquad \text{for $i = 1$, $2$, \dots, $g_{\lambda}$}.$$
 Hence the matrix of $T$ with respect to $\mathscr{B}$ has the form
 $$A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = \begin{pmatrix}
       \lambda & 0       & \cdots & 0       & \ast   & \cdots & \ast   \\
@@ -343,8 +343,8 @@ distinct eigenvalues are linearly independent, so the $w_{i}$ cannot be
 eigenvectors. Since $w_i\in E_{\lambda_i}$, and the only non-eigenvector
 in $E_{\lambda_i}$ is $\vec{0}$, it follows that $w_{i} = \vec{0}$ for
 all $i = 1$, $2$, ..., $k$. Hence
-$$\sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} = w_i = \vec{0} \qquad \text{for~$i = 1$,
-      $2$, \dots,~$k$}.$$ Since $\mathscr{B}_{i}$ is a basis
+$$\sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} = w_i = \vec{0} \qquad \text{for $i = 1$,
+      $2$, \dots, $k$}.$$ Since $\mathscr{B}_{i}$ is a basis
 for $E_{\lambda_{i}}$, it is linearly independent and so
 $\alpha_{ij} = 0$ for all $i$ and $j$. Hence $\mathscr{B}$ is a linearly
 independent set.

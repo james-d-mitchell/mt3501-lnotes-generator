@@ -357,7 +357,7 @@ scaling) were studied in MT2501. We have the following facts
 $$\begin{aligned}
     \langle e_{m}, e_{n} \rangle & = 0 &  & \text{if $m \neq n$,}   \\
     \langle f_{m}, f_{n} \rangle & = 0 &  & \text{if $m \neq n$,}   \\
-    \langle e_{m}, f_{n} \rangle & = 0 &  & \text{for all $m$,~$n$}
+    \langle e_{m}, f_{n} \rangle & = 0 &  & \text{for all $m$, $n$}
   \end{aligned}$$ and $$\|e_{n}\| = \|f_{n}\| = 1 \qquad
     \text{for all $n$}.$$ (The reason for the scaling factors is to
 achieve unit norm for each function.) The topic of Fourier series
@@ -622,7 +622,7 @@ scalar multiples of the Hermite polynomials.
 Let $V$ be an inner product space. If $U$ is a subspace of $V$, the
 ***orthogonal complement*** to $U$ is
 $$U^{\perp} = \{ v \in V  : \text{$\langle v,u \rangle = 0$ for
-        all~$u \in U$}\}.$$
+        all $u \in U$}\}.$$
 :::
 
 Thus $U^{\perp}$ consists of those vectors which are orthogonal to every

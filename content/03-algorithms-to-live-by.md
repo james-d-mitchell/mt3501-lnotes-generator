@@ -332,7 +332,8 @@ multiplied by $\alpha\in F$ to the first row. Then $$B =
 ## Algorithm 1: Show that a set of vectors is linearly (in)dependent
 
 ::: {.algorithm}
-[]{#algorithm-lin-independence label="algorithm-lin-independence"} Show that the collection
+[\[algorithm-lin-independence\]]{#algorithm-lin-independence
+label="algorithm-lin-independence"} Show that the collection
 $$\mathscr{A} = 
     \left\{
       \begin{pmatrix}
@@ -379,7 +380,8 @@ $$\mathscr{A} =
 
 ::: {.thm}
 []{#thm-algorithm-1 label="thm-algorithm-1"}
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}}) is valid.
+[\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+reference="algorithm-lin-independence"} is valid.
 :::
 
 ::: {.proof}
@@ -399,10 +401,12 @@ $\operatorname{dim}\operatorname{Col}(E) = \operatorname{dim}\operatorname{Span}
     = |\mathscr{A}|$.
 
 If we perform row operations rather than column operations in
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(2) or obtain the row echelon
+[\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+reference="algorithm-lin-independence"}(2) or obtain the row echelon
 form for $A$, then we must use the fact that the row and column rank of
 a matrix (see Theorem 7.5.3) are equal to prove that
-[Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}}) is valid. ◻
+[\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+reference="algorithm-lin-independence"} is valid. ◻
 :::
 
 ::: {.exampjupyter}
@@ -547,7 +551,8 @@ $$\begin{pmatrix}-61 & -6 & -60 & -16\\0 & -186 & 2654 & -2082\\0 & 0 &
 ## Algorithm 2: Find the dimension of a subspace
 
 ::: {.algorithm}
-[]{#algorithm-dim-of-subspace label="algorithm-dim-of-subspace"} Find
+[\[algorithm-dim-of-subspace\]]{#algorithm-dim-of-subspace
+label="algorithm-dim-of-subspace"} Find
 $\operatorname{dim}\operatorname{Span}(\mathscr{A})$ where $\mathscr{A}$
 is:
 $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
@@ -559,12 +564,14 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 1.  Make an $n\times m$ matrix whose columns are the vectors in
     $\mathscr{A}$ or whose rows are the vectors in $\mathscr{A}$; this
     is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(1).
+    [\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+    reference="algorithm-lin-independence"}(1).
 
 2.  Perform elementary row operations or elementary column operations to
     the matrix from step (1) until it is in row or column echelon form;
     this is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(2).
+    [\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+    reference="algorithm-lin-independence"}(2).
 
 3.  The number of non-zero rows in the row echelon form of the matrix
     from step (1) is the dimension of the subspace spanned by
@@ -575,7 +582,8 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 
 ::: {.thm}
 []{#thm-algorithm-2 label="thm-algorithm-2"}
-[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#algorithm-dim-of-subspace" >}}) is valid.
+[\[algorithm-dim-of-subspace\]](#algorithm-dim-of-subspace){reference-type="ref"
+reference="algorithm-dim-of-subspace"} is valid.
 :::
 
 ::: {.proof}
@@ -723,7 +731,8 @@ $\operatorname{dim}\operatorname{Span}(\mathscr{A}) = 3$.
 ## Algorithm 3: Find a basis for a subspace
 
 ::: {.algorithm}
-[]{#algorithm-subspace-basis label="algorithm-subspace-basis"} Find a basis for the subspace
+[\[algorithm-subspace-basis\]]{#algorithm-subspace-basis
+label="algorithm-subspace-basis"} Find a basis for the subspace
 $\operatorname{Span}(\mathscr{A})$ where $\mathscr{A}$ is:
 $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
       \end{pmatrix}, \ldots,
@@ -733,7 +742,8 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 1.  Make an $n\times m$ matrix whose columns are the vectors in
     $\mathscr{A}$ or whose rows are the vectors in $\mathscr{A}$; this
     is identical to
-    [Algorithm 3.3.1]({{< ref "03-algorithms-to-live-by#algorithm-lin-independence" >}})(1).
+    [\[algorithm-lin-independence\]](#algorithm-lin-independence){reference-type="ref"
+    reference="algorithm-lin-independence"}(1).
 
 2.  If in step (1) you entered $\mathscr{A}$ as rows, then perform
     elementary row operations to obtain the matrix in row echelon form.
@@ -752,7 +762,8 @@ $$\mathscr{A} = \left\{\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots \\ v_{n, 1}
 
 ::: {.thm}
 []{#thm-algorithm-3 label="thm-algorithm-3"}
-[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#algorithm-subspace-basis" >}}) is valid.
+[\[algorithm-subspace-basis\]](#algorithm-subspace-basis){reference-type="ref"
+reference="algorithm-subspace-basis"} is valid.
 :::
 
 ::: {.proof}
@@ -872,7 +883,8 @@ some $\alpha, \beta, \gamma \in \mathbb{R}$. Then $$\begin{aligned}
   \end{aligned}$$ and so $\alpha = \beta = \gamma = 0$, and the vectors
 $\vec{w}_1$, $\vec{w}_2$, and $\vec{w}_3$ are linearly independent. It
 follows from
-[Algorithm 3.5.1]({{< ref "03-algorithms-to-live-by#algorithm-subspace-basis" >}}) that
+[\[algorithm-subspace-basis\]](#algorithm-subspace-basis){reference-type="ref"
+reference="algorithm-subspace-basis"} that
 $\{\vec{w}_1, \vec{w}_2, \vec{w}_3\}$ is a basis for $U$ and that
 $\operatorname{dim} U = 3$.
 
@@ -893,7 +905,8 @@ $\vec{v}_1, \vec{v}_2, \vec{v}_3\in\operatorname{Span}(\vec{w}_1,
 ## Algorithm 4: Find a linear combination of vectors equal a given vector
 
 ::: {.algorithm}
-[]{#algorithm-linear-combo label="algorithm-linear-combo"} If
+[\[algorithm-linear-combo\]]{#algorithm-linear-combo
+label="algorithm-linear-combo"} If
 $$\mathscr{A} = \left\{\vec{v}_1=\begin{pmatrix} v_{1,1} \\ v_{2, 1} \\ \vdots
       \\v_{n, 1} \end{pmatrix}, \ldots,
       \vec{v}_m=\begin{pmatrix} v_{1,m} \\ v_{2, m} \\ \vdots \\v_{n, m}
@@ -954,7 +967,8 @@ equals $u$.
 :::
 
 That
-[Algorithm 3.4.1]({{< ref "03-algorithms-to-live-by#algorithm-dim-of-subspace" >}}) is valid, was shown in the
+[\[algorithm-dim-of-subspace\]](#algorithm-dim-of-subspace){reference-type="ref"
+reference="algorithm-dim-of-subspace"} is valid, was shown in the
 statement of the algorithm.
 
 ::: {.exampjupyter}
