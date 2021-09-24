@@ -187,7 +187,6 @@ div.solution:before {
 }
 
 div.solution {
-    counter-increment: part;
     background-color: #E8ECEF;
     border-left: 5px solid black;
     padding-left: 10px;
@@ -210,7 +209,6 @@ div.solution {
 }
 
 div.solution02 {
-  counter-increment: part;
   border-left: 5px solid black;
   padding-left: 10px;
   padding: 0 18px;
@@ -249,8 +247,7 @@ h2::before {
 
 h2 {
   counter-increment: section 1;
-  counter-reset: omitted css-counter;
-  counter-reset: part -1;
+  counter-reset: omitted css-counter part;
 }
 
 h1.title::before {

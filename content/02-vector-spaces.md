@@ -942,18 +942,18 @@ easily using a Jupyter notebook:
         Hence $M_{n}(F)$ forms a vector space over $F$. In the course of
         this verification, we checked the zero vector in $M_{n}(F)$ is
         the zero matrix $$\vec{0} = \begin{pmatrix}
-              0      & 0 & \cdots & 0 \\
-              0 & 0 & \cdots & 0 \\
+              0      & 0      & \cdots & 0 \\
+              0      & 0      & \cdots & 0 \\
               \vdots & \vdots & \ddots & \vdots \\
-              0      &\cdots & \cdots & 0
-            \end{pmatrix}.\qed$$
+              0      & \cdots & \cdots & 0
+            \end{pmatrix}.\square$$
 
         ::: {.center}
 
         ------------------------------------------------------------------------
         :::
 
-    2.  We verify the "Subspace criteria" given in
+    2.  We verify the Subspace Criteria given in
         [Theorem 2.2.3]({{< ref "02-vector-spaces#thm-subspace-criteria" >}}):
 
         1.  Certainly the zero matrix is symmetric (all its entries are
@@ -983,8 +983,8 @@ easily using a Jupyter notebook:
         ------------------------------------------------------------------------
         :::
 
-    3.  We verify that $V$ is non-empty and the "Subspace criteria"
-        given in
+    3.  We verify that $V$ is non-empty and the Subspace Criteria given
+        in
         [Theorem 2.2.3]({{< ref "02-vector-spaces#thm-subspace-criteria" >}}).
 
         1.  By definition of matrix multiplication,
@@ -1043,26 +1043,26 @@ easily using a Jupyter notebook:
         :::
 
     5.  Let $$B = \begin{pmatrix}
-          1 & 0 & \cdots & 0 \\
-          0 & 0 & \cdots & 0 \\
-          \vdots & \vdots & & \vdots \\
-          0 & 0 & \cdots & 0
+          1      & 0      & \cdots & 0 \\
+          0      & 0      & \cdots & 0 \\
+          \vdots & \vdots & \ddots & \vdots \\
+          0      & 0      & \cdots & 0
         \end{pmatrix} \in M_{n}(\mathbb{R}).$$ Then a straightforward
         matrix calculation shows $B^{2} = B$, so $B \in
         I$. Now $$2B = \begin{pmatrix}
-          2 & 0 & \cdots & 0 \\
-          0 & 0 & \cdots & 0 \\
-          \vdots & \vdots & & \vdots \\
-          0 & 0 & \cdots & 0
+          2      & 0      & \cdots & 0 \\
+          0      & 0      & \cdots & 0 \\
+          \vdots & \vdots & \ddots & \vdots \\
+          0      & 0      & \cdots & 0
         \end{pmatrix}$$ and $$(2B)^{2} = \begin{pmatrix}
-          4 & 0 & \cdots & 0 \\
-          0 & 0 & \cdots & 0 \\
-          \vdots & \vdots & & \vdots \\
-          0 & 0 & \cdots & 0
+          4      & 0      & \cdots & 0 \\
+          0      & 0      & \cdots & 0 \\
+          \vdots & \vdots & \ddots & \vdots \\
+          0      & 0      & \cdots & 0
         \end{pmatrix} \neq 2B.$$ Hence $2B \not\in I$, so $I$ is not
         closed under scalar multiplication. (Neither is it closed under
-        addition, since $B+B = 2B
-        \not\in I$.) Hence $I$ is not a subspace of $M_{n}(F)$.◻
+        addition, since $B+B = 2B \not\in I$.) Hence $I$ is not a
+        subspace of $M_{n}(F)$.◻
     :::
 
 2.  []{#problem-02-02 label="problem-02-02"}
@@ -1165,7 +1165,7 @@ easily using a Jupyter notebook:
         $$f(x) = x^{2} + x + 1 \qquad \text{and} \qquad g(x) = -x^{2}$$
         both belong to $W$. However, $$f(x) + g(x) = x+1 \not\in W$$
         since $f(x)+g(x)$ has degree $1$. Thus $W$ is not closed under
-        addition, so is not a subspace.◻
+        addition, so is not a subspace.
     :::
 
 3.  []{#problem-02-03 label="problem-02-03"}
@@ -1211,7 +1211,7 @@ easily using a Jupyter notebook:
         decompositions for $0$. Equally, similar decompositions can be
         produced from a general one $f(x) = g_{1}(x) +
               g_{2}(x)$ by adding a multiple of $h(x)$ to $g_{1}(x)$ and
-        subtracting the same multiple from $g_{2}(x)$.◻
+        subtracting the same multiple from $g_{2}(x)$.
     :::
 
 4.  []{#problem-02-04 label="problem-02-04"}
@@ -1330,7 +1330,7 @@ easily using a Jupyter notebook:
           3$, it follows that $$\dim W = |\mathscr{A}| = 3.$$ Since
         $W$ is a subspace of $\mathbb{R}^{3}$ with
         $\dim W = \dim \mathbb{R}^{3} = 3$, we deduce
-        $W = \mathbb{R}^{3}$. ◻
+        $W = \mathbb{R}^{3}$.
     :::
 
 5.  []{#problem-02-05 label="problem-02-05"}
@@ -1401,7 +1401,7 @@ easily using a Jupyter notebook:
         $\dim V =
           3$, the largest possible size for a linearly independent set
         is $3$ and, of course,
-        $|\mathscr{A}_{1} \cup \mathscr{A}_{2}| = 4$.◻
+        $|\mathscr{A}_{1} \cup \mathscr{A}_{2}| = 4$.
     :::
 
 6.  []{#problem-02-06 label="problem-02-06"}
@@ -1466,8 +1466,8 @@ easily using a Jupyter notebook:
         determine whether $\mathscr{A}$ is linearly independent. Solve
         $$\alpha \begin{pmatrix}2\\1\\0\\-1\end{pmatrix} + \beta \begin{pmatrix}4\\8\\-4\\-3\end{pmatrix} + \gamma
         \begin{pmatrix}1\\-3\\2\\0\end{pmatrix} + \delta \begin{pmatrix}1\\10\\-6\\-2\end{pmatrix} =
-        \begin{pmatrix}0\\0\\0\\0\end{pmatrix};
-        \label{eq:I.Q6a}$$ i.e., $$\begin{pmatrix}
+        \begin{pmatrix}0\\0\\0\\0\end{pmatrix};$$ i.e.,
+        $$\begin{pmatrix}
         2 & 4 & 1 & 1 \\
         1 & 8 & -3 & 10 \\
         0 & -4 & 2 & -6 \\
@@ -1559,9 +1559,8 @@ easily using a Jupyter notebook:
         0 & 0 & 0 & 0 \end{matrix}
         & \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
         \end{array} \right)
-        && (r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}$$ Hence, our
-        equation [\[eq:I.Q6a\]](#eq:I.Q6a){reference-type="eqref"
-        reference="eq:I.Q6a"} is equivalent to the following system of
+        && (r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}$$ Hence, the
+        original equation is equivalent to the following system of
         equations: $$\begin{array}{r@{}r@{}r@{}r@{}l}
         \alpha &{} +8\beta &{} - 3\gamma & {}+10\delta &{} = 0 \\
         &\beta &{} - \gamma &{} + 2\delta &{} = 0 \\
@@ -1679,9 +1678,8 @@ easily using a Jupyter notebook:
         \end{matrix} &
         \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
         \end{array} \right)
-        &&(r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}$$ Hence, our
-        equation [\[eq:I.Q6b\]](#eq:I.Q6b){reference-type="eqref"
-        reference="eq:I.Q6b"} is equivalent to the system of equations
+        &&(r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}$$ Hence, the
+        original equation is equivalent to the system of equations
         $$\begin{array}{r@{}r@{}r@{}l}
         \alpha &{} + 8\beta &{} - 3\gamma &{} = 0 \\
         &\beta &{} -\gamma &{} = 0 \\
@@ -1764,9 +1762,7 @@ easily using a Jupyter notebook:
         \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
         \end{array} \right)
         &&(r_{4} \mapsto r_{4} - \textstyle \frac{1}{2} r_{3})\end{aligned}$$
-        Hence the
-        equation [\[eq:I.Q6c\]](#eq:I.Q6c){reference-type="eqref"
-        reference="eq:I.Q6c"} is equivalent to
+        Hence the original equation is equivalent to
         $$\begin{array}{r@{.}r@{}r@{}l}
         \alpha &{} - 2\beta &{} + 3\gamma &{}=0 \\[3pt]
         &\beta &{} - \frac{31}{20}\gamma &{} = 0 \\[5pt]
@@ -1895,9 +1891,7 @@ easily using a Jupyter notebook:
         \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
         \end{array} \right)
         &&(r_{4} \mapsto r_{4} + 5r_{3})\end{aligned}$$ Consequently the
-        system of
-        equations [\[eq:I.Q6d\]](#eq:I.Q6d){reference-type="eqref"
-        reference="eq:I.Q6d"} is equivalent to
+        original system of equations is equivalent to
         $$\begin{array}{r@{}r@{}r@{}r@{}l}
         \alpha &{} + 8\beta &{} - 3\gamma & &{} = 0 \\
         & \beta &{} - \gamma &{} + 7\delta &{} = 0 \\
@@ -1913,7 +1907,7 @@ easily using a Jupyter notebook:
         these four vectors. Hence $\{
         \vec{v}_{1},\vec{v}_{2},\vec{v}_{3},\vec{v}_{5} \}$ is a basis
         for $U+W$ and therefore $\dim(U+W) = 4$. (Moreover, then $U+W =
-        \mathbb{R}^{4}$.) ◻
+        \mathbb{R}^{4}$.)
 
     **Alternative solution:** The first part of this alternative
     solution is the same as that of the solution above. We perform
@@ -1962,7 +1956,7 @@ easily using a Jupyter notebook:
     vector in $U$ that is not in $W$, or vice versa. It can be shown
     that $\vec{v}_5\not\in U$ by showing that
     $\{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_5\}$ is linearly
-    independent as we did above.
+    independent as we did above. ◻
     :::
 
 7.  []{#problem-02-07 label="problem-02-07"}
@@ -2105,9 +2099,8 @@ easily using a Jupyter notebook:
         \end{matrix} \right)
         &&\begin{array}{l}
         r_{3} \mapsto -3r_{3}
-        \end{array}\end{aligned}$$ So the
-        equation [\[eq:I-Q7a1\]](#eq:I-Q7a1){reference-type="eqref"
-        reference="eq:I-Q7a1"} is equivalent to $$\begin{aligned}
+        \end{array}\end{aligned}$$ So the original equation is
+        equivalent to $$\begin{aligned}
         \alpha - \beta - \;\; \gamma + \;\; \delta &= 0 \\
         \textstyle \beta + \frac{2}{3}\gamma + \frac{2}{3}\delta &= 0 \\
         \gamma + 7\delta &= 0\end{aligned}$$ Given any $\delta$, we can
@@ -2211,9 +2204,8 @@ easily using a Jupyter notebook:
         \end{matrix} \right)
         &&\begin{array}{l}
         r_{3} \mapsto -3r_{3}
-        \end{array}\end{aligned}$$ Hence
-        Equation [\[eq:I-Q7a2\]](#eq:I-Q7a2){reference-type="eqref"
-        reference="eq:I-Q7a2"} is equivalent to $$\begin{aligned}
+        \end{array}\end{aligned}$$ Hence the original equation is
+        equivalent to $$\begin{aligned}
         \alpha - \beta - \;\; \gamma &= 0 \\
         \textstyle\beta + \frac{2}{3}\gamma &= 0 \\
         \gamma &= 0\end{aligned}$$ and we conclude $\gamma = 0$,
@@ -2224,7 +2216,12 @@ easily using a Jupyter notebook:
         We conclude that
         $$\mathscr{B}= \left\{ \begin{pmatrix}2\\-1\\2\end{pmatrix}, \begin{pmatrix}1\\1\\3\end{pmatrix},
           \begin{pmatrix}0\\1\\1\end{pmatrix} \right\}$$ is a basis for
-        $U = \operatorname{Span}(\mathscr{A})$.
+        $U = \operatorname{Span}(\mathscr{A})$.◻
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
 
     2.  We solve
         $$\alpha \begin{pmatrix}0\\2\\-3\\-3\end{pmatrix} + \beta \begin{pmatrix}1\\1\\-2\\0\end{pmatrix} + \gamma
@@ -2305,9 +2302,8 @@ easily using a Jupyter notebook:
         &&\begin{array}{l}
         r_{3} \mapsto r_{3} + \frac{1}{2}r_{2} \\
         r_{4} \mapsto r_{4} - \frac{3}{2}r_{2}
-        \end{array}\end{aligned}$$ So the
-        Equation [\[eq:I-Q7b1\]](#eq:I-Q7b1){reference-type="eqref"
-        reference="eq:I-Q7b1"} is equivalent to $$\begin{aligned}
+        \end{array}\end{aligned}$$ So the original equation is
+        equivalent to $$\begin{aligned}
         \textstyle \alpha + \frac{1}{2}\beta \qquad\, + \frac{3}{2}\delta &= 0 \\
         \beta + 2\gamma - 7\delta &= 0.\end{aligned}$$ Given arbitrary
         $\gamma$ and $\delta$, we can read off solutions. In particular,
@@ -2332,7 +2328,7 @@ easily using a Jupyter notebook:
         spans the same subspace as $\mathscr{A}$. Since neither of these
         two vectors is a scalar multiple of the other, $\mathscr{B}$ is
         linearly independent. Hence this $\mathscr{B}$ is a basis for
-        $U = \operatorname{Span}(\mathscr{A})$.◻
+        $U = \operatorname{Span}(\mathscr{A})$.
     :::
 
 8.  []{#problem-02-08 label="problem-02-08"}
@@ -2403,10 +2399,8 @@ easily using a Jupyter notebook:
         &&\begin{array}{r@{}l}
         (r_{3} &{} \mapsto r_{3}-3r_{2} \\
         r_{4} &{} \mapsto r_{4} - 4r_{2})
-        \end{array}\end{aligned}$$ So our system of
-        equations [\[eq:I.Q7a\]](#eq:I.Q7a){reference-type="eqref"
-        reference="eq:I.Q7a"} is equivalent to
-        $$\begin{array}{r@{}r@{}r@{}l}
+        \end{array}\end{aligned}$$ So the original system of equations
+        is equivalent to $$\begin{array}{r@{}r@{}r@{}l}
         \alpha & &{} + 2\gamma &{} = 0 \\
         & \beta &{} - 4\gamma &{} = 0 \\
         & & 12\gamma &{} = 0
@@ -2415,7 +2409,12 @@ easily using a Jupyter notebook:
         $\mathscr{A}= \mathscr{C}$.
 
         As a consequence, $\mathscr{A}$ is a basis for $V$, so
-        $\dim V = 3$.
+        $\dim V = 3$.◻
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
 
     2.  When extending to a basis for the space $\mathcal{P}_{4}$ (as I
         shall choose to call it here) of polynomials of degree at
@@ -2470,10 +2469,8 @@ easily using a Jupyter notebook:
         &&\!\!\!\begin{array}{r@{}l}
         (r_{3} &{} \mapsto r_{3} - 3r_{2} \\
         r_{4} &{} \mapsto r_{4} - 4r_{2})
-        \end{array}\end{aligned}$$ So our system of
-        equations [\[eq:I.Q7b\]](#eq:I.Q7b){reference-type="eqref"
-        reference="eq:I.Q7b"} is equivalent to
-        $$\begin{array}{r@{}r@{}r@{}r@{}l}
+        \end{array}\end{aligned}$$ So the original system of equations
+        is equivalent to $$\begin{array}{r@{}r@{}r@{}r@{}l}
         \alpha & \quad &{} + 2\gamma & &{} = 0 \\
         & \beta &{} - 4\gamma & &{} = 0 \\
         & & 12\gamma & {} + \delta &{} = 0
@@ -2530,10 +2527,8 @@ easily using a Jupyter notebook:
         &&\!\!\!\begin{array}{r@{}l}
         (r_{3} &{} \mapsto r_{3} - 3r_{2} \\
         r_{4} &{} \mapsto r_{4} - 4r_{2})
-        \end{array}\end{aligned}$$ So our system of
-        equations [\[eq:I.Q7c\]](#eq:I.Q7c){reference-type="eqref"
-        reference="eq:I.Q7c"} is equivalent to
-        $$\begin{array}{r@{}r@{}r@{}r@{}l}
+        \end{array}\end{aligned}$$ So the original system of equations
+        is equivalent to $$\begin{array}{r@{}r@{}r@{}r@{}l}
         \alpha & \quad &{} + 2\gamma & \quad &{} = 0 \\
         & \beta &{} - 4\gamma & &{} = 0 \\
         & & \;\;\;\; 12\gamma & &{} = 0 \\
@@ -2573,9 +2568,14 @@ easily using a Jupyter notebook:
         $\operatorname{Span}(\mathscr{B}) = W$. If $\mathscr{C}$ is a
         basis for $V$, then $\operatorname{Span}(\mathscr{C}) = V$.
         Hence, by
-        Lemma [Lemma 2.4.3]({{< ref "02-vector-spaces#lemma-dim-dim" >}}),
+        [Lemma 2.4.3]({{< ref "02-vector-spaces#lemma-dim-dim" >}}),
         $\dim W = |\mathscr{B}| \leqslant|\mathscr{C}| = \dim V$, as
-        required.
+        required.◻
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
 
     2.  Since dimension is uniquely determined, if $V = W$ then
         certainly $\dim V = \dim W$.
@@ -2590,7 +2590,7 @@ easily using a Jupyter notebook:
         extended to a basis for $V$. But $n = \dim W = \dim V$, so
         whatever basis we produce must necessarily contain $n$ elements.
         Hence this basis is $\mathscr{B}$ itself and we deduce
-        $V = \operatorname{Span}(\mathscr{B}) = W$.◻
+        $V = \operatorname{Span}(\mathscr{B}) = W$.
     :::
 
 10. []{#problem-02-10 label="problem-02-10"}
@@ -2624,8 +2624,8 @@ easily using a Jupyter notebook:
     \alpha_{i} u_{i} + \sum_{i=k+1}^{n} \beta_{i} w_{i}$$ and we deduce
     that
     $$\mathscr{C} = \{ v_{1}, \dots, v_{k}, u_{k+1}, \dots, u_{m}, w_{k+1},
-    \dots, w_{n} \}$$ spans $U+W$. (Alternatively, use Question 5 to see
-    $\mathscr{C} =
+    \dots, w_{n} \}$$ spans $U+W$. (Alternatively, use
+    Problem [5]({{< ref "02-vector-spaces#problem-02-05" >}}) to see $\mathscr{C} =
     \mathscr{B}_{1} \cup \mathscr{B}_{2}$ spans $U+W$.)
 
     To show that $\mathscr{C}$ is linearly independent, consider the
@@ -2665,5 +2665,5 @@ easily using a Jupyter notebook:
     \dim(U+W) = |\mathscr{C}| &= k + (m-k) + (n-k) \\
     &= m+n-k \\
     &= |\mathscr{B}_{1}| + |\mathscr{B}_{2}| - |\mathscr{A}| \\
-    &= \dim U + \dim W - \dim(U \cap W). \qed\end{aligned}$$
+    &= \dim U + \dim W - \dim(U \cap W). \square\end{aligned}$$
     :::
