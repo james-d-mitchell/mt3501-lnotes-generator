@@ -881,7 +881,7 @@ $T(\mathscr{B})$ is a linearly independent spanning set for $W$, and so
 $T(\mathscr{B})$ is a basis for $W$.
 
 The converse is shown in
-[3]({{< ref "04-linear-transf#problem-04-03" >}})(c). ◻
+Problem [3]({{< ref "04-linear-transf#problem-04-03" >}})(c). ◻
 :::
 
 ::: {.cor}
@@ -1098,27 +1098,27 @@ easily using a Jupyter notebook:
 
     ::: {.question}
     Let $V$ and $W$ be finite-dimensional vector spaces over the
-    field $F$ having bases $\mathscr{B} = \{ v_{1},v_{2},\dots,v_{n} \}$
+    field $F$ with bases $\mathscr{B} = \{ v_{1},v_{2},\dots,v_{n} \}$
     and $\mathscr{C}
         = \{ w_{1},w_{2},\dots,w_{m} \}$, respectively. Define linear
     transformations $T_{k\ell} \colon V \to W$ by the following formula:
     $$T_{k\ell}(v_{j}) = 
           \begin{cases}
-            w_{k}   & \text{if $j = l$,} \\
-            \vec{0} & \text{if $j \neq k$}.
+            w_{k}   & \text{if }j = l, \\
+            \vec{0} & \text{if }j \neq l.
           \end{cases}$$
 
     1.  Show that every linear transformation $T \colon V \to W$ can be
         expressed as
-        $$T = \sum_{\substack{1 \leq k \leq n,\\1 \leq \ell \leq
-                  m}} \alpha_{k\ell} T_{k\ell}$$ for some
+        $$T = \sum_{\substack{1 \leq k \leq m,\\1 \leq \ell \leq
+                  n}} \alpha_{k\ell} T_{k\ell}$$ for some
         scalars $\alpha_{k\ell} \in F$. \[See
         Problem [4]({{< ref "04-linear-transf#problem-04-04" >}}) for the definition of sums and scalar
         multiples of linear transformation.\]
 
     2.  Let
-        $\mathscr{A} = \{T_{k\ell} : 1 \leq k \leq n, \; 1 \leq \ell \leq
-                m\}$. Prove that $\mathscr{A}$ is a linearly independent
+        $\mathscr{A} = \{T_{k\ell} : 1 \leq k \leq m, \; 1 \leq \ell \leq
+                n\}$. Prove that $\mathscr{A}$ is a linearly independent
         subset of $\mathcal{L}(V,W)$ and deduce that
         $$\dim \mathcal{L}(V,W) = \dim V \cdot \dim W.$$
     :::
