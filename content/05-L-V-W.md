@@ -54,7 +54,7 @@ $\dim \mathcal{L}(V, W) = \dim V \dim W$.
 Problem [7]({{< ref "04-linear-transf#problem-04-07" >}})(a) in
 [Section 4.5]({{< ref "04-linear-transf#problems-04-linear-transf" >}}), we showed that every linear
 transformation $T : V \to W$ can be expressed as
-$$T = \sum_{\substack{1 \leq \ell \leq n,\\1 \leq k \leq
+$$T = \sum_{\substack{1 \leq \ell \leq n\\1 \leq k \leq
         m}} \alpha_{k\ell} T_{k\ell}$$ for some
 scalars $\alpha_{k\ell} \in F$. It follows that
 $\operatorname{Span}(\mathscr{E}) = \mathcal{L}(V, W)$.
@@ -62,7 +62,7 @@ $\operatorname{Span}(\mathscr{E}) = \mathcal{L}(V, W)$.
 In Problem [7]({{< ref "04-linear-transf#problem-04-07" >}})(b) in
 [Section 4.5]({{< ref "04-linear-transf#problems-04-linear-transf" >}}), we showed that $\mathscr{E}$ is
 linearly independent, and hence
-$$\dim \mathcal{L}(V,W) = |\mathscr{E}| = \dim V \cdot \dim W.$$ ◻
+$$\dim \mathcal{L}(V,W) = |\mathscr{E}| = \dim V \cdot \dim W.\square$$ ◻
 :::
 
 ::: {.examp}
@@ -73,19 +73,19 @@ $\mathbb{R} ^ 3$.
 
 ::: {.solution}
 It follows from
-[Theorem 5.1.2]({{< ref "05-L-V-W#thm-basis-for-hom" >}}) that $\dim
-    \mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3) = \dim \mathbb{R}\ \dim \mathbb{R} ^ 3 = 1 \cdot 3 = 3 = \dim \mathbb{R} ^ 3$.
-Since both $\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)$ and
-$\mathbb{R} ^ 3$ are vector spaces over $\mathbb{R}$, it follows by
-[Corollary 4.4.3]({{< ref "04-linear-transf#thm-isomorphism" >}}) that
-$\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)$ is isomorphic to $\mathbb{R} ^
-    3$.
+[Theorem 5.1.2]({{< ref "05-L-V-W#thm-basis-for-hom" >}}) that $\dim \mathcal{L}(\mathbb{R},
+  \mathbb{R} ^ 3) = \dim \mathbb{R}\ \dim \mathbb{R} ^ 3 = 1 \cdot 3 = 3 = \dim
+  \mathbb{R} ^ 3$. Since both $\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)$
+and $\mathbb{R} ^ 3$ are vector spaces over $\mathbb{R}$, it follows by
+[Corollary 4.4.4]({{< ref "04-linear-transf#thm-isomorphism" >}}) that
+$\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)$ is isomorphic to
+$\mathbb{R} ^ 3$.
 
 Note that, since isomorphic vector spaces are the "same", by
-[Corollary 4.4.3]({{< ref "04-linear-transf#thm-isomorphism" >}}), we could think of the elements of
-$\mathcal{L}(\mathbb{R}, \mathbb{R} ^
-    3)$ as being $3 \times 1$ matrices with entries in $\mathbb{R}$, or
-in other words, column vectors with entries in $\mathbb{R}$!
+[Corollary 4.4.4]({{< ref "04-linear-transf#thm-isomorphism" >}}), we could think of the elements of
+$\mathcal{L}(\mathbb{R}, \mathbb{R} ^ 3)$ as being $3 \times 1$ matrices
+with entries in $\mathbb{R}$, or in other words, column vectors with
+entries in $\mathbb{R}$!
 :::
 
 Let $F$ be a field and let $M_{m, n}(F)$ denote the set of all
@@ -93,15 +93,15 @@ $m \times n$ matrices with entries in $F$. Then $M_{m, n}(F)$ is a
 vector space with addition (the usual addition of matrices) defined by:
 $$\begin{pmatrix}
       \alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
-      \alpha_{21}  & \alpha_{22}  & \cdots & \alpha_{2n} \\
-      \vdots                   & \vdots                   & \ddots & \vdots        \\
-      \alpha_{m1}  & \alpha_{m2}  & \cdots & \alpha_{mn}     
+      \alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
+      \vdots      & \vdots      & \ddots & \vdots        \\
+      \alpha_{m1} & \alpha_{m2} & \cdots & \alpha_{mn}
     \end{pmatrix}
     \begin{pmatrix}
       \beta_{11} & \beta_{12} & \cdots & \beta_{1n} \\
-      \beta_{21}  & \beta_{22}  & \cdots & \beta_{2n} \\
-      \vdots                   & \vdots                   & \ddots & \vdots        \\
-      \beta_{m1}  & \beta_{m2}  & \cdots & \beta_{mn}     
+      \beta_{21} & \beta_{22} & \cdots & \beta_{2n} \\
+      \vdots     & \vdots     & \ddots & \vdots     \\
+      \beta_{m1} & \beta_{m2} & \cdots & \beta_{mn}
     \end{pmatrix}
     =
     \begin{pmatrix}
@@ -115,16 +115,16 @@ $$\begin{pmatrix}
     \end{pmatrix}$$ and scalar multiplication $$\gamma 
     \begin{pmatrix}
       \alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
-      \alpha_{21}  & \alpha_{22}  & \cdots & \alpha_{2n} \\
-      \vdots                   & \vdots                   & \ddots & \vdots        \\
-      \alpha_{m1}  & \alpha_{m2}  & \cdots & \alpha_{mn}     
+      \alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
+      \vdots      & \vdots      & \ddots & \vdots        \\
+      \alpha_{m1} & \alpha_{m2} & \cdots & \alpha_{mn}
     \end{pmatrix}
     = 
     \begin{pmatrix}
-      \gamma\alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
-      \gamma\alpha_{21}  & \alpha_{22}  & \cdots & \alpha_{2n} \\
-      \vdots                   & \vdots                   & \ddots & \vdots        \\
-      \gamma\alpha_{m1}  & \alpha_{m2}  & \cdots & \alpha_{mn}     
+      \gamma\alpha_{11} & \gamma\alpha_{12} & \cdots & \gamma\alpha_{1n} \\
+      \gamma\alpha_{21} & \gamma\alpha_{22} & \cdots & \gamma\alpha_{2n} \\
+      \vdots            & \vdots            & \ddots & \vdots        \\
+      \gamma\alpha_{m1} & \gamma\alpha_{m2} & \cdots & \gamma\alpha_{mn}
     \end{pmatrix}.$$ for $\gamma \in F$ and
 $[\alpha_{ij}], [\beta_{ij}] \in M_{m, n}(F)$. This follows by a similar
 argument to that given in the solution of
@@ -267,18 +267,37 @@ and that it is linearly independent. Hence $\mathscr{F}$ is a basis for
 $M_{m, n}(F)$, as required. ◻
 :::
 
+Combining
+[Theorem 5.1.2]({{< ref "05-L-V-W#thm-basis-for-hom" >}}) and
+[Theorem 5.1.5]({{< ref "05-L-V-W#thm-basis-for-matrix" >}}), we obtain the following corollary.
+
+::: {.cor}
+If $V$ and $W$ are vector spaces over the field $F$ with dimensions $m$
+and $n$, respectively, then $\L(V, W)$ is isomorphic to $M_{m, n}(F)$.
+:::
+
+::: {.proof}
+*Proof.* It follows directly from
+[Theorem 5.1.2]({{< ref "05-L-V-W#thm-basis-for-hom" >}}) and
+[Theorem 5.1.5]({{< ref "05-L-V-W#thm-basis-for-matrix" >}}) that
+$\dim \L(V, W) = \dim M_{m, n}(F)$. Hence, by
+[Corollary 4.4.4]({{< ref "04-linear-transf#thm-isomorphism" >}}), $\L(V, W)$ and $M_{m, n}(F)$ are
+isomorphic vector spaces. ◻
+:::
+
 ::: {.thm}
 []{#thm-linear-transf-equal-matrices label="thm-linear-transf-equal-matrices"} Let $V$ and $W$ be vector
 spaces of dimensions $n$ and $m$ over a field $F$ and let $\mathscr{B}$
 and $\mathscr{C}$ be bases for $V$ and $W$, respectively. Then
 $\Psi: \mathcal{L}(V, W) \to M_{m, n}(F)$ defined by
-$$\Psi(T) = \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\quad \text{for all}\quad T \in \mathcal{L}(V, W)$$
-is an isomorphism of vector spaces.
+$$\Psi(T) = \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)\quad \text{for
+    all}\quad T \in \mathcal{L}(V, W)$$ is an isomorphism of vector
+spaces.
 :::
 
 ::: {.proof}
 *Proof.* By
-[Theorem 4.4.2]({{< ref "04-linear-transf#thm-bijection-basis" >}}), it suffices to show that $\Psi$ maps a
+[Theorem 4.4.3]({{< ref "04-linear-transf#thm-bijection-basis" >}}), it suffices to show that $\Psi$ maps a
 basis of $\mathcal{L}(V, W)$ bijectively to a basis of $M_{m, n}(F)$.
 The set $\mathscr{E}= \{T_{kl} : 1\leq l \leq n,\ 1\leq k \leq m\}$
 given in
@@ -319,7 +338,7 @@ $$\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) =
       1 & 1 & 0
     \end{pmatrix}
     = 2B_{11} + B_{21} + B_{22}.$$ By the proof of
-[Theorem 5.1.6]({{< ref "05-L-V-W#thm-linear-transf-equal-matrices" >}}), the linear transformation
+[Theorem 5.1.7]({{< ref "05-L-V-W#thm-linear-transf-equal-matrices" >}}), the linear transformation
 $\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}: \mathcal{L}(V,
   W) \to M_{m, n}(F)$ is an isomorphism and
 $\operatorname{Mat}_{\mathscr{B},
@@ -434,7 +453,7 @@ easily using a Jupyter notebook:
     3.  If $\mathscr{B}$ is any basis for $V$, then prove that
         $\mathrm{Mat}_{\mathscr{B}}: V \to F ^ n$ is an isomorphism
         using
-        [Theorem 5.1.6]({{< ref "05-L-V-W#thm-linear-transf-equal-matrices" >}}) and the
+        [Theorem 5.1.7]({{< ref "05-L-V-W#thm-linear-transf-equal-matrices" >}}) and the
         isomorphism $\iota$.
     :::
 

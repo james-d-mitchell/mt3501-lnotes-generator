@@ -809,14 +809,14 @@ easily using a Jupyter notebook:
                   \begin{pmatrix}
                     \alpha_{11}   & \alpha_{12}   & \cdots & \alpha_{1n} \\
                     \alpha_{21}   & \alpha_{22}   & \cdots & \alpha_{2n} \\
-                    \vdots        & \vdots        & \ddots & \vdots \\
+                    \vdots        & \vdots        & \ddots & \vdots      \\
                     \alpha_{{n}1} & \alpha_{{n}2} & \cdots & \alpha_{nn}
                   \end{pmatrix}
                   =
                   \begin{pmatrix}
                     \gamma \alpha_{11}   & \gamma \alpha_{12}   & \cdots & \gamma \alpha_{1n} \\
                     \gamma \alpha_{21}   & \gamma \alpha_{22}   & \cdots & \gamma \alpha_{2n} \\
-                    \vdots               & \vdots               & \ddots & \vdots \\
+                    \vdots               & \vdots               & \ddots & \vdots             \\
                     \gamma \alpha_{{n}1} & \gamma \alpha_{{n}2} & \cdots & \gamma \alpha_{nn}
                   \end{pmatrix}$$ for $\gamma \in F$ and
         $[\alpha_{ij}] \in M_{n}(F)$. What is the zero vector in this

@@ -208,7 +208,7 @@ div.solution {
   background-color: black;
 }
 
-div.solution02 {
+div.solution02, div.solution04  {
   border-left: 5px solid black;
   padding-left: 10px;
   padding: 0 18px;
@@ -217,19 +217,19 @@ div.solution02 {
   background-color: #E8ECEF;
 }
 
-div.solution02 ol li::marker {
+div.solution02, div.solution04 ol li::marker {
   content: counter(part) "(" counter(subpart, lower-alpha) ") ";
 }
 
-div.solution02 ol li li::marker {
+div.solution02, div.solution04 ol li li::marker {
   content: "(" counter(list-item) ") ";
 }
 
-div.solution02 ol {
+div.solution02, div.solution04 ol {
   counter-reset: subpart;
 }
 
-div.solution02 ol li {
+div.solution02, div.solution04 ol li {
   counter-increment: subpart;
 }
 
