@@ -976,7 +976,7 @@ easily using a Jupyter notebook:
             $\gamma[\alpha_{ij}] \in
                 W$.
 
-        Hence $W$ is a subspace of $M_{n}(F)$. ◻
+        Hence $W$ is a subspace of $M_{n}(F)$.
 
         ::: {.center}
 
@@ -999,7 +999,7 @@ easily using a Jupyter notebook:
             $$(\alpha X)A = \alpha XA = \alpha AX = A(\alpha X)$$ so
             $\alpha X \in V$.
 
-        Thus $V$ is a subspace of $M_{n}(F)$. ◻
+        Thus $V$ is a subspace of $M_{n}(F)$.
 
         ::: {.center}
 
@@ -1035,7 +1035,7 @@ easily using a Jupyter notebook:
         \end{pmatrix}$$ the $n \times n$ identity matrix and
         $\det(X+Y) = 1 \neq 0$. Hence the set $Z$ of matrices with zero
         determinant is not closed under vector addition, so $Z$ is not a
-        subspace of $M_{n}(F)$. ◻
+        subspace of $M_{n}(F)$.
 
         ::: {.center}
 
@@ -1062,7 +1062,7 @@ easily using a Jupyter notebook:
         \end{pmatrix} \neq 2B.$$ Hence $2B \not\in I$, so $I$ is not
         closed under scalar multiplication. (Neither is it closed under
         addition, since $B+B = 2B \not\in I$.) Hence $I$ is not a
-        subspace of $M_{n}(F)$.◻
+        subspace of $M_{n}(F)$.
     :::
 
 2.  []{#problem-02-02 label="problem-02-02"}
@@ -1097,7 +1097,7 @@ easily using a Jupyter notebook:
         $$(\alpha f)(1) = \alpha \cdot f(1) = \alpha \cdot 0 = 0,$$ so
         $\alpha f(x) \in W$ for any $\alpha \in \mathbb{R}$. Hence
         $W$ is closed under addition and scalar multiplication, so is a
-        subspace of $\mathbb{R}[x]$.◻
+        subspace of $\mathbb{R}[x]$.
 
         ::: {.center}
 
@@ -1121,8 +1121,7 @@ easily using a Jupyter notebook:
         $f(x) + g(x) \in W$. Similarly, if $\alpha \in \mathbb{R}$, then
         $$\alpha f(x) = (\alpha a_{n}) x^{n} + (\alpha a_{n-1}) x^{n-1} + \dots
         + (\alpha a_{1}) x$$ has zero constant term, so
-        $\alpha f(x) \in W$. Hence $W$ is a subspace
-        of $\mathbb{R}[x]$.◻
+        $\alpha f(x) \in W$. Hence $W$ is a subspace of $\mathbb{R}[x]$.
 
         ::: {.center}
 
@@ -1134,7 +1133,7 @@ easily using a Jupyter notebook:
               a_{0}$}\  \text{for some $a_{0},a_{1},a_{2},a_{3} \in \mathbb{R}$ with $a_{3} \neq 0$}
           \, \},$$ the set of polynomials of degree precisely $3$. Then
         the zero polynomial does not belong to $W$, so $W$ is not a
-        subspace. ◻
+        subspace.
 
         ::: {.center}
 
@@ -1153,7 +1152,7 @@ easily using a Jupyter notebook:
             + (a_{0}+b_{0}) \in W$$ and
         $$\alpha f(x) = (\alpha a_{3})x^{3} + (\alpha a_{2})x^{2} + (\alpha
             a_{1})x + (\alpha a_{0}) \in W$$ for any
-        $\alpha \in \mathbb{R}$. ◻
+        $\alpha \in \mathbb{R}$.
 
         ::: {.center}
 
@@ -1189,7 +1188,7 @@ easily using a Jupyter notebook:
 ::: {.solution02}
     1.  A simple description of $W_1\cap W_2$ is
         $W_{1} \cap W_{2} = \{\,f(x) \in \mathbb{R}[x]\mid f(1) = f(2) = 0\,\},$
-        the set of polynomials vanishing at $1$ and $2$. ◻
+        the set of polynomials vanishing at $1$ and $2$.
 
         ::: {.center}
 
@@ -1282,7 +1281,7 @@ easily using a Jupyter notebook:
                       z_{1})\\ (\alpha y_{1}) - (\alpha x_{1}) + (\alpha z_{1})\\ 2(\alpha
                       x_{1}) \end{pmatrix} = \begin{pmatrix}x''+y''-z''\\y''-x''+z''\\2x''\end{pmatrix}$$
 
-        Hence $W$ is a subspace of $\mathbb{R}^{3}$.◻
+        Hence $W$ is a subspace of $\mathbb{R}^{3}$.
 
         ::: {.center}
 
@@ -1318,7 +1317,7 @@ easily using a Jupyter notebook:
         Hence $\alpha = 0$ and adding the first two equations gives
         $2\beta =
         0$, so $\beta = 0$. Finally this yields $\gamma = 0$. This shows
-        that $\mathscr{A}$ is an linearly independent set. ◻
+        that $\mathscr{A}$ is an linearly independent set.
 
         ::: {.center}
 
@@ -1373,7 +1372,7 @@ easily using a Jupyter notebook:
           v_{1},v_{2},\dots,v_{m},w_{1},w_{2},\dots,w_{n} \}$). Hence
         $$W_{1} + W_{2} = \operatorname{Span}(\mathscr{A}_{1} \cup \mathscr{A}_{2})$$
         so the union $\mathscr{A}_{1} \cup \mathscr{A}_{2}$ is a
-        spanning set for $W_{1}+W_{2}$. ◻
+        spanning set for $W_{1}+W_{2}$.
 
         ::: {.center}
 
@@ -1687,7 +1686,7 @@ easily using a Jupyter notebook:
         \end{array}$$ and we successively deduce $\gamma = 0$,
          $\beta = 0$ and $\alpha =
         0$. Therefore $\mathscr{A}'$ is linearly independent, so that
-        $\dim U = 3$ as $\mathscr{A}'$ is a basis for $U$.◻
+        $\dim U = 3$ as $\mathscr{A}'$ is a basis for $U$.
 
         ::: {.center}
 
@@ -1770,7 +1769,7 @@ easily using a Jupyter notebook:
         \end{array}$$ and we deduce $\alpha = \beta = \gamma = 0$. Hence
         $\mathscr{B}$ is linearly independent and so is a basis for
         $W = \operatorname{Span}(\mathscr{B})$. We conclude that
-        $\dim W = 3$. ◻
+        $\dim W = 3$.
 
         ::: {.center}
 
@@ -1956,7 +1955,7 @@ easily using a Jupyter notebook:
     vector in $U$ that is not in $W$, or vice versa. It can be shown
     that $\vec{v}_5\not\in U$ by showing that
     $\{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_5\}$ is linearly
-    independent as we did above. ◻
+    independent as we did above.
     :::
 
 7.  []{#problem-02-07 label="problem-02-07"}
@@ -2216,7 +2215,7 @@ easily using a Jupyter notebook:
         We conclude that
         $$\mathscr{B}= \left\{ \begin{pmatrix}2\\-1\\2\end{pmatrix}, \begin{pmatrix}1\\1\\3\end{pmatrix},
           \begin{pmatrix}0\\1\\1\end{pmatrix} \right\}$$ is a basis for
-        $U = \operatorname{Span}(\mathscr{A})$.◻
+        $U = \operatorname{Span}(\mathscr{A})$.
 
         ::: {.center}
 
@@ -2409,7 +2408,7 @@ easily using a Jupyter notebook:
         $\mathscr{A}= \mathscr{C}$.
 
         As a consequence, $\mathscr{A}$ is a basis for $V$, so
-        $\dim V = 3$.◻
+        $\dim V = 3$.
 
         ::: {.center}
 
@@ -2570,7 +2569,7 @@ easily using a Jupyter notebook:
         Hence, by
         [Lemma 2.4.3]({{< ref "02-vector-spaces#lemma-dim-dim" >}}),
         $\dim W = |\mathscr{B}| \leqslant|\mathscr{C}| = \dim V$, as
-        required.◻
+        required.
 
         ::: {.center}
 

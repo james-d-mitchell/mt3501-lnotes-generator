@@ -119,7 +119,7 @@ also. ◻
 ::: {.cor}
 If $V = U_{1} \oplus U_{2}$ is a finite-dimensional vector space
 expressed as a direct sum of two subspaces, then
-$$\dim V = \dim U_{1} + \dim U_{2}.$$ ◻
+$$\dim V = \dim U_{1} + \dim U_{2}.$$
 :::
 
 ::: {.exampjupyter}
@@ -251,7 +251,8 @@ Hence $\operatorname{id} - P_1$ is the projection $P_2$.
 $\operatorname{id} - P_1 = P_2$,
 $\ker \operatorname{id} - P_1 = \ker P_2 =
     U_{1}$. Hence
-$$V = U_{1} \oplus U_{2} = \ker(\operatorname{id}-P_1) \oplus \ker P_1.$$ ◻
+$$V = U_{1} \oplus U_{2} = \ker(\operatorname{id}-P_1) \oplus \ker P_1.
+    \square$$ ◻
 :::
 
 We give an example to illustrate how projection maps depend on both
@@ -292,10 +293,8 @@ $U_{1} \cap
 **(2).** It suffices to find a $\vec{v} \in \mathbb{R} ^ 2$ such that
 $P(\vec{v}) \neq Q(\vec{v})$.
 
-If $\vec{v}\in U_1$ that
-
-$$P(\vec{v}) = Q(\vec{v}) = \vec{v}$$ and so we will have to take
-$\vec{v}\in \mathbb{R} ^ 2 \setminus U_1$.
+If $\vec{v}\in U_1$, then $$P(\vec{v}) = Q(\vec{v}) = \vec{v}.$$ Hence
+we will have to take $\vec{v}\in \mathbb{R} ^ 2 \setminus U_1$.
 
 If $\vec{v} = \begin{pmatrix} 3 \\ 2 \end{pmatrix} \in \mathbb{R}^{2}$,
 then $\vec{v}\not\in U_1$ and we obtain different values for

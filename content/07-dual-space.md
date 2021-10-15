@@ -4,9 +4,10 @@
 We saw in [Theorem 5.1.1]({{< ref "05-L-V-W#thm-hom-v-w" >}}) that the set $\mathcal{L}(V, W)$ of all linear
 transformations from a vector space $V$ to a vector space $W$ (over the
 same field $F$) is itself a vector space. One particular example of
-$\mathcal{L}(V, W)$ plays a special role in linear mathematics, and this
-is the topic of this section. Recall that every field $F$ is a vector
-space of dimension $1$ over itself.
+$\mathcal{L}(V,
+W)$ plays a special role in linear mathematics, and this is the topic of
+this section. Recall that every field $F$ is a vector space of dimension
+$1$ over itself.
 
 ## Linear functionals
 
@@ -189,79 +190,70 @@ transformation $T ^
 or by the observation that the composition of linear transformations
 (with compatible image and domain) is again a linear transformation.
 
+Suppose that $T: V\to W$ is a linear transformation. If $V$ is an
+$n$-dimensional vector space over $F$, and $W$ is an $m$-dimensional
+vector space over $F$, then $V$ is isomorphic to $F ^ n$ and $W$ is
+isomorphic to $F ^ m$. Hence we may, without loss of generality, assume
+that $T: F ^ n \to
+F ^ m$, and so $T$ eats column vectors of length $n$ and poops out
+column vectors of length $m$. What does the corresponding dual
+transformation $T ^ *$ do?
+
+As described above, linear functionals in $(F ^ n) ^ *$ correspond to
+row vectors of length $n$ and linear functionals in $(F ^ m) ^ *$
+correspond to row vectors of length $m$. So, in some sense, $T ^ *$ eats
+row vectors of length $m$ and poops out row vectors of length $n$.
+
+Well, sometimes dreams come true: if $\cev{f}$ is the matrix of a linear
+functional $f$ with respect to the standard bases for $F ^ n$ and $F$,
+then $$T ^ *(f): f\mapsto f \circ T(\vec{v}) = \cev{f} (A \vec{v}),$$
+where $\cev{f} A\vec{v}$ is a product of a $1 \times n$ matrix with an
+$n\times m$ matrix with a $1\times m$ matrix, which is a $1 \times m$
+matrix, AKA a row vector of length $m$. Sweet.
+
 ::: {.examp}
 []{#example-dual-transf label="example-dual-transf"} Suppose that
 $T: \mathbb{R} ^ 3\to \mathbb{R} ^ 2$ is the linear transformation
 defined by $$T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
     =
     \begin{pmatrix} x - y \\ y - z \end{pmatrix}.$$ Describe the dual
-transformation $T ^ * : (\mathbb{R} ^ 2) ^ * \to (\mathbb{R} ^ 3) ^ *$
-of $T$.
+transformation $T ^ * : (\mathbb{R} ^ 2) ^ * \to
+  (\mathbb{R} ^ 3) ^ *$ of $T$.
 :::
 
 ::: {.solution}
-Suppose that $\mathscr{B} ^ * = \{f_1, f_2\}$ is the dual basis for
-$(\mathbb{R} ^ 2) ^ *$ of the standard basis
-$\mathscr{B} = \{\vec{e}_1, \vec{e}_2\}$ for $\mathbb{R} ^ 2$. It
-suffices to describe $T ^ *$ on $\mathscr{B} ^ *$. If $i = 1$ or $2$,
-then
-$$T ^ * (f_i) = f_i \circ T : \mathbb{R} ^ 3\stackrel{T}{\longrightarrow} \mathbb{R} ^ 2
-    \stackrel{f_i}{\longrightarrow} \mathbb{R}\in \mathcal{L}(\mathbb{R} ^ 3,
-    \mathbb{R}) = (\mathbb{R} ^ 3) ^ *.$$ In particular, if you recall
-from
-[Example 7.1.2]({{< ref "07-dual-space#example-linear-functionals" >}}), the linear functional $f_i$
-maps a vector to its $i$th coordinate,
-$$f_1\begin{pmatrix} x \\ y \end{pmatrix} = x\qquad \text{and }\qquad f_2\begin{pmatrix} x \\ y \end{pmatrix} = y$$
-and so
-$$T ^ * (f_i) \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = (f_i \circ T) \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
-    = f_i \begin{pmatrix} x - y \\ y - z \end{pmatrix}.$$ Thus
-$$T ^ * (f_1): \mathbb{R} ^ 3 \to \mathbb{R} : \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} \mapsto x - y
-    \qquad \text{and}\qquad
-    T ^ * (f_2): \mathbb{R} ^ 3 \to \mathbb{R}: \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} \mapsto y - z.$$
-So, if $f\in V ^ *$ is arbitrary, then $$f = \alpha f_1 + \beta f_2$$
-for some $\alpha, \beta\in F$, and so, in particular,
-$$f\begin{pmatrix} x \\ y \end{pmatrix}
-    = 
-    (\alpha f_1 + \beta f_2) \begin{pmatrix} x \\ y \end{pmatrix}
-    = 
-    \alpha x + \beta y.$$ It follows that
-$$T ^ * (f) \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = \alpha (x - y) + \beta (y - z)
-    = (\alpha + \beta)x - (\alpha - \beta)y - \beta z.$$
+Suppose that $f \in (\mathbb{R} ^ 2) ^ *$ is arbitrary. Then there exist
+$\alpha, \beta \in F$ such that
+$$f \begin{pmatrix} x \\ y \end{pmatrix} = \alpha x + \beta y.$$ We will
+denote $T ^ *(f) \in (\mathbb{R} ^ 3) ^ *$ by $S: \R ^ 3 \to \R$. It
+follows directly from the definition that
+$$S \begin{pmatrix} x \\ y \\ z \end{pmatrix}  
+    = f \circ T \begin{pmatrix} x \\ y \\ z \end{pmatrix}  
+    = f \begin{pmatrix} x - y \\ y - z \end{pmatrix}
+    = \alpha (x - y) + \beta (y - z). \square$$
 :::
 
 ::: {.example}
 []{#example-dual-transf-2 label="example-dual-transf-2"} Let $T: \mathbb{R} ^ 4\to \mathbb{R} ^ 4$
-be defined by
-$$T \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}.$$
+be defined by $$T \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
+    = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}.$$
 Describe the dual transformation
-$T ^ *: (\mathbb{R} ^ 4) ^ * \to (\mathbb{R} ^ 4) ^ *$. \[In
+$T ^ *: (\mathbb{R} ^ 4) ^ * \to (\mathbb{R}
+  ^ 4) ^ *$. \[In
 [Example 4.2.2]({{< ref "04-linear-transf#ex:lintrans-matrix" >}}) we found the matrix of this linear
 transformation with respect to several bases for $\mathbb{R} ^ 4$.\]
 :::
 
 ::: {.solution}
-Suppose that $\mathscr{B} ^ * = \{f_1, f_2, f_3, f_4\}$ is the dual
-basis for $(\mathbb{R} ^
-    4) ^ *$ of the standard basis $\mathscr{B}$ for $\mathbb{R} ^ 4$. It
-suffices to describe $T ^ *$ on $\mathscr{B} ^ *$. If $i = 1$, $2$, $3$,
-or $4$, then
-$$T ^ * (f_i) = f_i \circ T : \mathbb{R} ^ 4\stackrel{T}{\longrightarrow} \mathbb{R} ^ 4
-    \stackrel{f_i}{\longrightarrow} \mathbb{R}\in \mathcal{L}(\mathbb{R} ^ 4, \mathbb{R}) = (\mathbb{R} ^ 4) ^ *.$$
-In particular, if you recall from
-[Example 7.1.2]({{< ref "07-dual-space#example-linear-functionals" >}}), the linear functional $f_i$
-maps a vector to its $i$th coordinate, and so
-$$T ^ * (f_i) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} = (f_i \circ T) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}
-    = f_i \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}.$$ It
-follows that
-$$T ^ * (f_1) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}  =  x + 4y, \quad
-    T ^ * (f_2) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}  =  y     , \quad
-    T ^ * (f_3) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}  =  2z + t, \quad
-    T ^ * (f_4) \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}  =  z + 2t.$$
-If $f\in V ^ *$ is arbitrary, then
-$$f = \alpha_1 f_1 + \alpha_2 f_2 + \alpha_3 f_3 + \alpha_4 f_4$$ for
-some $\alpha_1, \alpha_2, \alpha_3, \alpha_4\in \mathbb{R}$, and so
-$$T ^ * (f)  \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} = \alpha_1 (x + 4y) + \alpha_2 y + \alpha_3
-    (2z + t) + \alpha_4 (z + 2t).$$
+Suppose that $f\in (\mathbb{R} ^ 4) ^ *$ is arbitrary. Then there exist
+$\alpha, \beta, \gamma, \delta\in F$ such that
+$$f \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
+    = \alpha x + \beta y + \gamma z + \delta t.$$ Hence if we write
+$S = T ^ *(f) : \R ^ 4 \to \R$, then
+$$S \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix} 
+    = f \circ T  \begin{pmatrix} x \\ y \\ z \\ t \end{pmatrix}
+    = \begin{pmatrix} x+4y \\ y \\ 2z+t \\ z+2t \end{pmatrix}
+    = \alpha(x + 4y) + \beta y + \gamma (2z + t) + \delta (z + 2t).\square$$
 :::
 
 ::: {.prop}
@@ -290,24 +282,36 @@ transformation.
 
 ::: {.defn}
 If $A$ is a matrix with entries in a field $F$, then the ***transpose***
-$A ^ t$ of $A$ is the matrix obtained by swapping the rows and columns
+$A ^ *$ of $A$ is the matrix obtained by swapping the rows and columns
 of $A$. More precisely, if $A = [\alpha_{ij}]$, then $A
-  ^ t = [\alpha_{ji}]$.
+  ^ * = [\alpha_{ji}]$.
 :::
 
 ::: {.example}
-If $A$ is the matrix $$\begin{pmatrix}
+$$\text{If}\quad
+    A = 
+    \begin{pmatrix}
       8  & 6  & 0 \\
       -9 & -7 & 0 \\
       3  & 3  & 2
-    \end{pmatrix},$$ then $A ^ t$ is the matrix $$\begin{pmatrix}
+    \end{pmatrix},
+    \quad
+    \text{ then }
+    \quad
+    A ^ * = 
+    \begin{pmatrix}
       8 & -9 & 3 \\
       6 & -7 & 3 \\
       0 & 0  & 2
-    \end{pmatrix}.$$ If $B$ is the matrix, $$\begin{pmatrix}
+    \end{pmatrix}.$$ $$\text{If}\quad 
+    B = 
+    \begin{pmatrix}
       1 & 2 & 3 \\
       5 & 0 & 0
-    \end{pmatrix},$$ then $B ^ t$ is the matrix $$\begin{pmatrix}
+    \end{pmatrix}, 
+    \quad\text{ then }\quad
+    B ^ * = 
+    \begin{pmatrix}
       1 & 5 \\
       2 & 0 \\
       3 & 0
@@ -320,8 +324,8 @@ $T: \mathbb{R} ^ 3 \to \mathbb{R} ^ 2$ is the linear transformation
 defined by $$T\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}
     =
     \begin{pmatrix} x - y \\ y - z \end{pmatrix}.$$ If $\mathscr{B}$ and
-$\mathscr{C}$ are the standard bases for $\mathbb{R} ^ 3$ and
-$\mathbb{R} ^ 2$, respectively, then find
+$\mathscr{C}$ are the standard bases for $\mathbb{R} ^
+  3$ and $\mathbb{R} ^ 2$, respectively, then find
 $\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^*}(T ^ *)$ where
 $\mathscr{B} ^ *$ and $\mathscr{C} ^ *$ are the dual bases of
 $\mathscr{B}$ and $\mathscr{C}$, respectively.
@@ -329,24 +333,27 @@ $\mathscr{B}$ and $\mathscr{C}$, respectively.
 
 ::: {.solution}
 Suppose that $\mathscr{B} ^ * = \{f_1, f_2, f_3\}$ and
-$\mathscr{C} ^ * = \{g_1,
-    g_2\}$ as in
+$\mathscr{C} ^ * =
+  \{g_1, g_2\}$ as in
 [Example 7.3.2]({{< ref "07-dual-space#example-dual-transf" >}}). Then
-$$f_1\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = x, \quad f_2\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = y,
-    \quad f_3\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = z,\quad
-    g_1\begin{pmatrix} x \\ y \end{pmatrix} = x, \quad g_2\begin{pmatrix} x \\ y \end{pmatrix} = y.$$
+$$f_1\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = x, 
+    \quad f_2\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = y,
+    \quad f_3\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} = z,
+    \quad g_1\begin{pmatrix} x \\ y \end{pmatrix} = x, 
+    \quad g_2\begin{pmatrix} x \\ y \end{pmatrix} = y.$$
 
-To find the entries in
-$\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^*}(T ^ *)$ we must
-express $T ^ * (g_1)$ and $T ^ *(g_2)$ as linear combinations of $f_1$,
-$f_2$, and $f_3$. From the definition of $T ^*$, it follows that
-$$\begin{aligned}
-    (T ^ * (g_1))\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} & = & g_1\left(T \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}\right)
+To find the entries in $\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}
+  ^*}(T ^ *)$ we must express $T ^ * (g_1)$ and $T ^ *(g_2)$ as linear
+combinations of $f_1$, $f_2$, and $f_3$. From the definition of $T ^*$,
+it follows that $$\begin{aligned}
+    (T ^ * (g_1))\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} 
+    & = & g_1\left(T \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}\right)
     = g_1\begin{pmatrix} x - y \\ y - z \end{pmatrix}
     = x - y
     = f_1\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} -
     f_2\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} \\
-    (T ^ * (g_2))\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} & = & g_2\left(T \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}\right)
+    (T ^ * (g_2))\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} 
+    & = & g_2\left(T \begin{pmatrix} x \\ y \\ z \\ \end{pmatrix}\right)
     = g_2\begin{pmatrix} x - y \\ y - z \end{pmatrix}
     = y - z
     = f_2\begin{pmatrix} x \\ y \\ z \\ \end{pmatrix} -
@@ -364,7 +371,7 @@ $$\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) =
     \begin{pmatrix}
       1 & -1 & 0  \\
       0 & 1  & -1
-    \end{pmatrix}.$$
+    \end{pmatrix}.\square$$
 :::
 
 ::: {.thm}
@@ -374,7 +381,7 @@ $T : V \to W$ be a linear transformation. If $\mathscr{B}$ and
 $\mathscr{C}$ are bases for $V$ and $W$, respectively, and
 $\mathscr{B} ^ *$ and $\mathscr{C} ^ *$ are the respective dual bases,
 then $$\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *) =
-    \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) ^ t$$ where
+    \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) ^ *$$ where
 $T ^ * : W ^ * \to V ^ *$ is the dual transformation of $T$. In other
 words, the matrix of a dual transformation is the transpose of the
 matrix of the original linear transformation.
@@ -382,27 +389,48 @@ matrix of the original linear transformation.
 
 ::: {.proof}
 *Proof.* Suppose that $\mathscr{B} = \{v_1, \ldots, v_n\}$ and that
-$\mathscr{C} = \{w_1,
-    \ldots, w_m\}$. If
-$\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) = [\alpha_{ij}]$ and
-$v_j\in
-    \mathscr{B}$, then, by the definition of the matrix of a linear
-transformation, $$T(v_j) = \sum_{i = 1} ^ m \alpha_{ij}w_i.$$ for all
-$j$. Similarly, if $\mathscr{B} ^ * = \{f_1, \ldots, f_n\}$ and
-$\mathscr{C} ^ *= \{g_1,
-    \ldots, g_m\}$, then, by the definition of the dual transformation,
-$$(T ^ * (g_k)) (v_j) = g_k(T(v_j))
+$\mathscr{C} =
+  \{w_1, \ldots, w_m\}$. If
+$\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T) =
+  [\alpha_{ij}]$ and $v_j\in \mathscr{B}$, then, by the definition of
+the matrix of a linear transformation,
+$$T(v_j) = \sum_{i = 1} ^ m \alpha_{ij}w_i.$$ for all $j$. Similarly, if
+$\mathscr{B} ^ * = \{f_1, \ldots, f_n\}$ and
+$\mathscr{C} ^ *= \{g_1, \ldots, g_m\}$, then, by the definition of the
+dual transformation, $$\label{t-star-basis}
+    (T ^ * (g_k)) (v_j) = g_k(T(v_j))
     = g_k\left(\sum_{i = 1} ^ m \alpha_{ij}w_i\right)
     = \alpha_{kj}
-    = \alpha_{kj}\ f_j(v_j)$$ for all $j$ and for all $i$. Hence
-$$T ^ * (g_k) = \sum_{j = 1} ^ n \alpha_{kj} f_{j}$$ and so the $k$th
-column of $\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^*}(T ^ *)$
-is:
+    = \alpha_{kj}\ f_j(v_j)$$ for all $j$ and for all $i$. If $v\in V$
+is any vector, then there exist $\beta_1, \ldots, \beta_n\in
+  F$ such that $$\label{eq_v}
+    v = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n 
+      = \sum_{j = 1} ^ n \beta_j v_j.$$ Hence $$\label{eq_f_j_v}
+    f_j(v) = f_j\left(\sum_{i = 1} ^ n \beta_i v_i\right)
+           = \sum_{i = 1} ^ n \beta_i\ f_j(v_i) 
+           = \beta_j\ f_j(v_j)$$ since $f_j(v_i) = 0$ for all $i\neq j$.
+Therefore $$\begin{aligned}
+  (T ^ * (g_k))(v) & = g_k \circ T(v) && \text{by definition of } T ^ *\\ 
+                   & = g_k\circ T \left(\sum_{j=1} ^ {n}\beta_jv_j\right) &&
+                   \text{by }\eqref{eq_v} \\
+                   & = \sum_{j=1} ^ {n} \beta_j\big(g_k( T(v_j))\big) && \text{by
+                   linearity of } g_k\circ T \\
+                   & = \sum_{j=1} ^ {n} \beta_j\big(\alpha_{kj} f_j(v_j)\big) &&
+                   \text{by }\eqref{t-star-basis} \\
+                   & = \sum_{j=1} ^ {n} \alpha_{kj} \big(\beta_j f_j(v_j)\big) && 
+                     \text{scalar multiplication is commutative!}\\
+                   & = \sum_{j=1} ^ {n} \alpha_{kj} f_j(v)  &&
+                   \text{by }\eqref{eq_f_j_v}\\
+                   & = \left(\sum_{j=1} ^ {n} \alpha_{kj} f_j\right) (v)\end{aligned}$$
+and so $$T ^ * (g_k) = \sum_{j = 1} ^ n \alpha_{kj} f_{j}$$ and so the
+$k$th column of $\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}
+  ^*}(T ^ *)$ is:
 $$\begin{pmatrix} \alpha_{k1} \\ \alpha_{k2} \\ \vdots \\ \alpha_{kn} 
     \end{pmatrix},$$ and this is simply the $k$th row of
-$\operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)$. Therefore,
-$\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *) = [\alpha_{ji}] = \operatorname{Mat}_{\mathscr{B}, \mathscr{C}}(T)
-    ^ t$. ◻
+$\operatorname{Mat}_{\mathscr{B},
+    \mathscr{C}}(T)$. Therefore, $\operatorname{Mat}_{\mathscr{C} ^ *,
+    \mathscr{B} ^ *}(T ^ *) = [\alpha_{ji}] = \operatorname{Mat}_{\mathscr{B},
+  \mathscr{C}}(T) ^ *$. ◻
 :::
 
 ## Column rank equals row rank
@@ -437,7 +465,7 @@ Rank-Nullity Theorem
                                  & = & \dim W - ( \dim \ker T + \dim W - \dim V)    \\
                                  & = & \dim V - \dim \ker T                         \\
                                  & = & \dim V - (\dim V - \dim \operatorname{im} T) \\
-                                 & = & \dim \operatorname{im} T.
+                                 & = & \dim \operatorname{im} T.\square
   \end{aligned}$$ ◻
 :::
 
@@ -556,16 +584,16 @@ easily using a Jupyter notebook:
     ::: {.question}
     Suppose that $A$ and $B$ are matrices with entries in a field $F$.
     If $A
-          ^ t$ denotes the transpose of $A$, then show that the
+          ^ *$ denotes the transpose of $A$, then show that the
     following hold:
 
     1.  if $A$ and $B$ are $m\times n$ matrices, then
-        $(A + B) ^ t = A ^ t + B ^ t$;
+        $(A + B) ^ * = A ^ * + B ^ *$;
 
-    2.  $(\gamma A) ^ t = \gamma A ^ t$ for all $\gamma\in F$;
+    2.  $(\gamma A) ^ * = \gamma A ^ *$ for all $\gamma\in F$;
 
     3.  if $A$ is an $m\times n$ matrix and $B$ is a $n\times k$ matrix,
-        then $(AB) ^ t = B ^ t A ^ t$.
+        then $(AB) ^ * = B ^ * A ^ *$.
     :::
 
 6.  []{#problem-07-06 label="problem-07-06"}

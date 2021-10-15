@@ -1025,7 +1025,7 @@ easily using a Jupyter notebook:
           - 2\alpha z \\ -\alpha x + 4\alpha z \end{pmatrix} 
         = \alpha \begin{pmatrix}x+3y-z\\x+2y-2z\\-x+4z\end{pmatrix} 
         = \alpha \; T\!\begin{pmatrix}x\\y\\z\end{pmatrix}.\end{aligned}$$
-        Hence $T$ is a linear transformation. ◻
+        Hence $T$ is a linear transformation.
 
         ::: {.center}
 
@@ -1094,7 +1094,7 @@ easily using a Jupyter notebook:
           \operatorname{Span} \begin{pmatrix}4\\-1\\1\end{pmatrix}.$$
         Then $\left\{ \begin{pmatrix}4\\-1\\1\end{pmatrix} \right\}$ is
         a basis for $\ker T$ (as a set containing a single non-zero
-        vector is immediately linearly independent). ◻
+        vector is immediately linearly independent).
 
         ::: {.center}
 
@@ -1192,7 +1192,7 @@ easily using a Jupyter notebook:
         independent (for example, neither vector here is a scalar
         multiple of the other). Hence
         $$\left\{ \begin{pmatrix}1\\1\\-1\end{pmatrix}, \begin{pmatrix}3\\2\\0\end{pmatrix} \right\}$$
-        is a basis for $\operatorname{im}T$. ◻
+        is a basis for $\operatorname{im}T$.
 
         ::: {.center}
 
@@ -1326,7 +1326,7 @@ easily using a Jupyter notebook:
         3\alpha \quad\;\;\; &= 0,\end{aligned}$$ so
         $\alpha = \beta = 0$. Hence $\{ \vec{y}_{1},\vec{y}_{4} \}$ is
         linearly independent and so this is a basis for
-        $\operatorname{im}T$. ◻
+        $\operatorname{im}T$.
 
         ::: {.center}
 
@@ -1375,7 +1375,7 @@ easily using a Jupyter notebook:
         we immediately see that $\alpha = \beta = 0$. Hence the set of
         the above two vectors is linearly independent. We conclude that
         $$\left\{ \begin{pmatrix}-3\\1\\0\\6\end{pmatrix}, \begin{pmatrix}-1\\0\\1\\3\end{pmatrix} \right\}$$
-        is a basis for $\ker T$. ◻
+        is a basis for $\ker T$.
 
         ::: {.center}
 
@@ -1426,7 +1426,7 @@ easily using a Jupyter notebook:
         then $T(u-v) = T(u) - T(v) =
           \vec{0}$, and so $u-v \in \ker T = \{\vec{0}\}$. Hence
         $u-v = \vec{0}$, and so $u = v$. This shows that $T$ is
-        injective. ◻
+        injective.
 
         ::: {.center}
 
@@ -1474,7 +1474,7 @@ easily using a Jupyter notebook:
 
         Finally if $v \in V$, put $w = T(v)$. Then, by definition, we
         have $S(w) = v$, so $$ST(v) = S(w) = v.$$ We deduce that
-        $ST = \operatorname{id}_V$. ◻
+        $ST = \operatorname{id}_V$.
 
         ::: {.center}
 
@@ -1538,7 +1538,7 @@ easily using a Jupyter notebook:
         and
         $$(S+T)(\alpha v) = S(\alpha v) + T(\alpha v) = \alpha \, S(v) + \alpha
         \, T(v) = \alpha (S(v)+T(v)) = \alpha \, (S+T)(v).$$ Hence $S+T$
-        is a linear transformation. ◻
+        is a linear transformation.
 
         ::: {.center}
 
@@ -1693,7 +1693,7 @@ easily using a Jupyter notebook:
         \mapsto A\vec{v}$ is a linear transformation.
 
         \[Alternatively, this could all be done extremely quickly by
-        simply quoting standard facts about matrix multiplication.\]◻
+        simply quoting standard facts about matrix multiplication.\]
 
         ::: {.center}
 
@@ -1786,7 +1786,6 @@ easily using a Jupyter notebook:
         $$T = \sum_{\substack{1 \leqslant k \leqslant n \\ 1 \leqslant\ell \leqslant m}}
         \beta_{\ell k} T_{k \ell}$$ where
         $B = \operatorname{Mat}_{\mathscr{B},\mathscr{C}}(T) = [\beta_{ij}]$.
-        ◻
 
         ::: {.center}
 
@@ -1864,7 +1863,7 @@ easily using a Jupyter notebook:
         $\mathscr{B}= \left\{ \begin{pmatrix}3\\-1\end{pmatrix}, \begin{pmatrix}-5\\2\end{pmatrix} \right\}$
         is linearly independent and, since a basis for $\mathbb{R}^{2}$
         is a linearly independent set of size $2$, we conclude
-        $\mathscr{B}$ is a basis for $\mathbb{R}^{2}$. ◻
+        $\mathscr{B}$ is a basis for $\mathbb{R}^{2}$.
 
         ::: {.center}
 
@@ -2050,7 +2049,7 @@ easily using a Jupyter notebook:
         \end{array}$$ So $\alpha = \beta = \gamma = 0$ and we deduce
         $\mathscr{B}$ is linearly independent. As
         $\dim \mathbb{R}^{3} = 3$, we conclude $\mathscr{B}$ is indeed a
-        basis for $\mathbb{R}^{3}$. ◻
+        basis for $\mathbb{R}^{3}$.
 
         ::: {.center}
 
@@ -2247,7 +2246,7 @@ easily using a Jupyter notebook:
         $\alpha_{j} \neq 0$ and $T^{n-1}(v) \neq \vec{0}$, which is a
         contradiction. Hence $\mathscr{B}$ is linearly independent. As
         $\dim V =
-        n$, our set $\mathscr{B}$ is indeed a basis for $V$.◻
+        n$, our set $\mathscr{B}$ is indeed a basis for $V$.
 
         ::: {.center}
 
@@ -2353,5 +2352,5 @@ easily using a Jupyter notebook:
         Hence with respect to
         $$\mathscr{B}= \left\{ \begin{pmatrix}1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\-1\end{pmatrix},
           \begin{pmatrix}-2\\-2\\0\end{pmatrix} \right\}$$ the matrix
-        of $T$ has the required form. ◻
+        of $T$ has the required form.
     :::
