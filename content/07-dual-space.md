@@ -206,10 +206,9 @@ row vectors of length $m$ and poops out row vectors of length $n$.
 
 Well, sometimes dreams come true: if $\cev{f}$ is the matrix of a linear
 functional $f$ with respect to the standard bases for $F ^ n$ and $F$,
-then $$T ^ *(f): f\mapsto f \circ T(\vec{v}) = \cev{f} (A \vec{v}),$$
-where $\cev{f} A\vec{v}$ is a product of a $1 \times n$ matrix with an
-$n\times m$ matrix with a $1\times m$ matrix, which is a $1 \times m$
-matrix, AKA a row vector of length $m$. Sweet.
+then $$T ^ *(f) = f \circ T = \cev{f} A,$$ where $\cev{f} A$ is a
+product of a $1 \times m$ matrix with an $m\times n$ matrix, AKA a row
+vector of length $n$. Sweet.
 
 ::: {.examp}
 []{#example-dual-transf label="example-dual-transf"} Suppose that
@@ -401,8 +400,8 @@ dual transformation, $$\label{t-star-basis}
     (T ^ * (g_k)) (v_j) = g_k(T(v_j))
     = g_k\left(\sum_{i = 1} ^ m \alpha_{ij}w_i\right)
     = \alpha_{kj}
-    = \alpha_{kj}\ f_j(v_j)$$ for all $j$ and for all $i$. If $v\in V$
-is any vector, then there exist $\beta_1, \ldots, \beta_n\in
+    = \alpha_{kj}\ f_j(v_j)$$ for all $j$ and $k$. If $v\in V$ is any
+vector, then there exist $\beta_1, \ldots, \beta_n\in
   F$ such that $$\label{eq_v}
     v = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n 
       = \sum_{j = 1} ^ n \beta_j v_j.$$ Hence $$\label{eq_f_j_v}
@@ -488,7 +487,7 @@ Hence, by
 [Theorem 4.2.3]({{< ref "04-linear-transf#thm-column-space-is-image" >}})(1), the column rank of $A$ equals
 $\dim
   \operatorname{im} T$.
-[Lemma 7.5.2]({{< ref "07-dual-space#lemma-rank-im-dual-transf" >}}), implies that $$\dim
+[Lemma 7.5.2]({{< ref "07-dual-space#lemma-rank-im-dual-transf" >}}) states that $$\dim
   \operatorname{im} T = \dim \operatorname{im} T ^ *$$ and $\dim
   \operatorname{im} T ^ *$ equals the column rank of
 $\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B} ^ *}(T ^ *)$

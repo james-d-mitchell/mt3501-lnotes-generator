@@ -163,8 +163,8 @@ respectively).
 ::: {.defn}
 Let $V = U_{1} \oplus U_{2}$ be a vector space expressed as a direct sum
 of two subspaces. Then the ***projection maps*** $P_{1} :
-    V \to U_1$ and $P_{2} : V \to U_2$ of the direct sum
-$U_{1} \oplus U_{2}$ are defined by
+    V \longrightarrow U_1$ and $P_{2} : V \longrightarrow U_2$ of the
+direct sum $U_{1} \oplus U_{2}$ are defined by
 $$P_{1}(v) = u_{1} \qquad \text{and} \qquad P_{2}(v) = u_{2}.$$ where
 $v\in V$, $u_1\in U_1$, $u_2\in U_2$ and $v = u_1 + u_2$ is the unique
 expression of $v$.
@@ -172,8 +172,8 @@ expression of $v$.
 
 ::: {.lemma}
 []{#lem:proj label="lem:proj"} Let $V = U_{1} \oplus U_{2}$
-be a direct sum of subspaces with projection map $P_{i} : V \to U_i$
-where $i = 1$ or $2$. Then:
+be a direct sum of subspaces with projection map
+$P_{i} : V \longrightarrow U_i$ where $i = 1$ or $2$. Then:
 
 1.  $P_{i}$ is a linear transformation;
 
@@ -214,9 +214,9 @@ $P_1$. On the other hand, if $u\in U_1$ is arbitrary, then $u = P_1(u)$
 The major facts about projections are the following:
 
 ::: {.prop}
-[]{#prop:proj label="prop:proj"} Let $P : V \to V$ be a
-projection corresponding to some direct sum decomposition of the vector
-space $V$. Then
+[]{#prop:proj label="prop:proj"} Let
+$P : V \longrightarrow V$ be a projection corresponding to some direct
+sum decomposition of the vector space $V$. Then
 
 1.  $P^{2} = P$;
 
@@ -226,8 +226,8 @@ space $V$. Then
 
 4.  $V = \ker P \oplus \ker(\operatorname{id}-P)$;
 
-where $\operatorname{id} : V \to V$ denotes the identity transformation
-defined by $\operatorname{id}(v) = v$ for all $v\in V$.
+where $\operatorname{id} : V \longrightarrow V$ denotes the identity
+transformation defined by $\operatorname{id}(v) = v$ for all $v\in V$.
 :::
 
 ::: {.proof}
@@ -241,8 +241,8 @@ $$P_1^{2}(v) = P_1(P_1(v)) = P_1(v)$$ and so $P_1^{2} = P_1$.
 $\operatorname{im} P_1 = U_{1}$, so
 $$V = U_{1} \oplus U_{2} = \operatorname{im} P_1 \oplus \ker P_1.$$
 
-**(3).** Let $P_2 : V \to U_2$ be the projection onto $U_{2}$. If
-$v \in V$, say $v = u_{1}+u_{2}$ where $u_{1} \in
+**(3).** Let $P_2 : V \longrightarrow U_2$ be the projection
+onto $U_{2}$. If $v \in V$, say $v = u_{1}+u_{2}$ where $u_{1} \in
     U_{1}$ and $u_{2} \in U_{2}$, then
 $$P_2(v) = u_{2} = v-u_{1} = v - P_1(v) = (\operatorname{id}-P_1)(v).$$
 Hence $\operatorname{id} - P_1$ is the projection $P_2$.
@@ -268,9 +268,9 @@ $$U_{1} = \operatorname{Span}\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad
     $$\mathbb{R}^{2} = U_{1} \oplus U_{2} \qquad \text{and} \qquad \mathbb{R}^{2} = U_{1}
         \oplus U_{3}.$$
 
-2.  If $P : \mathbb{R}^{2} \to \mathbb{R}^{2}$ is the projection
-    onto $U_{1}$ corresponding to the first decomposition and
-    $Q : \mathbb{R}^{2} \to
+2.  If $P : \mathbb{R}^{2} \longrightarrow\mathbb{R}^{2}$ is the
+    projection onto $U_{1}$ corresponding to the first decomposition and
+    $Q : \mathbb{R}^{2} \longrightarrow
         \mathbb{R}^{2}$ is the projection onto $U_{1}$ corresponding to
     the second decomposition, that $P \neq Q$.
 :::
@@ -323,7 +323,7 @@ where $$\vec{v}_{1} =
 
 1.  Find a subspace $W$ such that $V = U \oplus W$.
 
-2.  Let $P : V \to V$ be the associated projection onto $W$.
+2.  Let $P : V \longrightarrow V$ be the associated projection onto $W$.
     Calculate $P(\vec{u})$ where $$\vec{u} = 
             \begin{pmatrix}
               4 \\
@@ -440,13 +440,385 @@ easily using a Jupyter notebook:
 
     1.  Show that $\mathbb{R}^{4} = U \oplus W$.
 
-    2.  Let $P \colon \mathbb{R}^{4} \to \mathbb{R}^{4}$ be the
-        projection map onto $U$. Calculate $$P \begin{pmatrix}
+    2.  Let $P \colon \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}$ be
+        the projection map onto $U$. Calculate $$P \begin{pmatrix}
                     1 \\
                     0 \\
                     0 \\
                     0 \\
                   \end{pmatrix}.$$
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    1.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        If $\mathscr{B}_1$ and $\mathscr{B}_2$ are bases for $U$ and
+        $W$, respectively, then by
+        [Proposition 6.1.3]({{< ref "06-direct-sums#prop-dirsum-basis" >}}), $\mathbb{R}^{4} =
+          U \oplus W$ if and only if $\mathscr{B}_1 \cup \mathscr{B}_2$
+        is a basis for $\mathbb{R}^{4}$ and
+        $\mathscr{B}_1 \cap \mathscr{B}_2 = \varnothing$.
+
+        Hence to show that $\mathbb{R} ^ 4 = U \oplus W$, it suffices to
+        show that $$\mathscr{B} = \left\{ \begin{pmatrix}
+            3 \\
+            1 \\
+            0 \\
+            4 \\
+          \end{pmatrix}, \begin{pmatrix}
+            1 \\
+            0 \\
+            -2 \\
+            1 \\
+          \end{pmatrix},
+          \begin{pmatrix}
+            0 \\
+            1 \\
+            0 \\
+            -1 \\
+          \end{pmatrix}, \begin{pmatrix}
+            2 \\
+            0 \\
+            0 \\
+            3 \\
+          \end{pmatrix} \right\}$$ is a basis for $\mathbb{R} ^ 4$.
+        Since $|\mathscr{B}| = 4 = \dim \mathbb{R} ^
+          4$, it suffices to show that $\mathscr{B}$ is linearly
+        independent.
+
+        We first show that $\mathscr{B}$ is linearly independent. We
+        solve
+        $$\alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} + \gamma
+        \begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} =
+        \begin{pmatrix}0\\0\\0\\0\end{pmatrix}$$ that is,
+        $$\begin{pmatrix}
+        3 & 1 & 0 & 2 \\
+        1 & 0 & 1 & 0 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{pmatrix}
+        \begin{pmatrix}\alpha\\\beta\\\gamma\\\delta\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.$$
+        We apply the following row operations: $$\begin{aligned}
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        3 & 1 & 0 & 2 \\
+        1 & 0 & 1 & 0 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        3 & 1 & 0 & 2 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array}\right)
+        &&r_{1} \leftrightarrow r_{2} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & -2 & 0 & 0 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&\!\!\!\begin{array}{r@{}l}
+        r_{2} &{} \mapsto r_{2} - 3r_{1} \\
+        r_{4} &{} \mapsto r_{4} - 4r_{1}
+        \end{array} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & 1 & 0 & 0 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \mapsto -{\textstyle\frac{1}{2}}r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{2} \leftrightarrow r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & -3 & 2 \\
+        0 & 0 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&\!\!\!\begin{array}{r@{}l}
+        r_{3} &{} \mapsto r_{3} - r_{2} \\
+        r_{4} &{} \mapsto r_{4} - r_{2}
+        \end{array} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & -3 & 2 \\
+        0 & 0 & 1 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{4} \mapsto r_{4} - 2r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & -1 \\
+        0 & 0 & -3 & 2
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \leftrightarrow r_{4} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & -1 \\
+        0 & 0 & 0 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{4} \mapsto r_{4} + 3r_{3}\end{aligned}$$ Hence the equation
+        above is equivalent to $$\begin{array}{r@{}r@{}r@{}r@{}l}
+        \alpha & &{} + \gamma & &{} = 0 \\
+        & \;\;\beta & & &{} = 0 \\
+        & & \gamma &{} - \delta &{} = 0 \\
+        & & & -\delta &{} = 0
+        \end{array}$$ and we deduce
+        $\alpha = \beta = \gamma = \delta = 0$. We conclude that
+        $\mathscr{B}$ is linearly independent and, since
+        $\dim \mathbb{R}^{4} = 4$, it is therefore a basis
+        for $\mathbb{R}^{4}$.
+
+        Let $\vec{v} \in \mathbb{R}^{4}$. Since
+        $\mathscr{B}$ spans $\mathbb{R}^{4}$, there exist scalars
+        $\alpha$, $\beta$, $\gamma$, $\delta$ such that
+        $$\vec{v} = \left[ \alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta
+          \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} \right] + \left[ \gamma \begin{pmatrix}0\\1\\0\\-1\end{pmatrix}
+          + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} \right] \in U + W.$$
+        Hence $\mathbb{R}^{4} = U+W$.
+
+        Now let $\vec{v} \in U \cap W$. Then
+        $$\vec{v} = \alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} =
+        \gamma \begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix}$$
+        for some $\alpha$, $\beta$, $\gamma$ and $\delta$, and
+        rearranging gives
+        $$\alpha \begin{pmatrix}3\\1\\0\\4\end{pmatrix} + \beta \begin{pmatrix}1\\0\\-2\\1\end{pmatrix} - \gamma
+        \begin{pmatrix}0\\1\\0\\-1\end{pmatrix} - \delta \begin{pmatrix}2\\0\\0\\3\end{pmatrix} = \begin{pmatrix}0\\0\\0\\0\end{pmatrix}.$$
+        As $\mathscr{B}$ is linearly independent, we conclude
+        $\alpha = \beta = -\gamma
+        = -\delta = 0$ and hence $\vec{v} = \vec{0}$. Thus
+        $U \cap W = \{ \vec{0} \}$.
+
+        This shows $\mathbb{R}^{4} = U \oplus W$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    2.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        To calculate $P\begin{pmatrix}
+         1 \\
+         0 \\
+         0 \\
+         0 \\
+         \end{pmatrix}$, we need to write $$\begin{pmatrix}
+         1 \\
+         0 \\
+         0 \\
+         0 \\
+         \end{pmatrix} = \vec{u} + \vec{w}$$ where $\vec{u} \in U$ and
+        $\vec{w} \in W$. We solve $$\alpha \begin{pmatrix}
+         3 \\
+         1 \\
+         0 \\
+         4 \\
+         \end{pmatrix} + \beta \begin{pmatrix}
+         1 \\
+         0 \\
+         -2 \\
+         1 \\
+         \end{pmatrix} + \gamma
+        \begin{pmatrix}
+         0 \\
+         1 \\
+         0 \\
+         -1 \\
+         \end{pmatrix} + \delta \begin{pmatrix}
+         2 \\
+         0 \\
+         0 \\
+         3 \\
+         \end{pmatrix} =
+        \begin{pmatrix}
+         1 \\
+         0 \\
+         0 \\
+         0 \\
+         \end{pmatrix};$$ i.e., $$\begin{pmatrix}
+        3 & 1 & 0 & 2 \\
+        1 & 0 & 1 & 0 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{pmatrix}
+        \begin{pmatrix}
+         \alpha \\
+         \beta \\
+         \gamma \\
+         \delta \\
+         \end{pmatrix} = \begin{pmatrix}
+         1 \\
+         0 \\
+         0 \\
+         0 \\
+         \end{pmatrix}.$$ Again we need to apply row operations (though
+        we could have avoided it by going far enough to calculate the
+        inverse of the above matrix when we performed them the last
+        time): $$\begin{aligned}
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        3 & 1 & 0 & 2 \\
+        1 & 0 & 1 & 0 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{matrix} &
+        \begin{matrix} 1 \\ 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        3 & 1 & 0 & 2 \\
+        0 & -2 & 0 & 0 \\
+        4 & 1 & -1 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{1} \leftrightarrow r_{2} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & -2 & 0 & 0 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&\!\!\!\begin{array}{r@{}l}
+        r_{2} &{} \mapsto r_{2} - 3r_{1} \\
+        r_{4} &{} \mapsto r_{4} - 4r_{1}
+        \end{array} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & 1 & 0 & 0 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 1 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \mapsto -{\textstyle\frac{1}{2}}r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 1 & -3 & 2 \\
+        0 & 1 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 1 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{2} \leftrightarrow r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & -3 & 2 \\
+        0 & 0 & -5 & 3
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 1 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&\!\!\!\begin{array}{r@{}l}
+        r_{3} &{} \mapsto r_{3} - r_{2} \\
+        r_{4} &{} \mapsto r_{4} - r_{2}
+        \end{array} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & -3 & 2 \\
+        0 & 0 & 1 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 1 \\ -2 \end{matrix}
+        \end{array} \right)
+        &&r_{4} \mapsto r_{4} - 2r_{3} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & -1 \\
+        0 & 0 & -3 & 2
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ -2 \\ 1 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \leftrightarrow r_{4} \\
+        %%%%%%%%%%%%%%%%%%%%
+        &\longrightarrow \left( \begin{array}{c|c}
+        \begin{matrix}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & -1 \\
+        0 & 0 & 0 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ -2 \\ -5 \end{matrix}
+        \end{array} \right)
+        &&r_{4} \mapsto r_{4} + 3r_{3}\end{aligned}$$ Hence the equation
+        above is equivalent to $$\begin{array}{r@{}r@{}r@{}r@{}l}
+        \alpha & &{} + \gamma & &{} = 0 \\
+        &\;\; \beta & & &{} = 0 \\
+        & & \gamma &{} - \delta &{} = -2 \\
+        & & & -\delta &{} = -5
+        \end{array}$$ and we deduce $\delta = 5$,
+         $\gamma = -2 + \delta = 3$,  $\beta =
+        0$ and $\alpha = -\gamma = -3$. Hence $$\begin{aligned}
+        \begin{pmatrix}1\\0\\0\\0\end{pmatrix} &= \left[ -3 \begin{pmatrix}3\\1\\0\\4\end{pmatrix} \right] +
+        \left[ 3\begin{pmatrix}0\\1\\0\\-1\end{pmatrix} + 5 \begin{pmatrix}2\\0\\0\\3\end{pmatrix} \right] \\
+        &= \begin{pmatrix}-9\\-3\\0\\-12\end{pmatrix} + \begin{pmatrix}10\\3\\0\\12\end{pmatrix}.\end{aligned}$$
+        The first of these is the $U$-component, the second the
+        $W$-component, so
+        $$P\begin{pmatrix}1\\0\\0\\0\end{pmatrix} = \begin{pmatrix}-9\\-3\\0\\-12\end{pmatrix}.\square$$
     :::
 
 2.  []{#problem-06-02 label="problem-06-02"}
@@ -457,9 +829,27 @@ easily using a Jupyter notebook:
     $\mathscr{B}_{1}$ and $\mathscr{B}_{2}$ be bases for $U$ and $W$,
     respectively.
 
-    What is the matrix of the projection map $P \colon V \to V$ onto $U$
-    with respect to the basis $\mathscr{B}_{1} \cup \mathscr{B}_{2}$
-    for $V$?
+    What is the matrix of the projection map
+    $P \colon V \longrightarrow V$ onto $U$ with respect to the
+    basis $\mathscr{B}_{1} \cup \mathscr{B}_{2}$ for $V$?
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    Let us suppose $\mathscr{B}_{1} = \{ u_{1},u_{2},\dots,u_{m} \}$ is
+    our basis for $U$ and
+    $\mathscr{B}_{2} = \{ w_{1},w_{2},\dots,w_{n} \}$ is our basis
+    for $W$. Then $$\mathscr{B}_{1} \cup \mathscr{B}_{2} = \{
+    u_{1},u_{2},\dots,u_{m},w_{1},w_{2},\dots,w_{n} \}$$ is a basis for
+    $V = U \oplus W$. Let $P \colon V \longrightarrow V$ be the
+    projection onto $U$.
+
+    Since $u_{i} \in U$, the decomposition $u_{i} = u_{i} + \vec{0}$
+    yields $$P(u_{i}) = u_{i},$$ while for $w_{j} \in W$, the
+    decomposition $w_{j} = \vec{0} + w_{j}$ yields
+    $$P(w_{j}) = \vec{0}.$$ The coefficients occurring in these two
+    equations determine the entries of the
+    matrix $\operatorname{Mat}_{}(P)$ with respect to our basis.
     :::
 
 3.  []{#problem-06-03 label="problem-06-03"}
@@ -471,6 +861,41 @@ easily using a Jupyter notebook:
     of $\mathscr{A}$ in $\mathscr{B}$, show that
     $$V = \operatorname{Span}(\mathscr{A}) \oplus
               \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).$$
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    Let $\mathscr{A}$ be a subset of the basis $\mathscr{B}$. Let
+    $\mathscr{A}= \{
+    v_{1},v_{2},\dots,v_{m} \}$ and $\mathscr{B}\setminus\mathscr{A}= \{
+    v_{m+1},\dots,v_{n} \}$. Let
+    $$U = \operatorname{Span}(\mathscr{A}) \qquad \text{and} \qquad W = \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).$$
+
+    Let $v \in V$. Since $\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}$ is
+    a basis, there exist scalars $\alpha_{1}$, $\alpha_{2}$,
+    ..., $\alpha_{n}$ such that $$v = \sum_{i=1}^{n} \alpha_{i} v_{i}.$$
+    Then
+    $$u = \sum_{i=1}^{m} \alpha_{i} v_{i} \in U \qquad \text{and} \qquad w =
+    \sum_{i=m+1}^{n} \alpha_{i} v_{i} \in W$$ with $$v = u+w.$$ We
+    conclude that $V = U+W$ (that is, every vector in $V$ is expressible
+    as the sum of a vector in $U$ and a vector in $W$).
+
+    Now let $v \in U \cap W$. Then as
+    $v \in \operatorname{Span}(\mathscr{A})$, there exist scalars
+    $\beta_{1}$, $\beta_{2}$, ..., $\beta_{m}$ such that
+    $$v = \sum_{i=1}^{m} \beta_{i} v_{i}.$$ Similarly, as
+    $v \in \operatorname{Span}(\mathscr{B}\setminus\mathscr{A})$, there
+    exist scalars $\gamma_{m+1}$, ..., $\gamma_{n}$ such that
+    $$v = \sum_{i=m+1}^{n} \gamma_{i} v_{i}.$$ Rearranging the equation
+    $$v = \sum_{i=1}^{m} \beta_{i} v_{i} = \sum_{i=m+1}^{n} \gamma_{i} v_{i}$$
+    gives
+    $$\sum_{i=1}^{m} \beta_{i} v_{i} + \sum_{i=m+1}^{n} (-\gamma_{i})v_{i} = \vec{0}.$$
+    Since $\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}$ is linearly
+    independent, we conclude
+    $$\beta_{1} = \beta_{2} = \dots = \beta_{m} = \gamma_{m+1} = \dots =
+    \gamma_{n} = 0.$$ Hence
+    $$v = \sum_{i=1}^{m} \beta_{i} v_{i} = \vec{0}.$$ This shows
+    $U \cap W = \{\vec{0}\}$. We conclude $V = U \oplus W$.
     :::
 
 4.  []{#problem-06-04 label="problem-06-04"}
@@ -489,12 +914,81 @@ easily using a Jupyter notebook:
 
     2.  Calculate the matrices of the corresponding projection maps
         $P,Q \colon
-                \mathbb{R}^{3} \to \mathbb{R}^{3}$ onto $U$ and $W$,
-        respectively with respect to the standard basis for
+                \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ onto $U$
+        and $W$, respectively with respect to the standard basis for
         $\mathbb{R}^{3}$.
 
     3.  Check explicitly that $\ker P = W$ and
         $\operatorname{im} P = U$.
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    1.  Let
+        $$W = \operatorname{Span} \left( \begin{pmatrix}0\\1\\0\end{pmatrix},
+          \begin{pmatrix}0\\0\\1\end{pmatrix} \right) = \left\{ \begin{pmatrix}0\\y\\z\end{pmatrix} \biggm|
+          y,z \in \mathbb{R}\right\}.$$ Then clearly
+        $U \cap W = \{\vec{0}\}$ (for if
+        $$\begin{pmatrix}x\\x\\0\end{pmatrix} = \begin{pmatrix}0\\y\\z\end{pmatrix}$$
+        for some $x,y,z \in \mathbb{R}$, then we must have
+        $x = y = z = 0$). An arbitrary vector in $\mathbb{R}^{3}$ can be
+        written
+        $$\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}x\\x\\0\end{pmatrix} + \begin{pmatrix}0\\y-x\\z\end{pmatrix} \in
+        U + W,$$ so we deduce $U+W = \mathbb{R}^{3}$. Hence
+        $\mathbb{R}^{3} = U \oplus W$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    2.  Consider the standard basis
+        $\mathscr{E} = \{ \vec{e}_{1},\vec{e}_{2},\vec{e}_{3} \}$
+        for $\mathbb{R}^{3}$: $$\begin{aligned}
+        \vec{e}_{1} &= \begin{pmatrix}1\\0\\0\end{pmatrix} = \begin{pmatrix}1\\1\\0\end{pmatrix} +
+        \begin{pmatrix}0\\-1\\0\end{pmatrix} \\
+        \vec{e}_{2} &= \begin{pmatrix}0\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} +
+        \begin{pmatrix}0\\1\\0\end{pmatrix} \\
+        \vec{e}_{3} &= \begin{pmatrix}0\\0\\1\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} + \begin{pmatrix}0\\0\\1\end{pmatrix}\end{aligned}$$
+        are the decompositions corresponding to
+        $\mathbb{R}^{3} = U \oplus W$. Hence $$\begin{aligned}
+        P(\vec{e}_{1}) &= \begin{pmatrix}1\\1\\0\end{pmatrix} = \vec{e}_{1} + \vec{e}_{2} & Q(\vec{e}_{1}) &=
+        \begin{pmatrix}0\\-1\\0\end{pmatrix} = -\vec{e}_{2} \\
+        P(\vec{e}_{2}) &= \begin{pmatrix}0\\0\\0\end{pmatrix} = \vec{0} & Q(\vec{e}_{2}) &=
+        \begin{pmatrix}0\\1\\0\end{pmatrix} = \vec{e}_{2} \\
+        P(\vec{e}_{3}) &= \begin{pmatrix}0\\0\\0\end{pmatrix} = \vec{0} & Q(\vec{e}_{3}) &=
+        \begin{pmatrix}0\\0\\1\end{pmatrix} = \vec{e}_{3}.\end{aligned}$$
+        Hence
+        $$\operatorname{Mat}_{\mathscr{E},\mathscr{E}}(P) = \begin{pmatrix}
+        1 & 0 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 0
+        \end{pmatrix}
+        \qquad \text{and} \qquad
+        \operatorname{Mat}_{\mathscr{E},\mathscr{E}}(Q) = \begin{pmatrix}
+        0 & 0 & 0 \\
+        -1 & 1 & 0 \\
+        0 & 0 & 1
+        \end{pmatrix}.\square$$
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    3.  Note $$P\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}
+        1 & 0 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 0
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix}
+        = \begin{pmatrix}x\\x\\0\end{pmatrix},$$ so
+        $$P\begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} \qquad \text{if and only
+          if} \qquad x = 0.$$ Hence
+        $$\ker P = \left\{ \begin{pmatrix}0\\y\\z\end{pmatrix} \biggm| y,z \in \mathbb{R}\right\} = W.$$
+        Also
+        $$\operatorname{im}P = \left\{ P\begin{pmatrix}x\\y\\z\end{pmatrix} \biggm| \begin{pmatrix}x\\y\\z\end{pmatrix} \in
+          \mathbb{R}^{3} \right\} = \left\{ \begin{pmatrix}x\\x\\0\end{pmatrix} \biggm| x \in \mathbb{R}\right\}
+        = U.\square$$
     :::
 
 5.  []{#problem-06-05 label="problem-06-05"}
@@ -508,14 +1002,26 @@ easily using a Jupyter notebook:
     \[Hint: Extend a basis for $U$ to a basis for $V$.\]
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    Let $\mathscr{A}= \{ u_{1},u_{2},\dots,u_{m} \}$ be a basis for $U$.
+    Since $\mathscr{A}$ is linearly independent, we can extend it to a
+    basis $\mathscr{B}= \{
+    u_{1},u_{2},\dots,u_{m},v_{m+1},\dots,v_{n} \}$ for $V$. Let
+    $$W = \operatorname{Span}(v_{m+1},\dots,v_{n}) = \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).$$
+    Then by Question 3,
+    $$V = \operatorname{Span}(A) \oplus \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}) = U \oplus W. \square$$
+    :::
+
 6.  []{#problem-06-06 label="problem-06-06"}
 
     ::: {.question}
-    A linear transformation $T \colon V \to V$ is called *idempotent* if
-    $T^{2} = T$; that is, if
+    A linear transformation $T \colon V \longrightarrow V$ is called
+    *idempotent* if $T^{2} = T$; that is, if
     $$T(T(v)) = T(v) \qquad \text{for all $v \in V$}.$$
 
-    Let $T \colon V \to V$ be an idempotent linear transformation.
+    Let $T \colon V \longrightarrow V$ be an idempotent linear
+    transformation.
 
     1.  Show that $v-T(v)$ lies in the kernel of $T$ for all $v \in V$.
 
@@ -532,15 +1038,88 @@ easily using a Jupyter notebook:
         maps are precisely the same things.
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    1.  $$\begin{aligned}
+              T\bigl(v-T(v)\bigr) &= T(v) - T(T(v)) &&\text{(by linearity)} \\
+                                  &= T(v) - T^{2}(v) && \\
+                                  &= T(v) - T(v) &&\text{(by assumption)} \\
+                                  &= \vec{0} \\
+            \end{aligned}$$ Therefore $v-T(v) \in \ker T$ for all
+        $v \in V$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    2.  If $v \in V$, then $$v = \bigl( v-T(v) \bigr) + T(v)$$ and here
+        $v-T(v) \in \ker T$ and $T(v) \in \operatorname{im}T$. Hence
+        $v \in \ker
+            T + \operatorname{im}T$ for all $v \in V$ and we conclude
+        $V = \ker T + \operatorname{im}T$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    3.  Let $v \in \ker T \cap \operatorname{im}T$. Then $v = T(u)$ for
+        some $u \in V$ because $v \in \operatorname{im}T$. Now, as
+        $v \in \ker T$,
+        $$\vec{0} = T(v) = T(T(u)) = T^{2}(u) = T(u) = v.$$ Hence
+        $\ker T \cap \operatorname{im}T = \{\vec{0}\}$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    4.  Let $v \in V = \ker T \oplus \operatorname{im}T$. The associated
+        decomposition of $v$ is given by the equation in the solution to
+        Problem [6]({{< ref "06-direct-sums#problem-06-06" >}})(b) above:
+        $$v = \bigl( v - T(v) \bigr) + T(v).$$ Hence $P(v) = T(v)$ for
+        all $v \in V$ and therefore $P = T$.
+
+        ::: {.center}
+
+        ------------------------------------------------------------------------
+        :::
+
+    5.  We have observed in lectures that if $P$ is a projection map,
+        then $P^{2} =
+          P$, that is, $P$ is idempotent. On the other hand, if $T$ is
+        an idempotent linear transformation then part (d) tells us that
+        $T$ is one of the projection maps associated with the direct sum
+        decomposition $V = \ker T
+          \oplus \operatorname{im}T$.
+    :::
+
 7.  []{#problem-06-07 label="problem-06-07"}
 
     ::: {.question}
-    Let $T \colon V \to V$ be an idempotent linear transformation. Prove
-    directly from the definition that $\operatorname{id} - T$ is also an
-    idempotent transformation.
+    Let $T \colon V \longrightarrow V$ be an idempotent linear
+    transformation. Prove directly from the definition that
+    $\operatorname{id} - T$ is also an idempotent transformation.
 
-    \[Here $\operatorname{id} \colon V \to V$ is the identity map. By
-    "directly from the definition", I mean that you should not use the
-    fact that idempotent transformations and projection maps are
-    precisely the same objects.\]
+    \[Here $\operatorname{id} \colon V \longrightarrow V$ is the
+    identity map. By "directly from the definition", I mean that you
+    should not use the fact that idempotent transformations and
+    projection maps are precisely the same objects.\]
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    If $v \in V$, then $$\begin{aligned}
+        (\operatorname{id}-T)^{2}(v) &= (\operatorname{id}-T)(\operatorname{id}-T)(v) \\
+        &= (\operatorname{id}-T)(v - T(v)) \\
+        &= v-T(v) - T(v-T(v)) \\
+        &= v - T(v) - T(v) + T^{2}(v) \\
+        &= v - 2T(v) + T^{2}(v) \\
+        &= v - 2T(v) + T(v) &&\text{(as $T^{2} = T$)} \\
+        &= v - T(v) \\
+        &= (\operatorname{id}-T)(v).
+      \end{aligned}$$ Hence
+    $(\operatorname{id}-T)^{2} = \operatorname{id}-T$, so
+    $\operatorname{id}-T$ is indeed idempotent.
     :::

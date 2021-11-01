@@ -338,7 +338,7 @@ $\lambda \in F$. We define
 $$W = \operatorname{im} (T - \lambda \operatorname{id}),$$ where
 $\operatorname{id}: V\to V$ is the identity linear transformation. If
 $v\in
-  V\setminus \{\vec{0}\}$ is the eigenvector with eigenvalue $\lambda$,
+  V\setminus \{\vec{0}\}$ is an eigenvector with eigenvalue $\lambda$,
 then $v\in\ker(T - \lambda \operatorname{id})$ (the eigenspace of
 $\lambda$). Hence $\dim\ker(T
   - \lambda \operatorname{id}) > 0$ and so, by the Rank-Nullity Theorem

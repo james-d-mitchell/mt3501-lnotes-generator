@@ -542,8 +542,30 @@ of $V$ (and hence satisfies all three conditions):
 vectors in a vector space $V$, and $\mathscr{C}$ is a linearly
 independent subset of $\mathscr{A}$, then there exists a basis
 $\mathscr{B}$ for $\operatorname{Span}(\mathscr{A})$ such that
-$\mathscr{C}\subseteq
-  \mathscr{B}$.
+$\mathscr{C}\subseteq \mathscr{B}$.
+:::
+
+::: {.proof}
+*Proof.* We will prove the theorem under the assumption that $V$ is a
+finite dimensional vector space. The theorem holds for infinite
+dimensional vector spaces also but the proof requires something called
+Zorn's Lemma, which is beyond the scope of this course.
+
+If there exists $v_1\in \mathscr{A}$ such that $v_1\not\in
+  \operatorname{Span}(\mathscr{C})$, then $\mathscr{C}\cup \{v_1\}$ is
+linearly independent (by
+[Lemma 2.4.2]({{< ref "02-vector-spaces#cor-dep-lincomb" >}})). We can repeatedly apply this argument
+(replacing $\mathscr{C}$ by $\mathscr{C}\cup \{v_1\}$, then by
+$\mathscr{C}\cup \{v_1, v_2\}$ and so on) until every vector in
+$\mathscr{A}$ belongs to the space spanned by the linearly independent
+set $\mathscr{C}\cup
+  \{v_1, \ldots, v_n\}\subseteq \mathscr{A}$. This must happen after
+finitely many repeats because $\mathscr{A}$ is finite. At this point
+$\mathscr{C}\cup \{v_1, \ldots, v_n\}$ is a linearly independent
+spanning set for $\operatorname{Span}(\mathscr{A})$ and so
+$\mathscr{C}\cup \{v_1, \ldots, v_n\}$ is a basis for
+$\operatorname{Span}(\mathscr{A})$ by
+[Theorem 2.4.8]({{< ref "02-vector-spaces#thm-3-conditions" >}}). ◻
 :::
 
 ::: {.cor}
@@ -552,15 +574,33 @@ $\mathscr{A}$ is a subset of a vector space $V$, then $\mathscr{A}$
 contains a basis for $\operatorname{Span}(\mathscr{A})$.
 :::
 
+::: {.proof}
+*Proof.* If $\mathscr{C} = \varnothing$, then $\mathscr{C}$ is linearly
+independent and $\mathscr{C}$ is contained in $\mathscr{A}$. It follows
+by
+[Theorem 2.4.9]({{< ref "02-vector-spaces#thm-new-linear-indep" >}}) that there exists a basis
+$\mathscr{B}$ for $\operatorname{Span}(\mathscr{A})$ contained in
+$\mathscr{A}$. ◻
+:::
+
 [Corollary 2.4.10]({{< ref "02-vector-spaces#thm-basis-subset" >}}) implies that you can go from a spanning
 set to a linearly independent spanning set by omitting the correct
 choice of vectors.
 
 ::: {.cor}
 []{#prop-extension label="prop-extension"} If
-$\mathscr{A}$ is a linearly independent subset of a vector space $V$,
-then there exists a basis $\mathscr{B}$ for $V$ such that
-$\mathscr{A} \subseteq \mathscr{B}$.
+$\mathscr{C}$ is a linearly independent subset of a vector space $V$,
+then there exists a basis $\mathscr{B}$ for $V$ such that $\mathscr{C}
+  \subseteq \mathscr{B}$.
+:::
+
+::: {.proof}
+*Proof.* If $\mathscr{A}$ is any spanning set for $V$ that contains
+$\mathscr{C}$ ($V$ is an example of such a spanning set), then there
+exists a basis $\mathscr{B}$ for $\operatorname{Span}(\mathscr{A}) = V$
+such that $\mathscr{C}\subseteq
+  \mathscr{B}$ by
+[Corollary 2.4.10]({{< ref "02-vector-spaces#thm-basis-subset" >}}). ◻
 :::
 
 ::: {.omittedexampjupyter}

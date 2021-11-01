@@ -1663,8 +1663,7 @@ easily using a Jupyter notebook:
         $$\vec{v} \mapsto A\vec{v} \qquad \text{for $\vec{v} \in F^{n}$.}$$
 
         Show that the matrix of this linear transformation with respect
-        to the standard bases of $F^{n}$ and $F^{m}$ is given by
-        $\operatorname{Mat}{A} = A$.
+        to the standard bases of $F^{n}$ and $F^{m}$ is $A$.
 
     2.  Now consider any linear transformation
         $T \colon F^{n} \longrightarrow
@@ -1694,6 +1693,23 @@ easily using a Jupyter notebook:
 
         \[Alternatively, this could all be done extremely quickly by
         simply quoting standard facts about matrix multiplication.\]
+
+        It remains to show that the matrix $\operatorname{Mat}_{}(T)$ of
+        the linear transformation $T: F
+        ^ n \longrightarrow F ^ m$ defined by $T(\vec{v}) = A \vec{v}$
+        is $A$. If $\vec{e}_i$ is the $i$-th standard basis vector for
+        $F ^ n$, then the $i$-th column of $\operatorname{Mat}_{}(T)$
+        consists of the coefficients of the standard basis vectors for
+        $F ^ m$ in the unique linear combination that equals
+        $T(\vec{e}_i)$. But $T(\vec{e}_i)$ is $$Ae_i = \begin{pmatrix}
+                   \alpha_{1i} \\
+                   \alpha_{2i} \\
+                   \vdots \\
+                   \alpha_{mi} \\
+                 \end{pmatrix}$$ which is precisely the $i$-th column of
+        $A$. Hence every column of $\operatorname{Mat}_{}(T)$ equals the
+        corresponding column of $A$, and so
+        $\operatorname{Mat}_{}(T) = A$.
 
         ::: {.center}
 
