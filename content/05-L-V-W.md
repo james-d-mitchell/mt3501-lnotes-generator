@@ -166,14 +166,14 @@ Problem [1]({{< ref "02-vector-spaces#problem-02-01" >}}) in
         0 & 0 & 1 \\
       \end{pmatrix}
     \end{array}
-    \right\}$$ is a basis for $M_{3, 2}(\mathbb{R})$.
+    \right\}$$ is a basis for $M_{2, 3}(\mathbb{R})$.
 :::
 
 ::: {.solution}
-It suffices to show that $\mathscr{F}$ is a spanning set for $M_{3,
-  2}(\mathbb{R})$ and that $\mathscr{F}$ is linearly independent.
+It suffices to show that $\mathscr{F}$ is a spanning set for $M_{2,
+  3}(\mathbb{R})$ and that $\mathscr{F}$ is linearly independent.
 
-If $A = [\alpha_{ij}] \in M_{3, 2}(\mathbb{R})$ is any matrix, then
+If $A = [\alpha_{ij}] \in M_{2, 3}(\mathbb{R})$ is any matrix, then
 $$\begin{aligned}
     A & = & \begin{pmatrix}
       \alpha_{11} & \alpha_{12} & \alpha_{13} \\
@@ -248,7 +248,7 @@ $$\begin{pmatrix}
     \end{pmatrix}$$ and so
 $\beta_{11} = \beta_{12} = \beta_{13} = \beta_{21} = \beta_{22} =
     \beta_{23} = 0$. Therefore $\mathscr{F}$ is linear independent, and
-hence a basis for $M_{3, 2}(\mathbb{R})$.
+hence a basis for $M_{2, 3}(\mathbb{R})$.
 :::
 
 ::: {.thm}

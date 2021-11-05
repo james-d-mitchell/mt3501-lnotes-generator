@@ -337,34 +337,35 @@ $F$ is algebraically closed, it follows from
 $\lambda \in F$. We define
 $$W = \operatorname{im} (T - \lambda \operatorname{id}),$$ where
 $\operatorname{id}: V\to V$ is the identity linear transformation. If
-$v\in
-  V\setminus \{\vec{0}\}$ is an eigenvector with eigenvalue $\lambda$,
-then $v\in\ker(T - \lambda \operatorname{id})$ (the eigenspace of
-$\lambda$). Hence $\dim\ker(T
-  - \lambda \operatorname{id}) > 0$ and so, by the Rank-Nullity Theorem
+$v\in V\setminus \{\vec{0}\}$ is an eigenvector with eigenvalue
+$\lambda$, then $v\in\ker(T - \lambda \operatorname{id})$ (the
+eigenspace of $\lambda$). Hence
+$\dim\ker(T - \lambda \operatorname{id}) > 0$ and so, by the
+Rank-Nullity Theorem
 ([Theorem 4.1.7]({{< ref "04-linear-transf#thm-rank-nullity" >}})),
-$$\dim W = \dim \operatorname{im} (T - \lambda \operatorname{id}) = \dim V - \dim \ker(T - \lambda \operatorname{id})  < \dim V.$$
-To apply the inductive hypothesis, we require a linear transformation
-from $W$ to $W$. If $w\in W$, then
-$T(w) = (T- \lambda \operatorname{id})(w) + \lambda w$ and since
-$(T- \lambda \operatorname{id})(w)
-  \in \operatorname{im} (T- \lambda \operatorname{id}) = W$ and
-$\lambda w \in W$, it follows that $T(w)
-  \in W$. If we define $S : W \to W$ by $S(w) = T(w)$ for all $w\in W$,
-then $S$ is a linear transformation.
+$$\dim W = \dim \operatorname{im} (T - \lambda \operatorname{id}) = \dim V -
+    \dim \ker(T - \lambda \operatorname{id})  < \dim V.$$ To apply the
+inductive hypothesis, we require a linear transformation from $W$ to
+$W$. If $w\in W$, then $T(w) = (T- \lambda \operatorname{id})(w) +
+  \lambda w$ and since $(T- \lambda \operatorname{id})(w) \in
+  \operatorname{im} (T- \lambda \operatorname{id}) = W$ and
+$\lambda w \in W$, it follows that $T(w) \in W$. If we define
+$S : W \to W$ by $S(w) = T(w)$ for all $w\in W$, then $S$ is a linear
+transformation.
 
-Hence, by the inductive hypothesis, there exists a basis
-$\mathscr{C} = \{w_1, w_2, \ldots, w_m\}$ for $W$ such that
+Hence, by the inductive hypothesis, there exists a basis $\mathscr{C} =
+  \{w_1, w_2, \ldots, w_m\}$ for $W$ such that
 $\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(S)$ is upper triangular.
 In particular, by
 [Lemma 8.3.3]({{< ref "08-eigen-stuff#lemma-upper-triangular" >}}), $T(w_i) = S(w_i) \in
   \operatorname{Span}(w_1, \ldots, w_i)$ for all $w_i\in \mathscr{C}$.
 If we extend $\mathscr{C}$ to a basis
-$\mathscr{B} = \{v_1 = w_1, v_2 = w_2, \ldots, v_m = w_m,
-  v_{m + 1}, \ldots, v_n\}$ for $V$, then, for every
-$i\in \{m + 1, \ldots,
-  n\}$, $$T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i.$$
-Certainly,
+$\mathscr{B} = \{v_1 = w_1, v_2 = w_2,
+    \ldots, v_m = w_m, v_{m + 1}, \ldots, v_n\}$ for $V$, then, for
+every $i\in
+    \{1, \ldots, n\}$,
+$$T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i.$$ Hence
+if $i\in \{1, \ldots, n\}$ is arbitrary, then
 $$(T - \lambda \operatorname{id})(v_i) \in \operatorname{im} (T - \lambda\operatorname{id}) = W = \operatorname{Span}(w_1,
     \ldots, w_m) = \operatorname{Span}(v_1, \ldots, v_m)$$ and so
 $$T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i 
@@ -385,7 +386,7 @@ result nor the proof is constructive. In other words, neither the
 theorem nor its proof says how to find such an upper triangular matrix
 (at least not in an easy to compute way).
 
-## The Cayley--Hamilton Theorem
+## The Cayley-Hamilton Theorem
 
 The subject of this section is the following theorem.
 
@@ -435,40 +436,40 @@ $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ by $A =
 [Proposition 8.3.2]({{< ref "08-eigen-stuff#prop-upper-triangular-good" >}})(4),
 $$c_T(x) = (x - \alpha_{11})(x - \alpha_{22})\cdots (x - \alpha_{nn}).$$
 If we substitute $T$ for $x$ in the previous equation, we obtain
-$$c_T(T) = (T - \alpha_{11}\operatorname{id})(T - \alpha_{22}\operatorname{id})\cdots (T - \alpha_{nn}\operatorname{id}).$$
+$$c_T(T) = (T - \alpha_{11}\operatorname{id})(T -
+    \alpha_{22}\operatorname{id})\cdots (T - \alpha_{nn}\operatorname{id}).$$
 So, $c_T(T)$ is itself a linear transformation from $V$ to $V$ (as a
 composite of the linear transformations
 $T - \alpha_{ii}\operatorname{id}$).
 
 We define $W_0 = \{\vec{0}\}$ and
 $W_k = \operatorname{Span}(w_1, \ldots,
-  w_k)$ for $k \in \{1, \ldots, n\}$. Note that
+  w_k)$ for every $k \in \{1, \ldots, n\}$. Note that
 $$W_0 \subseteq W_1 \subseteq W_2\subseteq \cdots \subseteq W_n.$$ Since
 $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is upper triangular,
-and by the definition of
-$\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$, it follows that
+[Lemma 8.3.3]({{< ref "08-eigen-stuff#lemma-upper-triangular" >}}) implies that
 $$\label{eq-proof-of-ch}
     T(w_i) = \alpha_{1i}w_1 + \alpha_{2i}w_2 + \cdots + \alpha_{ii}w_i \in
     \operatorname{Span}(w_1, w_2, \ldots, w_i) = W_i$$ for every
 $i\in \{1, \ldots, n\}$.
 
 We will show that
-$(T- \alpha_{kk} \operatorname{id})(W_k) \subseteq W_{k - 1}$ for all
-$k$.
+$(T- \alpha_{kk} \operatorname{id})(W_k) \subseteq W_{k -
+  1}$ for all $k$.
 
 Suppose that $w_k\in \mathscr{B}$ is arbitrary. Then $$\begin{aligned}
     (T- \alpha_{kk}\operatorname{id})(w_k) &= T(w_k) - \alpha_{kk}w_k \\
                              &= \alpha_{1k}w_1  + \cdots + \alpha_{k-1\ k}w_{k -
                              1} + \alpha_{kk}w_k - \alpha_{kk}w_k\\
                              &= \alpha_{1k}w_1  + \cdots + \alpha_{k-1\ k}w_{k
-                             - 1} \in \operatorname{Span}(w_1, \ldots, w_{k -1}) = W_{k -1}.
+                             - 1} \in \operatorname{Span}(w_1, \ldots, w_{k
+                           -1}) = W_{k -1}.
   \end{aligned}$$ On the other hand, if $j \in \{1, \ldots, k - 1\}$,
 then $$(T- \alpha_{kk}\operatorname{id})(w_j) = T(w_j) - \alpha_{kk}w_j 
                              = \alpha_{1j}w_1  + \cdots + \alpha_{jj}w_j -
-                             \alpha_{kk}w_j
-                             \in \operatorname{Span}(w_1, \ldots, w_{j}) = W_{j} \subseteq
-                             W_{k -1}.$$ Hence
-$(T- \alpha_{kk}\operatorname{id})(w_j)\in W_{k - 1}$ for all
+                             \alpha_{kk}w_j \in \operatorname{Span}(w_1,
+                             \ldots, w_{j}) = W_{j} \subseteq W_{k -1}.$$
+Hence $(T- \alpha_{kk}\operatorname{id})(w_j)\in W_{k - 1}$ for all
 $j\in \{1, \ldots, k\}$ and for all $k \in \{1, \ldots,
  n\}$.
 

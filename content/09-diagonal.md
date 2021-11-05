@@ -207,16 +207,16 @@ $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = A =
 $\lambda_{1},\lambda_{2},\dots,\lambda_{n} \in F$ (possibly including
 repeats). The characteristic polynomial of $T$ does not depend on the
 choice of basis
-([Proposition 8.2.4]({{< ref "08-eigen-stuff#prop-char-poly-indep" >}})), so $$\begin{aligned}
-    c_{T}(x) = \det(xI-A) & = \det 
+([Proposition 8.2.4]({{< ref "08-eigen-stuff#prop-char-poly-indep" >}})), so $$c_{T}(x) 
+    = \det(xI-A) 
+    = \det 
     \begin{pmatrix}
       x - \lambda_{1} & 0              & \cdots & 0\\
       0               & x- \lambda_{2} & \cdots & 0 \\
       \vdots          & \vdots         & \ddots & \vdots \\
       0               & 0              & \cdots & x- \lambda_{n}
     \end{pmatrix}
-                          & = (x-\lambda_{1})(x-\lambda_{2}) \cdots (x-\lambda_{n}).
-  \end{aligned}$$ ◻
+    = (x-\lambda_{1})(x-\lambda_{2}) \cdots (x-\lambda_{n}). \square$$ ◻
 :::
 
 If $T: V\to V$ is diagonalisable, then its characteristic polynomial is
@@ -414,7 +414,7 @@ at most $n ^
 $$f(x) = x^{k} + \alpha_{k-1} x^{k-1} + \dots + \alpha_{1} x +
     \alpha_{0} \qquad \text{and} \qquad
     g(x) = x^{k} + \beta_{k-1} x^{k-1} + \dots + \beta_{1} x + \beta_{0}$$
-are polynomials of the least degree such that $f(T) =
+are monic polynomials of the least degree such that $f(T) =
     g(T) = \vec{0}_{\mathcal{L}(V, V)}$. If $f \not=g$, then
 $$h(x) = f(x) - g(x) = (\alpha_{k-1} - \beta_{k-1})x^{k-1} + \dots +
     (\alpha_{1} - \beta_{1}) x + (\alpha_{0} - \beta_{0})$$ is a
