@@ -5,9 +5,9 @@
 
 ::: {.defn}
 []{#defn-eigen label="defn-eigen"} Let $V$ be a vector
-space over a field $F$ and let $T : V \to V$ be a linear transformation.
-A *non-zero* vector $v$ is an ***eigenvector*** for $T$ with
-*eigenvalue* $\lambda \in
+space over a field $F$ and let $T : V \longrightarrow V$ be a linear
+transformation. A *non-zero* vector $v$ is an ***eigenvector*** for $T$
+with *eigenvalue* $\lambda \in
   F$ if $$T(v) = \lambda v.$$
 :::
 
@@ -16,15 +16,15 @@ $\lambda \in F$, which is why $v$ is non-zero in
 [Definition 8.1.1]({{< ref "08-eigen-stuff#defn-eigen" >}}).
 
 ::: {.defn}
-Let $V$ be a vector space over a field $F$, let $T : V \to V$ be a
-linear transformation, and $\lambda \in F$. The ***eigenspace***
-corresponding to the eigenvalue $\lambda$ is the subspace
-$$\begin{aligned}
-    E_{\lambda} = \ker(T-\lambda \operatorname{id}) 
-    & = \{v \in V : T(v) - \lambda v = \vec{0}\}                                                                \\
+Let $V$ be a vector space over a field $F$, let
+$T : V \longrightarrow V$ be a linear transformation, and
+$\lambda \in F$. The ***eigenspace*** corresponding to the
+eigenvalue $\lambda$ is the subspace $$\begin{aligned}
+    E_{\lambda} = \ker(T-\lambda \operatorname{id})
+    & = \{v \in V : T(v) - \lambda v = \vec{0}\}  \\
                                     & = \{v \in V : T(v) = \lambda v\},
-  \end{aligned}$$ where $\operatorname{id}: V \to V$ is the identity
-transformation. In other words, the eigenspace of an eigenvalue
+  \end{aligned}$$ where $\operatorname{id}: V \longrightarrow V$ is the
+identity transformation. In other words, the eigenspace of an eigenvalue
 $\lambda$ is the subspace of $V$ consisting of all of the eigenvectors
 for $\lambda$ and the zero vector $\vec{0}_V$.
 :::
@@ -36,35 +36,37 @@ $E_{\lambda}=\ker(T-\lambda I)$ is a subspace of $V$ by
 ## Characteristic polynomial
 
 ::: {.defn}
-Let $T : V \to V$ be a linear transformation of the finite-dimensional
-vector space $V$ (over $F$) and let $A$ be the matrix of $T$ with
-respect to some basis. The ***characteristic polynomial*** of $T$ is
-$$c_{T}(x) = \det(xI-A)$$ where $x$ is an indeterminate variable.
+Let $T : V \longrightarrow V$ be a linear transformation of the
+finite-dimensional vector space $V$ (over $F$) and let $A$ be the matrix
+of $T$ with respect to some basis. The ***characteristic polynomial***
+of $T$ is $$c_{T}(x) = \det(xI-A)$$ where $x$ is an indeterminate
+variable.
 :::
 
 ::: {.prop}
-[]{#prop-eigenvalue-root label="prop-eigenvalue-root"} Suppose that $T : V \to V$ is a linear
-transformation of the finite-dimensional vector space $V$ over $F$. Then
-$\lambda$ is an eigenvalue of $T$ if and only if $\lambda$ is a root of
-the characteristic polynomial of $T$.
+[]{#prop-eigenvalue-root label="prop-eigenvalue-root"} Suppose that $T : V \longrightarrow V$ is
+a linear transformation of the finite-dimensional vector space $V$
+over $F$. Then $\lambda$ is an eigenvalue of $T$ if and only if
+$\lambda$ is a root of the characteristic polynomial of $T$.
 :::
 
 ::: {.cor}
-Suppose that $T : V \to V$ is a linear transformation of the
+Suppose that $T : V \longrightarrow V$ is a linear transformation of the
 finite-dimensional vector space $V$ over $\mathbb{C}$. Then $T$ has at
 least one eigenvalue $\lambda \in \mathbb{C}$.
 :::
 
-The characteristic polynomial of a linear transformation $T:V \to V$ is
-defined in terms of a matrix $A$ for $T$, and the matrix depends on a
-particular choice of bases for $V$. Hence it appears that the
-characteristic polynomial of $T$ depends on the choice of bases for $V$.
+The characteristic polynomial of a linear transformation
+$T:V \longrightarrow V$ is defined in terms of a matrix $A$ for $T$, and
+the matrix depends on a particular choice of bases for $V$. Hence it
+appears that the characteristic polynomial of $T$ depends on the choice
+of bases for $V$.
 
 ::: {.prop}
 []{#prop-char-poly-indep label="prop-char-poly-indep"} Let $V$ be a finite-dimensional vector
-space $V$ over $F$ and $T : V \to V$ be a linear transformation. The
-characteristic polynomial $c_{T}(x)$ is independent of the choice of
-basis for $V$.
+space $V$ over $F$ and $T : V \longrightarrow V$ be a linear
+transformation. The characteristic polynomial $c_{T}(x)$ is independent
+of the choice of basis for $V$.
 :::
 
 ::: {.proof}
@@ -89,9 +91,10 @@ eigenvalues of a linear transformation, or matrix. These tricks are
 primarily intended for when you might want to find the eigenvalues of a
 linear transformation by hand.
 
-Throughout this section we suppose that $T : V\to V$ is a linear
-transformation from an $n$-dimensional vector space $V$ to itself, and
-that $A$ is the matrix of $T$ with respect to some bases for $V$.
+Throughout this section we suppose that $T : V\longrightarrow V$ is a
+linear transformation from an $n$-dimensional vector space $V$ to
+itself, and that $A$ is the matrix of $T$ with respect to some bases for
+$V$.
 
 Here are some definitions.
 
@@ -142,8 +145,8 @@ Tricks:
 
 ::: {.example}
 []{#ex-no-eigenvalues label="ex-no-eigenvalues"}
-Suppose that $T: \mathbb{R} ^ 2 \to \mathbb{R} ^ 2$ is a linear
-transformation with matrix $$A =
+Suppose that $T: \mathbb{R} ^ 2 \longrightarrow\mathbb{R} ^ 2$ is a
+linear transformation with matrix $$A =
     \begin{pmatrix}
       1 & -2 \\
       2 & 0
@@ -282,10 +285,10 @@ Here's why upper triangular matrices are a good thing.
 
 ::: {.prop}
 []{#prop-upper-triangular-good label="prop-upper-triangular-good"} Let $V$ be an $n$-dimensional vector
-space over an algebraically closed field $F$, let $T : V\to V$ be a
-linear transformation, and let $A = [\alpha_{ij}]$ be an upper
-triangular matrix for $T$ with respect to some basis for $V$. Then the
-following hold:
+space over an algebraically closed field $F$, let
+$T : V\longrightarrow V$ be a linear transformation, and let
+$A = [\alpha_{ij}]$ be an upper triangular matrix for $T$ with respect
+to some basis for $V$. Then the following hold:
 
 1.  $\det(A) = \alpha_{11}\alpha_{22} \cdots \alpha_{nn}$;
 
@@ -302,7 +305,7 @@ In other words, upper triangular matrices are [nice]{.sans-serif}.
 :::
 
 ::: {.lemma}
-[]{#lemma-upper-triangular label="lemma-upper-triangular"} Let $T: V \to V$ be a linear
+[]{#lemma-upper-triangular label="lemma-upper-triangular"} Let $T: V \longrightarrow V$ be a linear
 transformation and let $\mathscr{B} = \{v_1,
   v_2, \ldots, v_n\}$ be a basis for $V$. Then
 $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is upper triangular
@@ -319,10 +322,10 @@ $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$. ◻
 
 ::: {.thm}
 []{#cor:quotient:triangular label="cor:quotient:triangular"} Let $V$ be an $n$-dimensional vector
-space over an algebraically closed field $F$, and let $T : V\to V$ be a
-linear transformation. Then there is a basis $\mathscr{B}$ of $V$ so
-that $\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)$ is upper
-triangular.
+space over an algebraically closed field $F$, and let
+$T : V\longrightarrow V$ be a linear transformation. Then there is a
+basis $\mathscr{B}$ of $V$ so that
+$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)$ is upper triangular.
 :::
 
 ::: {.proof}
@@ -336,10 +339,10 @@ $F$ is algebraically closed, it follows from
 [Proposition 8.2.2]({{< ref "08-eigen-stuff#prop-eigenvalue-root" >}}) that $T$ has an eigenvalue
 $\lambda \in F$. We define
 $$W = \operatorname{im} (T - \lambda \operatorname{id}),$$ where
-$\operatorname{id}: V\to V$ is the identity linear transformation. If
-$v\in V\setminus \{\vec{0}\}$ is an eigenvector with eigenvalue
-$\lambda$, then $v\in\ker(T - \lambda \operatorname{id})$ (the
-eigenspace of $\lambda$). Hence
+$\operatorname{id}: V\longrightarrow V$ is the identity linear
+transformation. If $v\in V\setminus \{\vec{0}\}$ is an eigenvector with
+eigenvalue $\lambda$, then $v\in\ker(T - \lambda \operatorname{id})$
+(the eigenspace of $\lambda$). Hence
 $\dim\ker(T - \lambda \operatorname{id}) > 0$ and so, by the
 Rank-Nullity Theorem
 ([Theorem 4.1.7]({{< ref "04-linear-transf#thm-rank-nullity" >}})),
@@ -350,24 +353,30 @@ $W$. If $w\in W$, then $T(w) = (T- \lambda \operatorname{id})(w) +
   \lambda w$ and since $(T- \lambda \operatorname{id})(w) \in
   \operatorname{im} (T- \lambda \operatorname{id}) = W$ and
 $\lambda w \in W$, it follows that $T(w) \in W$. If we define
-$S : W \to W$ by $S(w) = T(w)$ for all $w\in W$, then $S$ is a linear
-transformation.
+$S : W \longrightarrow W$ by $S(w) = T(w)$ for all $w\in W$, then $S$ is
+a linear transformation.
 
 Hence, by the inductive hypothesis, there exists a basis $\mathscr{C} =
   \{w_1, w_2, \ldots, w_m\}$ for $W$ such that
 $\operatorname{Mat}_{\mathscr{C}, \mathscr{C}}(S)$ is upper triangular.
-In particular, by
-[Lemma 8.3.3]({{< ref "08-eigen-stuff#lemma-upper-triangular" >}}), $T(w_i) = S(w_i) \in
-  \operatorname{Span}(w_1, \ldots, w_i)$ for all $w_i\in \mathscr{C}$.
-If we extend $\mathscr{C}$ to a basis
-$\mathscr{B} = \{v_1 = w_1, v_2 = w_2,
-    \ldots, v_m = w_m, v_{m + 1}, \ldots, v_n\}$ for $V$, then, for
-every $i\in
-    \{1, \ldots, n\}$,
-$$T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i.$$ Hence
-if $i\in \{1, \ldots, n\}$ is arbitrary, then
-$$(T - \lambda \operatorname{id})(v_i) \in \operatorname{im} (T - \lambda\operatorname{id}) = W = \operatorname{Span}(w_1,
-    \ldots, w_m) = \operatorname{Span}(v_1, \ldots, v_m)$$ and so
+Since $\mathscr{C}$ is a linearly independent subset of $V$, we can
+extend $\mathscr{C}$ to a basis $\mathscr{B} = \{v_1 = w_1, v_2 = w_2,
+    \ldots, v_m = w_m, v_{m + 1}, \ldots, v_n\}$ for $V$. We will show
+that $T(v_i) \in \operatorname{Span}(v_1, v_2, \ldots, v_i)$ for every
+$i\in \{1, \ldots, n\}$.
+
+If $1\leqslant i \leqslant m$, then, by applying
+[Lemma 8.3.3]({{< ref "08-eigen-stuff#lemma-upper-triangular" >}}) to $S:W \longrightarrow W$ and
+$\mathscr{C}$, it follows that $$T(v_i) = T(w_i) = S(w_i) \in
+      \operatorname{Span}(w_1, \ldots, w_i) = \operatorname{Span}(v_1, \ldots,
+    v_i).$$
+
+For the case when $m < i \leqslant n$, note that
+$$T(v) = (T - \lambda \operatorname{id})(v) + \lambda v$$ and
+$$(T - \lambda \operatorname{id})(v) \in \operatorname{im} (T -
+      \lambda\operatorname{id}) = W = \operatorname{Span}(w_1,
+      \ldots, w_m) = \operatorname{Span}(v_1, \ldots, v_m)$$ holds for
+every $v\in V$. If $i\in \{m + 1, \ldots, n\}$ is arbitrary, then
 $$T(v_i) = (T - \lambda \operatorname{id})(v_i) + \lambda v_i 
     \in  
     \operatorname{Span}(v_1, \ldots, v_m, v_i)
@@ -392,8 +401,8 @@ The subject of this section is the following theorem.
 
 ::: {.thm}
 []{#thm-cayley-hamilton label="thm-cayley-hamilton"} Let $V$ be a finite-dimensional vector
-space and let $T : V \to V$ be a linear transformation. If $c_{T}(x)$ is
-the characteristic polynomial of $T$, then
+space and let $T : V \longrightarrow V$ be a linear transformation. If
+$c_{T}(x)$ is the characteristic polynomial of $T$, then
 $c_{T}(T) = \vec{0}_{\mathcal{L}(V, V)}$, where
 $\vec{0}_{\mathcal{L}(V, V)}$ is the linear transformation of $V$
 mapping every vector $v\in V$ to $\vec{0}_V$.
@@ -408,7 +417,7 @@ It follows that $c_T(A)$ is the zero matrix.
 ::: {.exampjupyter}
 We showed in
 [Example 8.2.6]({{< ref "08-eigen-stuff#ex-no-eigenvalues" >}}) that the characteristic polynomial of
-$T: \mathbb{R} ^ 2 \to \mathbb{R} ^ 2$ with matrix $$A =
+$T: \mathbb{R} ^ 2 \longrightarrow\mathbb{R} ^ 2$ with matrix $$A =
     \begin{pmatrix}
       1 & -2 \\
       2 & 0
@@ -511,22 +520,36 @@ easily using a Jupyter notebook:
 1.  []{#problem-08-01 label="problem-08-01"}
 
     ::: {.questionjupyter}
-    Let $T \colon \mathbb{R}^{2} \to \mathbb{R}^{2}$ be the linear
-    transformation having matrix $$A = \begin{pmatrix}
+    Let $T \colon \mathbb{R}^{2} \longrightarrow\mathbb{R}^{2}$ be the
+    linear transformation having matrix $$A = \begin{pmatrix}
           -13 & -5 \\
           34 & 13
         \end{pmatrix}$$ with respect to the standard basis. Calculate
     the characteristic polynomial of $T$.
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+    $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) & = \det \begin{pmatrix}
+          x+13 & 5 \\ -34 & x-13
+        \end{pmatrix} \\
+        & = (x+13)(x-13) + 170 \\
+        & = x^{2} - 169 + 170 \\
+        & = x^{2} + 1.
+      \end{aligned}$$
+    :::
+
 2.  []{#problem-08-02 label="problem-08-02"}
 
     ::: {.questionjupyter}
     For each matrix $A$ below, let
-    $T \colon \mathbb{R}^{3} \to \mathbb{R}^{3}$ be the linear
-    transformation having matrix $A$ with respect to the standard basis,
-    that is, $$\begin{aligned}
-      T \colon \mathbb{R}^{3} &\to \mathbb{R}^{3} \\
+    $T \colon \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ be the
+    linear transformation having matrix $A$ with respect to the standard
+    basis, that is, $$\begin{aligned}
+      T \colon \mathbb{R}^{3} &\longrightarrow\mathbb{R}^{3} \\
       \vec{v} &\mapsto A\vec{v}.
       \end{aligned}$$ Calculate the characteristic polynomial of $T$ and
     find the eigenvalues of $T$. $$\begin{array}{rlrlrl}
@@ -574,6 +597,169 @@ easily using a Jupyter notebook:
         \end{array}$$
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+
+    1.  $$A = \begin{pmatrix}
+            3 & -4 & 0 \\
+            0 & -1 & 0 \\
+            0 & 6 & 2
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x-3 & 4 & 0 \\
+              0 & x+1 & 0 \\
+              0 & -6 & x-2
+            \end{pmatrix} \\
+            &= (x-3) \det \begin{pmatrix}
+              x+1 & 0 \\ -6 & x-2
+            \end{pmatrix} \\
+            &= (x-3)(x+1)(x-2).
+          \end{aligned}$$ Hence the eigenvalues of $T$ are $-1$, $2$
+        and $3$.
+
+    2.  $$A = \begin{pmatrix}
+            1 & 1 & -1 \\
+            -2 & 4 & -2 \\
+            0 & 1 & 0
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x-1 & -1 & 1 \\
+              2 & x-4 & 2 \\
+              0 & -1 & x
+            \end{pmatrix} \\
+            &= (x-1) \det \begin{pmatrix}
+              x-4 & 2 \\
+              -1 & x
+            \end{pmatrix}
+            -2 \det \begin{pmatrix}
+              -1 & 1 \\
+              -1 & x
+            \end{pmatrix} \\
+            &= (x-1) (x^{2}-4x+2) -2 (-x+1) \\
+            &= (x-1) (x^{2}-4x+2+2) \\
+            &= (x-1)(x^{2}-4x+4) \\
+            &= (x-1)(x-2)^{2}.
+          \end{aligned}$$ Hence the eigenvalues of $T$ are $1$ and $2$.
+
+    3.  $$A = \begin{pmatrix}
+            5 & 2 & 2 \\
+            2 & 2 & -4 \\
+            2 & -4 & 2
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x-5 & -2 & -2 \\
+              -2 & x-2 & 4 \\
+              -2 & 4 & x-2
+            \end{pmatrix} \\
+            &= (x-5) \bigl( (x-2)^{2} - 16 \bigr) + 2 \bigl( -2(x-2) + 8 \bigr) -2
+            \bigl( -8 + 2(x-2) \bigr) \\
+            &= (x-5) (x^{2}-4x-12) -4(x-6) - 4(x-6) \\
+            &= (x-5)(x+2)(x-6) - 8(x-6) \\
+            &= (x-6) \bigl( (x-5)(x+2) - 8 \bigr) \\
+            &= (x-6) (x^{2} - 3x -10 - 8) \\
+            &= (x-6) (x^{2} - 3x -18) \\
+            &= (x-6)(x-6)(x+3) \\
+            &= (x-6)^{2}(x+3).
+          \end{aligned}$$ Hence the eigenvalues of $T$ are $-3$ and $6$.
+
+    4.  $$A = \begin{pmatrix}
+            3 & 4 & 4 \\
+            1 & 3 & 0 \\
+            -2 & -4 & -1
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det\begin{pmatrix}
+              x-3 & -4 & -4 \\
+              -1 &x-3 & 0 \\
+              2 & 4 &x+1
+            \end{pmatrix} \\
+            &= -4 \det \begin{pmatrix}
+              -1 & x-3 \\
+              2 & 4
+            \end{pmatrix} + (x+1) \det \begin{pmatrix}
+              x-3 & -4 \\
+              -1 & x-3
+            \end{pmatrix} \\
+            % &\hspace*{120pt} \text{[expanding over last column]} \\
+            &= -4 \bigl( -4 - 2(x-3) \bigr) + (x+1) \bigl( (x-3)^{3} - 4 \bigr) \\
+            &= 8(x-3+2) + (x+1)(x^{2}-6x+9-4) \\
+            &= 8(x-1) + (x+1)(x^{2}-6x+5) \\
+            &= 8(x-1) + (x+1)(x-1)(x-5) \\
+            &= (x-1) \bigl( 8 + (x+1)(x-5) \bigr) \\
+            &= (x-1) (8 + x^{2} - 4x - 5) \\
+            &= (x-1)(x^{2} - 4x + 3) \\
+            &= (x-1)(x-1)(x-3) \\
+            &= (x-1)^{2} (x-3).
+          \end{aligned}$$ Hence the eigenvalues of $T$ are $1$ and $3$.
+
+    5.  $$A = \begin{pmatrix}
+            1 & 0 & 1 \\
+            0 & 2 & 1 \\
+            -1 & 0 & 3
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x-1 & 0 & -1 \\
+              0 & x-2 & -1 \\
+              1 & 0 & x-3
+            \end{pmatrix} \\
+            &= (x-1) \det \begin{pmatrix}
+              x-2 & -1 \\
+              0 & x-3
+            \end{pmatrix} - \det \begin{pmatrix}
+              0 & x-2 \\
+              1 & 0
+            \end{pmatrix} \\
+            &= (x-1)(x-2)(x-3) + (x-2) \\
+            &= (x-2) \bigl( (x-1)(x-3) + 1 \bigr) \\
+            &= (x-2) (x^{2} - 4x + 4) \\
+            &= (x-2) (x-2)^{2} \\
+            &= (x-2)^{3}.
+          \end{aligned}$$ Hence the only eigenvalue of $T$ is $2$.
+
+    6.  $$A = \begin{pmatrix}
+            2 & -1 & 0 \\
+            0 & 2 & 0 \\
+            -1 & 1 & 2
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x-2 & 1 & 0 \\
+              0 & x-2 & 0 \\
+              1 & -1 & x-2
+            \end{pmatrix} \\
+            &= (x-2) \det \begin{pmatrix}
+              x-2 & 0 \\
+              -1 & x-2
+            \end{pmatrix} - \det \begin{pmatrix}
+              0 & 0 \\
+              1 & x-2
+            \end{pmatrix} \\
+            &= (x-2)(x-2)^{2} - 0 \\
+            &= (x-2)^{3}.
+          \end{aligned}$$ Hence the only eigenvalue of $T$ is $2$.
+
+    7.  $$A = \begin{pmatrix}
+            -2 & -3 & 0 \\
+            3 & 4 & 0 \\
+            6 & 6 & 1
+          \end{pmatrix},$$ so $$\begin{aligned}
+            c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+              x+2 & 3 & 0 \\
+              -3 & x-4 & 0 \\
+              -6 & -6 & x-1
+            \end{pmatrix} \\
+            &= (x-1) \det \begin{pmatrix}
+              x+2 & 3 \\
+              -3 & x-4
+            \end{pmatrix} \\
+            &= (x-1) \bigl( (x+2)(x-4) + 9 \bigr) \\
+            &= (x-1) (x^{2} - 2x - 8 + 9) \\
+            &= (x-1)(x^{2} - 2x + 1) \\
+            &= (x-1) (x-1)^{2} \\
+            &= (x-1)^{3}.
+          \end{aligned}$$ Hence the only eigenvalue of $T$ is $1$.
+    :::
+
 3.  []{#problem-08-03 label="problem-08-03"}
 
     ::: {.questionjupyter}
@@ -591,11 +777,38 @@ easily using a Jupyter notebook:
     characteristic polynomials.
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+    $$\begin{aligned}
+    c_{A}(x) = \det(xI-A) &= \det \begin{pmatrix}
+    x-1 & -1 & 0 \\
+    0 & x-2 & 0 \\
+    0 & 0 & x-1
+    \end{pmatrix} \\
+    &= (x-1) \det \begin{pmatrix}
+    x-2 & 0 \\
+    0 & x-1
+    \end{pmatrix} \\
+    &= (x-1)^{2} (x-2)\end{aligned}$$ $$\begin{aligned}
+    c_{B}(x) = \det(xI-B) &= \det \begin{pmatrix}
+    x-2 & 0 & 0 \\
+    0 & x-2 & -2 \\
+    0 & 0 & x-1
+    \end{pmatrix} \\
+    &= (x-2) \det \begin{pmatrix}
+    x-2 & -2 \\
+    0 & x-1
+    \end{pmatrix} \\
+    &= (x-2)^{2}(x-1).\end{aligned}$$ Hence $c_{A}(x) \neq c_{B}(x)$.
+    :::
+
 4.  []{#problem-08-04 label="problem-08-04"}
 
     ::: {.questionjupyter}
-    Let $T \colon \mathbb{R}^{4} \to \mathbb{R}^{4}$ be the linear
-    transformation given by the matrix $$A = \begin{pmatrix}
+    Let $T \colon \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}$ be the
+    linear transformation given by the matrix $$A = \begin{pmatrix}
               2 & 1 & 0 & -1 \\
               -2 & 5 & -1 & -7 \\
               -12 & 16 & -4 & -15 \\
@@ -604,16 +817,150 @@ easily using a Jupyter notebook:
     of $T$.
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+    $$\begin{aligned}
+    c_{T}(x) &= \det(xI-A) \\
+    &= \det \begin{pmatrix}
+    x-2 & -1 & 0 & 1 \\
+    2 & x-5 & 1 & 7 \\
+    12 & -16 & x+4 & 15 \\
+    2 & -3 & 1 & x+5
+    \end{pmatrix} \\
+    &= (x-2) \det \begin{pmatrix}
+    x-5 & 1 & 7 \\
+    -16 & x+4 & 15 \\
+    -3 & 1 & x+5
+    \end{pmatrix} +
+    \det \begin{pmatrix}
+    2 & 1 & 7 \\
+    12 & x+4 & 15 \\
+    2 & 1 & x+5
+    \end{pmatrix} \\
+    & - \det \begin{pmatrix}
+    2 & x-5 & 1 \\
+    12 & -16 & x+4 \\
+    2 & -3 & 1
+    \end{pmatrix} \\
+    &= (x-2) \left( (x-5) \det \begin{pmatrix}
+    x+4 & 15 \\
+    1 & x+5
+    \end{pmatrix} - \det \begin{pmatrix}
+    -16 & 15 \\
+    -3 & x+5
+    \end{pmatrix} \right. \\
+    &\qquad \left. \mbox{} + 7 \det \begin{pmatrix}
+    -16 & x+4 \\
+    -3 & 1
+    \end{pmatrix} \right) + 2 \det \begin{pmatrix}
+    x+4 & 15 \\
+    1 & x+5
+    \end{pmatrix} - \det \begin{pmatrix}
+    12 & 15 \\
+    2 & x+5
+    \end{pmatrix} \\
+    &\qquad \mbox{} + 7 \det \begin{pmatrix}
+    12 & x+4 \\
+    2 & 1
+    \end{pmatrix} - \left( 2 \det \begin{pmatrix}
+    -16 & x+4 \\
+    -3 & 1
+    \end{pmatrix} - (x-5) \det \begin{pmatrix}
+    12 & x+4 \\
+    2 & 1
+    \end{pmatrix} \right. \\
+    &\left. \qquad \mbox{} + \det \begin{pmatrix}
+    12 & -16 \\
+    2 & -3
+    \end{pmatrix} \right) \\
+    &= (x-2) \biggl( (x-5) \bigl( (x+4)(x+5) - 15 \bigr) - \bigl( -16(x+5)
+    + 45 \bigr) \biggr. \\
+    &\qquad \biggl. {} + 7 \bigl( -16 + 3(x+4) \bigr) \biggr) + 2 \bigl(
+    (x+4)(x+5) - 15 \bigr) - \bigl( 12 (x+5) - 30 \bigr) \\
+    &\qquad {} + 7 \bigl( 12 -
+    2(x+4) \bigr) - \biggl( 2 \bigl( - 16 + 3(x+4) \bigr) \biggr. \\
+    &\qquad\qquad\qquad\qquad \biggl. {}- (x-5) \bigl(
+    12 - 2(x+4) \bigr) - 36 + 32 \biggr) \\
+    &= (x-2) \bigl( (x-5)(x^{2} + 9x + 20 - 15) - (-16x - 80 + 45) + 7
+    (-16 + 3x + 12) \bigr) \\
+    &\qquad {} + 2(x^{2} + 9x + 20 -15) - (12x + 60 - 30) +
+    7(12 - 2x - 8) \\
+    &\qquad {} - \bigl( 2(-16 + 3x + 12) - (x-5) (12 - 2x - 8) - 4 \bigr) \\
+    &= (x-2) \bigl( (x-5)(x^{2}+9x+5) - (-16x - 35) + 7(3x-4) \bigr) +
+    2(x^{2}+9x+5) \\
+    &\qquad {} - (12x + 30) + 7(4-2x) - \bigl( 2(3x-4) - (x-5)(4-2x) -
+    4 \bigr) \\
+    &= (x-2) (x^{3} + 4x^{2} - 40x - 25 + 16x + 35 + 21x - 28) + 2x^{2} +
+    18 x + 10 \\
+    &\qquad {} - 12x - 30 + 28 - 14x - \bigl( 6x-8 - (-2x^{2} + 14x - 20 )
+    - 4 \bigr) \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - (6x - 12 +
+    2x^{2} - 14x + 20) \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - 2x^{2} + 8x -
+    8 \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) \\
+    &= (x-2)(x-2) (x^{2} + 6x + 9) \\
+    &= (x-2)^{2} (x+3)^{2}.\square\end{aligned}$$
+    :::
+
 5.  []{#problem-08-05 label="problem-08-05"}
 
     ::: {.question}
-    Let $T \colon V \to V$ be a linear transformation of a
+    Let $T \colon V \longrightarrow V$ be a linear transformation of a
     finite-dimensional vector space $V$ over a field $F$. Let $f(x)$ be
     a polynomial over $F$,  $\mathscr{B}$ be a basis for $V$ and $A =
           \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)$. Show that
     $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) = f(A).$$
     Deduce that
     $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(c_T(T)) = c_T(A)$.
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    Suppose that
+    $$f(x) = a_{0} + a_{1}x + a_{2}x^{2} + \cdots + a_{k}x^{k}.$$ The
+    first thing to do is make use of Problem 5 on the Problem Sheet for
+    Section 4 (Linear Transformations). It says that if
+    $S,T \colon V \longrightarrow V$ are linear transformations, then
+    $$\operatorname{Mat}_{}(ST) = \operatorname{Mat}_{}(S) \cdot \operatorname{Mat}_{}(T).$$
+    Applied to powers of $T$, we deduce that
+    $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{i}) = A^{i}$$
+    where $A = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T)$.
+
+    Suppose $A = [\alpha_{ij}]$. Then $T(v_{j}) = \sum_{i=1}^{n}
+      \alpha_{ij} v_{i}$ (where
+    $\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}$), so
+    $$aT(v_{j}) = \sum_{i=1}^{n} (a\alpha_{ij}) v_{i}$$ for any
+    scalar $a$ and we deduce
+    $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(aT) = [a\alpha_{ij}] = a \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).$$
+
+    If $S \colon V \longrightarrow V$ is any linear transformation with
+    matrix $B =
+      [\beta_{ij}]$, then
+    $$(S+T)(v_{j}) = S(v_{j}) + T(v_{j}) = \sum_{i=1}^{n} \beta_{ij}v_{i} +
+      \sum_{i=1}^{n} \alpha_{ij}v_{i} = \sum_{i=1}^{n} (\beta_{ij}+\alpha_{ij})v_{i}.$$
+    Hence
+    $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S+T) = [\beta_{ij}+\alpha_{ij}] = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).$$
+
+    We now put this all together: $$\begin{aligned}
+        \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I + a_{1}T + a_{2}T^{2} +
+        \dots + a_{k}T^{k}) \\
+        &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
+        \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{2}T^{2}) \\
+        &\hspace{4cm} \mbox{} + \dots + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{k}T^{k}) \\
+        &= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(I) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
+        \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{2}) \\
+        &\hspace{4cm} \mbox{} + \dots + a_{k} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{k}) \\
+        &= a_{0} I + a_{1}A + a_{2}A^{2} + \dots + a_{k}A^{k} \\
+        &= f(A),
+      \end{aligned}$$ as required.
+
+    That
+    $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)(c_T(T)) = c_T(A)$
+    follows immediately from the above since $c_T(x)$ is a polynomial
+    over $F$.
     :::
 
 [^1]: The general case can be reduced to the case when $F$ is

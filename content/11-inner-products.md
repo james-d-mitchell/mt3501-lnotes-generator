@@ -202,7 +202,7 @@ remainder of this section.
 inner product $\langle \cdot,
     \cdot \rangle$, let $v\in V$, and $\alpha\in F$. Then
 
-1.  $\|\alpha v\| = \|\alpha\| \cdot \|v\|$;
+1.  $\|\alpha v\| = |\alpha| \cdot \|v\|$;
 
 2.  $\|v\| > 0$ if and only if $v \neq \vec{0}$;
 
@@ -213,8 +213,7 @@ inner product $\langle \cdot,
 *Proof.* **(1).**
 $\|\alpha v\|^{2} = \langle \alpha v,\alpha v \rangle = \alpha
     \langle v,\alpha v \rangle = \alpha \bar{\alpha} \langle v,v \rangle
-    = \|\alpha\|^{2} \|v\|^{2}$ and taking square roots gives the
-result.
+    = |\alpha|^{2} \|v\|^{2}$ and taking square roots gives the result.
 
 **(2).** If $\|v\| = \langle v,v \rangle  > 0$, then $v \neq
   \vec{0}$ by positivity (part (4) of the definition of inner products).
@@ -232,18 +231,18 @@ $u = v$. Hence we've established identity of indiscernibles for norms.
 
 ::: {.thm}
 Let $V$ be an inner product space with inner product $\langle
-    \cdot,\cdot \rangle$. Then $$\|\langle u,v \rangle\| \leq
-    \|u\| \cdot \|v\|$$ for all $u,v \in V$.
+    \cdot,\cdot \rangle$. Then
+$$|\langle u,v \rangle| \leq \|u\| \cdot \|v\|$$ for all $u,v \in V$.
 :::
 
 ::: {.proof}
 *Proof.* If $v = \vec{0}$, then
 $$\langle u,v \rangle = \langle u,\vec{0} \rangle = \langle
     u,0\cdot\vec{0}\rangle = 0 \langle u,\vec{0} \rangle = 0.$$ Hence
-$\|\langle u,v \rangle\| =
-  \|0\| = 0$ and, since $\|v\|
+$|\langle u,v \rangle| =
+  |0| = 0$ and, since $\|v\|
   = 0$, it follows that
-$$\|\langle u,v \rangle\| = 0 = \|u\| \cdot \|v\|.$$
+$$|\langle u,v \rangle| = 0 = \|u\| \cdot \|v\|.$$
 
 In the remainder of the proof we assume $v \neq \vec{0}$. If $\alpha$ is
 a scalar and $w = u + \alpha v$, then $$\begin{aligned}
@@ -253,22 +252,21 @@ a scalar and $w = u + \alpha v$, then $$\begin{aligned}
                                & = \langle u,u \rangle + \alpha \langle v,u \rangle + \bar{\alpha}
     \langle u,v \rangle + \alpha \bar{\alpha} \langle v,v \rangle                                  \\
                                & = \|u\|^{2} + \alpha \overline{\langle u,v \rangle} +
-    \bar{\alpha} \langle u,v \rangle + \|\alpha\|^{2} \|v\|^{2}.
+    \bar{\alpha} \langle u,v \rangle + |\alpha|^{2} \|v\|^{2}.
   \end{aligned}$$ Setting $\alpha = -\langle u,v \rangle / \|v\|^{2}$,
 we deduce that $$\begin{aligned}
     0 & \leq & \|u\|^{2} - \frac{ \langle u,v \rangle
       \overline{\langle u,v \rangle} }{ \|v\|^{2} } - \frac{
       \overline{\langle u,v \rangle} \langle u,v \rangle
-      }{\|v\|^{2}} + \frac{\| \langle u,v \rangle
-  \|^{2}}{\|v\|^{4}} \|v\|^{2}                                \\
+      }{\|v\|^{2}} + \frac{| \langle u,v \rangle|^{2}}{\|v\|^{4}} \|v\|^{2}                                \\
        & = &
       \|u\|^{2} - \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} } 
                    - \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} }
                    + \frac{|\langle u, v\rangle| ^ 2}{ \|v\|^{2} }\\
-      & = & \|u\|^{2} - \frac{ \|\langle u,v \rangle\|^{2} }{
+      & = & \|u\|^{2} - \frac{ |\langle u,v \rangle|^{2} }{
       \|v\|^{2} },
   \end{aligned}$$ so
-$$\| \langle u,v \rangle \|^{2} \leq \|u\|^{2} \|v\|^{2}$$ and taking
+$$| \langle u,v \rangle |^{2} \leq \|u\|^{2} \|v\|^{2}$$ and taking
 square roots gives the result. ◻
 :::
 
@@ -286,7 +284,7 @@ $u,v \in V$.
                    & = \|u\|^{2} + \langle u,v \rangle + \overline{\langle u,v
     \rangle} + \|v\|^{2}                                                                                             \\
                    & = \|u\|^{2} + 2 \Re \langle u,v \rangle + \|v\|^{2}                                          \\
-                   & \leq \|u\|^{2} + 2 \| \langle u,v \rangle \| + \|v\|^{2}
+                   & \leq \|u\|^{2} + 2 | \langle u,v \rangle | + \|v\|^{2}
     \\
                    & \leq \|u\|^{2} + 2 \|u\| \cdot \|v\| + \|v\|^{2}
                    &                                                                      & \text{(by Cauchy-Schwarz)} \\
@@ -301,7 +299,7 @@ inequality from the start of this section.
 
 The triangle inequality is a fundamental observation that tells us we
 can use the norm to measure distance on an inner product space in the
-same way that modulus $\|x\|$ is used to measure distance on
+same way that modulus $|x|$ is used to measure distance in
 $\mathbb{R}$ or $\mathbb{C}$. We can then perform analysis and speak of
 continuity and convergence. This topic is addressed in greater detail in
 the study of Functional Analysis.
