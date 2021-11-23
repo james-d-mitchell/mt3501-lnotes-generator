@@ -7,19 +7,20 @@ transformations.
 ## Diagonalisability
 
 ::: {.defn}
-A linear transformation $T : V \to V$ of a finite-dimensional vector
-space $V$ is ***diagonalisable*** if there is a basis $\mathscr{B}$ for
-$V$ such that $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is a
-diagonal matrix.
+A linear transformation $T : V \longrightarrow V$ of a
+finite-dimensional vector space $V$ is ***diagonalisable*** if there is
+a basis $\mathscr{B}$ for $V$ such that
+$\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is a diagonal matrix.
 
 A square matrix $A$ is ***diagonalisable*** if there is an invertible
 matrix $P$ such that $P^{-1}AP$ is diagonal.
 :::
 
-If $V$ is a finite-dimensional vector space and $T: V\to V$ is a linear
-transformation, then it is routine to verify that $T$ is diagonalisable
-if and only if $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is
-diagonalisable for every choice of basis $\mathscr{B}$ for $V$.
+If $V$ is a finite-dimensional vector space and $T: V\longrightarrow V$
+is a linear transformation, then it is routine to verify that $T$ is
+diagonalisable if and only if
+$\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T)$ is diagonalisable for
+every choice of basis $\mathscr{B}$ for $V$.
 
 Why do we care about diagonal matrices or diagonalisable linear
 transformations? The reason is that diagonal matrices are considerably
@@ -85,8 +86,8 @@ We require the following definitions.
 
 ::: {.defn}
 Let $V$ be a finite-dimensional vector space over the field $F$, let
-$T : V \to V$ be a linear transformation of $V$, and let $\lambda \in F$
-be an eigenvalue of $T$. Then
+$T : V \longrightarrow V$ be a linear transformation of $V$, and let
+$\lambda \in F$ be an eigenvalue of $T$. Then
 
 1.  The ***algebraic multiplicity*** of $\lambda$ is the largest
     power $k$ such that $(x-\lambda)^{k}$ is a factor of the
@@ -102,11 +103,11 @@ Recall that a polynomial is called ***monic*** if the leading
 coefficient is $1$.
 
 ::: {.defn}
-[]{#de-min-poly label="de-min-poly"} Let $T : V \to V$ be
-a linear transformation of an $n$-dimensional vector space over the
-field $F$. Then the monic polynomial $m_T(x)$ with coefficients in $F$
-of smallest degree such that $m_T(T) = 0$ is called the ***minimum
-polynomial*** of $T$.
+[]{#de-min-poly label="de-min-poly"} Let
+$T : V \longrightarrow V$ be a linear transformation of an
+$n$-dimensional vector space over the field $F$. Then the monic
+polynomial $m_T(x)$ with coefficients in $F$ of smallest degree such
+that $m_T(T) = 0$ is called the ***minimum polynomial*** of $T$.
 :::
 
 It is not at all clear from the definition that the minimum polynomial
@@ -117,8 +118,8 @@ The main theorem in this section is the following.
 
 ::: {.thm}
 []{#thm-diagonalisation label="thm-diagonalisation"} Let $V$ be a finite-dimensional vector
-space and let $T: V\to V$ be a linear transformation. Then the following
-are equivalent:
+space and let $T: V\longrightarrow V$ be a linear transformation. Then
+the following are equivalent:
 
 1.  $T$ is diagonalisable;
 
@@ -133,7 +134,7 @@ are equivalent:
 :::
 
 ::: {.cor}
-Suppose that $T: V \to V$ is a linear transformation over an
+Suppose that $T: V \longrightarrow V$ is a linear transformation over an
 $n$-dimensional vector space $V$. Then the following hold:
 
 1.  if the characteristic polynomial of $T$ has $n$ distinct roots, then
@@ -151,9 +152,9 @@ will do several examples in
 
 ::: {.thm}
 []{#thm-basis-eigenvectors label="thm-basis-eigenvectors"} Let $V$ be a finite-dimensional vector
-space and let $T: V\to V$ be a linear transformation. Then $T$ is
-diagonalisable if and only if $V$ has a basis consisting of eigenvectors
-of $T$.
+space and let $T: V\longrightarrow V$ be a linear transformation. Then
+$T$ is diagonalisable if and only if $V$ has a basis consisting of
+eigenvectors of $T$.
 :::
 
 ::: {.proof}
@@ -188,15 +189,15 @@ Recall that a *linear* polynomial is just a polynomial of degree $1$,
 that is a polynomial of the form $\alpha x + \beta$.
 
 ::: {.prop}
-[]{#prop-diag-linfactors label="prop-diag-linfactors"} If the linear transformation $T : V \to V$
-is diagonalisable and $A$ is the matrix of $T$ with respect to some
-basis for $V$, then the characteristic polynomial
+[]{#prop-diag-linfactors label="prop-diag-linfactors"} If the linear transformation
+$T : V \longrightarrow V$ is diagonalisable and $A$ is the matrix of $T$
+with respect to some basis for $V$, then the characteristic polynomial
 $c_T(x) = \det(xI - A)$ of $T$ is a product of linear factors.
 :::
 
 ::: {.proof}
-*Proof.* Since $T : V \to V$ is diagonalisable, there exists a
-basis $\mathscr{B}$ for $V$ such that
+*Proof.* Since $T : V \longrightarrow V$ is diagonalisable, there exists
+a basis $\mathscr{B}$ for $V$ such that
 $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = A = 
     \begin{pmatrix}
       \lambda_{1} & 0           & \cdots & 0\\
@@ -219,11 +220,12 @@ choice of basis
     = (x-\lambda_{1})(x-\lambda_{2}) \cdots (x-\lambda_{n}). \square$$ ◻
 :::
 
-If $T: V\to V$ is diagonalisable, then its characteristic polynomial is
-a product of linear factors. So, if $T: V \to V$ has characteristic
-polynomial that is not a product of linear factors, then $T$ is not
-diagonalisable. However, if the characteristic polynomial of a linear
-transformation $T : V \to
+If $T: V\longrightarrow V$ is diagonalisable, then its characteristic
+polynomial is a product of linear factors. So, if
+$T: V \longrightarrow V$ has characteristic polynomial that is not a
+product of linear factors, then $T$ is not diagonalisable. However, if
+the characteristic polynomial of a linear transformation
+$T : V \longrightarrow
 V$ happens to be a product of linear factors, then this does not tell us
 anything about whether or not $T$ is diagonalisable. (Every polynomial
 over $\mathbb{C}$ can be factorised as a product of linear factors, but
@@ -233,9 +235,9 @@ diagonalisable!)
 ::: {.prop}
 []{#prop-alg-geo label="prop-alg-geo"} Let $V$ be an
 $n$-dimensional vector space over the field $F$ and let $T : V
-  \to V$ be a linear transformation of $V$ with distinct eigenvalues
-$\lambda_1, \lambda_2, \ldots, \lambda_k\in F$ with algebraic and
-geometric multiplicities $a_{1}, a_{2}, \ldots, a_{k}$ and
+  \longrightarrow V$ be a linear transformation of $V$ with distinct
+eigenvalues $\lambda_1, \lambda_2, \ldots, \lambda_k\in F$ with
+algebraic and geometric multiplicities $a_{1}, a_{2}, \ldots, a_{k}$ and
 $g_{1}, g_{2}, \ldots,
   g_{k}$ respectively.
 
@@ -243,8 +245,8 @@ $g_{1}, g_{2}, \ldots,
     factors, then $$a_{1} + a_{2} + \cdots + a_{k} = \dim V$$ (the sum
     of the algebraic multiplicities equals $\dim V$);
 
-2.  $1 \leq g_{i} \leq a_{i}$ for all $i = 1, \ldots, k$ (the geometric
-    multiplicity is at most the algebraic multiplicity).
+2.  $1 \leqslant g_{i} \leqslant a_{i}$ for all $i = 1, \ldots, k$ (the
+    geometric multiplicity is at most the algebraic multiplicity).
 :::
 
 ::: {.proof}
@@ -260,7 +262,7 @@ multiplicities.
 **(2).** Let $\lambda$ be an eigenvalue of $T$. Then the geometric
 multiplicity $g_{\lambda}$ of $\lambda$ is defined to be the dimension
 of the eigenspace $E_{\lambda} = \ker(T-\lambda I)$. Since eigenvectors
-are not allowed to be $\vec{0}$, it follows that $g_{\lambda} \geq
+are not allowed to be $\vec{0}$, it follows that $g_{\lambda} \geqslant
   1$. Choose a basis $\{ v_{1},v_{2},\dots,v_{g_{\lambda}} \}$
 for $E_{\lambda}$ and extend to a basis $\mathscr{B} = \{
     v_{1},v_{2},\dots,v_{g_{\lambda}},v_{g_{\lambda}+1},\dots,v_{n} \}$
@@ -295,15 +297,15 @@ is greater than or equal to $g_{\lambda}$. ◻
 
 ::: {.lemma}
 []{#lemma-eigenvectors-linear-indep label="lemma-eigenvectors-linear-indep"} Let $V$ be a finite-dimensional
-vector space and let $T: V\to V$ be a linear transformation. Then a set
-of eigenvectors of $T$ corresponding to *distinct* eigenvalues is
-linearly independent.
+vector space and let $T: V\longrightarrow V$ be a linear transformation.
+Then a set of eigenvectors of $T$ corresponding to *distinct*
+eigenvalues is linearly independent.
 :::
 
 ::: {.thm}
 []{#thm-diag-algebraic-geometric label="thm-diag-algebraic-geometric"} Let $V$ be an n-dimensional vector
 space over the field $F$ and let $T :
-    V \to V$ be a linear transformation of $V$. Then $T$ is
+    V \longrightarrow V$ be a linear transformation of $V$. Then $T$ is
 diagonalisable if and only if $c_{T}(x)$ is a product of linear factors
 and $a_{\lambda} = g_{\lambda}$ for all eigenvalues $\lambda$.
 :::
@@ -334,7 +336,7 @@ consists of eigenvectors for $T$. Hence $T$ is diagonalisable by
 
 We conclude the proof by showing that $\mathscr{B}$ is linearly
 independent. Suppose
-$$\sum_{\substack{1\leq i\leq k\\1\leq j \leq g_{i}}} \alpha_{ij}
+$$\sum_{\substack{1\leqslant i\leqslant k\\1\leqslant j \leqslant g_{i}}} \alpha_{ij}
     v_{ij} = \vec{0}.$$ If
 $w_{i} = \sum_{j=1}^{g_{i}} \alpha_{ij} v_{ij} \in E_{\lambda_i}$, then
 $$w_{1} + w_{2} + \dots + w_{k} = \vec{0}.$$
@@ -361,11 +363,11 @@ eigenvector,
 $$\mathscr{B} = \mathscr{B}_{1} \cup \mathscr{B}_{2} \cup \dots \cup \mathscr{B}_{k}.$$
 As $\mathscr{B}$ is linearly independent, so is $\mathscr{B}_{i}$ and
 [Lemma 2.4.3]({{< ref "02-vector-spaces#lemma-dim-dim" >}}) tells us
-$$|\mathscr{B}_{i}| \leq \dim E_{\lambda_{i}} = g_{i} .$$ Hence
+$$|\mathscr{B}_{i}| \leqslant\dim E_{\lambda_{i}} = g_{i} .$$ Hence
 $$n = |\mathscr{B}| = |\mathscr{B}_{1}| + |\mathscr{B}_{2}| + \dots +
-    |\mathscr{B}_{k}| \leq g_{1} + g_{2} + \dots + g_{k}.$$ But
-$g_{i} \leq a_{i}$ and $a_{1} + a_{2} + \dots + a_{k} = n$, so we deduce
-$g_{i} = a_{i}$ for all $i$. ◻
+    |\mathscr{B}_{k}| \leqslant g_{1} + g_{2} + \dots + g_{k}.$$ But
+$g_{i} \leqslant a_{i}$ and $a_{1} + a_{2} + \dots + a_{k} = n$, so we
+deduce $g_{i} = a_{i}$ for all $i$. ◻
 :::
 
 ## Minimum polynomial
@@ -379,10 +381,10 @@ $1$.
 ::: {.prop}
 []{#prop-min-poly label="prop-min-poly"} Let $V$ be a
 finite-dimensional vector space over a field $F$ and let $T
-    : V \to V$ be a linear transformation. Then there exists a unique
-monic polynomial $m_T(x)$ with coefficients in $F$ of smallest degree
-such that $m_T(T) = 0$. The monic polynomial $m_T(x)$ is called the
-**minimum polynomial** of $T$.
+    : V \longrightarrow V$ be a linear transformation. Then there exists
+a unique monic polynomial $m_T(x)$ with coefficients in $F$ of smallest
+degree such that $m_T(T) = 0$. The monic polynomial $m_T(x)$ is called
+the **minimum polynomial** of $T$.
 :::
 
 ::: {.proof}
@@ -390,8 +392,8 @@ such that $m_T(T) = 0$. The monic polynomial $m_T(x)$ is called the
 $f(T) = 0$, and hence there exist such polynomials of minimum degree. We
 then show that any two such monic polynomials are actually equal.
 
-**Existence.** Suppose that $\operatorname{id}: V \to V$ is the identity
-transformation. Then
+**Existence.** Suppose that $\operatorname{id}: V \longrightarrow V$ is
+the identity transformation. Then
 $$\mathscr{A} = \{\operatorname{id}, \; T, \; T^{2}, \; T^{3}, \; \dots , \; T^{n^{2}}\} \subseteq \mathcal{L}(V,
     V).$$ Since $\dim \mathcal{L}(V, V) = n ^ 2$ but
 $|\mathscr{A}| = n ^ 2 + 1$ it follows that $\mathscr{A}$ is linearly
@@ -430,8 +432,9 @@ smallest degree such that $f(T) = 0$. ◻
 
 ::: {.prop}
 []{#prop-m-divide label="prop-m-divide"} Let $V$ be a
-finite-dimensional vector space over a field $F$ and let $T : V \to V$
-be a linear transformation. Then the following hold:
+finite-dimensional vector space over a field $F$ and let
+$T : V \longrightarrow V$ be a linear transformation. Then the following
+hold:
 
 1.  if $f(x)$ is any polynomial (over $F$) such that $f(T) = 0$, then
     the minimum polynomial $m_{T}(x)$ divides $f(x)$;
@@ -471,8 +474,8 @@ a root of $c_T(x)$ also. ◻
 ::: {.lemma}
 []{#lem:kernel-bound label="lem:kernel-bound"} Let
 $V$, $W$, and $X$ be finite-dimensional vector spaces over a field $F$.
-Suppose that $T: V\to W$ and $S : W\to X$ are linear maps. Then
-$$\dim \ker ST \le \dim\ker S + \dim \ker T$$
+Suppose that $T: V\longrightarrow W$ and $S : W\longrightarrow X$ are
+linear maps. Then $$\dim \ker ST \le \dim\ker S + \dim \ker T$$
 :::
 
 ::: {.proof}
@@ -481,13 +484,13 @@ $T(v) \in \ker S$. On the other hand, if $v\in V$ and $T(v)\in \ker S$,
 then $S(T(v)) = \vec{0}_{X}$, and so $v\in \ker ST$. It follows that
 $$\ker ST = \{v\in V : T(v)\in \ker S\}.$$ If $v\in \ker T$, then
 $T(v) = 0_W \in \ker S$, and so $\ker(T) \subseteq
-    \ker(ST)$. The function $F: \ker ST \to W$ defined by $F(v) = T(v)$
-for all $v\in \ker ST$ is linear (since $\ker ST$ is a subspace and
-hence a vector space in its own right, and because $T$ is linear). Hence
-the Rank-Nullity Theorem implies that
+    \ker(ST)$. The function $F: \ker ST \longrightarrow W$ defined by
+$F(v) = T(v)$ for all $v\in \ker ST$ is linear (since $\ker ST$ is a
+subspace and hence a vector space in its own right, and because $T$ is
+linear). Hence the Rank-Nullity Theorem implies that
 $$\dim \ker ST = \dim \ker F + \dim \operatorname{im} F.$$ But
 $\operatorname{im} F\subseteq \ker S$ and so
-$\dim \operatorname{im} F \leq \dim \ker S$. On the other hand,
+$\dim \operatorname{im} F \leqslant\dim \ker S$. On the other hand,
 $\ker F = \{v\in \ker ST : F(v) = \vec{0}_W = T(v)\}\subseteq
     \ker(T)$. On the third hand, if $v\in \ker T\subseteq \ker ST$, then
 $T(v) =
@@ -502,9 +505,9 @@ To see the full link to diagonalisability, we finally prove:
 ::: {.thm}
 []{#thm:m-diag-condn label="thm:m-diag-condn"} Let
 $V$ be a finite-dimensional vector space over the field $F$ and let
-$T : V \to V$ be a linear transformation. Then $T$ is diagonalisable if
-and only if the minimum polynomial $m_{T}(x)$ is a product of distinct
-linear factors.
+$T : V \longrightarrow V$ be a linear transformation. Then $T$ is
+diagonalisable if and only if the minimum polynomial $m_{T}(x)$ is a
+product of distinct linear factors.
 :::
 
 ::: {.proof}
@@ -568,12 +571,12 @@ Hence $$\begin{array}{rclr}
        & =                                                        & g_1 + \cdots + g_k
        & \text{by definition of the geometric multiplicity}
       \\
-       & \leq                                                     & a_1 + \cdots + a_k                                 & \text{by \cref{prop-alg-geo}(2)} \\
-       & \leq                                                     & \deg c_T(x)                                                                             \\
-       & \leq                                                     & \dim V                                                                                  \\
+       & \leqslant& a_1 + \cdots + a_k                                                                                                                                                         & \text{by \cref{prop-alg-geo}(2)} \\
+       & \leqslant& \deg c_T(x)                                                                             \\
+       & =    & \dim V                                                                                  \\
     \end{array}$$ yielding equality throughout. Hence
 $a_1 + \cdots + a_k = \deg c_T(x)$ and so $c_T(x)$ is a product of
-linear factors. Finally, since $g_i \leq a_i$ for all $i$ and
+linear factors. Finally, since $g_i \leqslant a_i$ for all $i$ and
 $a_1 + \cdots + a_k = g_1 + \cdots + g_k$, it follows that $a_i = g_i$
 for all $i$. Hence, by
 [Theorem 9.3.4]({{< ref "09-diagonal#thm-diag-algebraic-geometric" >}}), $T$ is diagonalisable. ◻
@@ -583,9 +586,9 @@ for all $i$. Hence, by
 
 ::: {.exampjupyter}
 []{#ex-non-diag label="ex-non-diag"} Let
-$T : \mathbb{R}^{3} \to \mathbb{R}^{3}$ be the linear transformation
-such that the matrix of $T$ with respect to the standard basis for
-$\mathbb{R} ^ 3$ is $$B = \begin{pmatrix}
+$T : \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ be the linear
+transformation such that the matrix of $T$ with respect to the standard
+basis for $\mathbb{R} ^ 3$ is $$B = \begin{pmatrix}
       8   & 3  & 0 \\
       -18 & -7 & 0 \\
       -9  & -4 & 2
@@ -614,8 +617,8 @@ of the characteristic polynomial
 $T$ are $-1$, $2$, and $2$. The algebraic multiplicities are
 $a_{-1} = 1$ and $a_{2} = 2$.
 
-$\mathbf{\lambda = -1.}$ Since $g_{-1} \leq a_{-1}\leq 1$ and because
-$g_{-1} \geq 1$, it follows that $g_{-1} = 1$.
+$\mathbf{\lambda = -1.}$ Since $g_{-1} \leqslant a_{-1}\leqslant 1$ and
+because $g_{-1} \geqslant 1$, it follows that $g_{-1} = 1$.
 
 If $\in E_{2}$, then $T(\vec{v}) = 2\vec{v}$ and so $(T-2I)(\vec{v}) =
   \vec{0}$. In other words, $$(B - 2I)
@@ -718,8 +721,9 @@ diagonalisable.
 
 ::: {.examp}
 In [Example 9.5.1]({{< ref "09-diagonal#ex-non-diag" >}}), we showed that the linear transformation
-$T : \mathbb{R}^{3} \to \mathbb{R}^{3}$ whose matrix with respect to the
-standard basis for $\mathbb{R} ^ 3$ is $$B = \begin{pmatrix}
+$T : \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ whose matrix with
+respect to the standard basis for $\mathbb{R} ^ 3$ is
+$$B = \begin{pmatrix}
       8   & 3  & 0 \\
       -18 & -7 & 0 \\
       -9  & -4 & 2
@@ -740,8 +744,8 @@ ruled out, and so $m_T(x) = c_T(x)$.
 
 ::: {.exampjupyter}
 []{#ex:diagonalise label="ex:diagonalise"} Let
-$T : \mathbb{R} ^ 3 \to \mathbb{R} ^ 3$ be such that the matrix of $T$
-with respect to the standard basis for $\mathbb{R} ^ 3$ is
+$T : \mathbb{R} ^ 3 \longrightarrow\mathbb{R} ^ 3$ be such that the
+matrix of $T$ with respect to the standard basis for $\mathbb{R} ^ 3$ is
 $$A = \begin{pmatrix}
       8  & 6  & 0 \\
       -9 & -7 & 0 \\
@@ -790,7 +794,7 @@ all $v\in \mathbb{R} ^ 3$.
 
     $\mathbf{\lambda = -1.}$ We want to find
     $g_{-1} = \dim E_{-1} = \dim \ker (T + I)$. Since
-    $g_{-1} \leq a_{-1} = 1$, it suffices to show that $g_{-1}
+    $g_{-1} \leqslant a_{-1} = 1$, it suffices to show that $g_{-1}
                 \not= 0$. But $$(A + I)
                 =
                 \begin{pmatrix}
@@ -840,8 +844,9 @@ all $v\in \mathbb{R} ^ 3$.
 :::
 
 ::: {.exampjupyter}
-Consider the linear transformation $\mathbb{R}^{3} \to \mathbb{R}^{3}$
-given by the matrix $$D = \begin{pmatrix}
+Consider the linear transformation
+$\mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ given by the matrix
+$$D = \begin{pmatrix}
       3  & 0 & 1 \\
       2  & 2 & 2 \\
       -1 & 0 & 1
@@ -888,8 +893,9 @@ diagonalisable. Indeed $$(D-2I)^{2} = \begin{pmatrix}
 :::
 
 ::: {.exampjupyter}
-Consider the linear transformation $\mathbb{R}^{3} \to \mathbb{R}^{3}$
-given by the matrix $$E = \begin{pmatrix}
+Consider the linear transformation
+$\mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ given by the matrix
+$$E = \begin{pmatrix}
       -3 & -4  & -12 \\
       0  & -11 & -24 \\
       0  & 4   & 9
@@ -1004,26 +1010,52 @@ easily using a Jupyter notebook:
 1.  []{#problem-09-01 label="problem-09-01"}
 
     ::: {.question}
-    1.  Let $T \colon \mathbb{R}^{2} \to \mathbb{R}^{2}$ be the linear
-        transformation having matrix $$A = \begin{pmatrix}
+    1.  Let $T \colon \mathbb{R}^{2} \longrightarrow\mathbb{R}^{2}$ be
+        the linear transformation having matrix $$A = \begin{pmatrix}
               -13 & -5 \\
               34 & 13
             \end{pmatrix}$$ with respect to the standard basis. Is
         $T$ diagonalisable?
 
-    2.  Let $S \colon \mathbb{C}^{2} \to \mathbb{C}^{2}$ be the linear
-        transformation having the above matrix $A$ with respect to the
-        standard basis. Is $S$ diagonalisable?
+    2.  Let $S \colon \mathbb{C}^{2} \longrightarrow\mathbb{C}^{2}$ be
+        the linear transformation having the above matrix $A$ with
+        respect to the standard basis. Is $S$ diagonalisable?
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    1.  In Problem 1 on the Section 8 problem sheet, we computed:
+        $$\begin{aligned}
+              c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+                x+13 & 5 \\ -34 & x-13
+              \end{pmatrix} \\
+              &= (x+13)(x-13) + 170 \\
+              &= x^{2} - 169 + 170 \\
+              &= x^{2} + 1.
+            \end{aligned}$$ This polynomial does not factorise
+        over $\mathbb{R}$, so $c_{T}(x)$ has no roots and hence $T$ has
+        no eigenvalues. Thus $T$ is not diagonalisable.
+
+    2.  $$c_{S}(x) = \det(xI-A) = x^{2} + 1$$ just as before, but now
+        $$c_{S}(x) = (x-i)(x+i)$$ since we are working
+        over $\mathbb{C}$. Hence $S$ has two distinct eigenvalues
+        $i$ and $-i$. Let $v_{1},v_{2}$ be eigenvectors for these
+        eigenvalues. Then $\{v_{1},v_{2}\}$ is a linearly independent
+        subset of $\mathbb{C}^{2}$ (since eigenvectors for distinct
+        eigenvalues are linearly independent) and hence a basis. With
+        respect to this basis, the matrix of $S$ is $$\begin{pmatrix}
+              i & 0 \\ 0 & -i
+            \end{pmatrix}$$ and so $S$ is diagonalisable.
     :::
 
 2.  []{#problem-09-02 label="problem-09-02"}
 
     ::: {.questionjupyter}
     For each matrix $A$ below, let
-    $T \colon \mathbb{R}^{3} \to \mathbb{R}^{3}$ be the linear
-    transformation having matrix $A$ with respect to the standard basis,
-    that is, $$\begin{aligned}
-        T \colon \mathbb{R}^{3} &\to \mathbb{R}^{3} \\
+    $T \colon \mathbb{R}^{3} \longrightarrow\mathbb{R}^{3}$ be the
+    linear transformation having matrix $A$ with respect to the standard
+    basis, that is, $$\begin{aligned}
+        T \colon \mathbb{R}^{3} &\longrightarrow\mathbb{R}^{3} \\
         \vec{v} &\mapsto A\vec{v}.
       \end{aligned}$$ Calculate the algebraic and geometric
     multiplicities of each eigenvalue of each such $T$, and determine
@@ -1073,12 +1105,558 @@ easily using a Jupyter notebook:
       \end{array}$$
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+
+    1.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $$A = \begin{pmatrix}
+        3 & -4 & 0 \\
+        0 & -1 & 0 \\
+        0 & 6 & 2
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x-3 & 4 & 0 \\
+        0 & x+1 & 0 \\
+        0 & -6 & x-2
+        \end{pmatrix} \\
+        &= (x-3) \det \begin{pmatrix}
+        x+1 & 0 \\ -6 & x-2
+        \end{pmatrix} \\
+        &= (x-3)(x+1)(x-2).\end{aligned}$$ Hence the eigenvalues of $T$
+        are $-1$, $2$ and $3$.
+
+        The algebraic multiplicity of each eigenvalue is
+        $$a_{-1} = 1, \qquad a_{2} = 1, \qquad a_{3} = 1.$$ Since
+        $-1$, $2$ and $3$ are eigenvalues, the corresponding eigenspaces
+        are non-zero. Hence the geometric multiplicities are non-zero
+        and as $g_{\lambda} \leqslant a_{\lambda}$ for each $\lambda$,
+        we deduce $$g_{-1} = 1, \qquad g_{2} = 1, \qquad g_{3} = 1.$$
+
+        As $c_{T}(x)$ is a product of distinct linear factors and
+        $a_{\lambda}
+        = g_{\lambda}$ for each $\lambda$, we conclude $T$ is
+        diagonalisable.
+
+        To find the required matrix $P$, we need to find a basis for
+        each eigenspace. First consider the eigenspace $E_{-1}$. We
+        solve $(T+I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        4 & -4 & 0 \\
+        0 & 0 & 0 \\
+        0 & 6 & 3
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Hence $$4x - 4y = 6y + 3z = 0.$$ Given arbitrary $x$, we deduce
+        $y = x$ and $z = -2y = -2x$. Thus
+        $$E_{-1} = \left\{ \begin{pmatrix}x\\x\\-2x\end{pmatrix} \biggm| x \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}1\\1\\-2\end{pmatrix} \right).$$
+
+        Now we determine $E_{2}$, so we solve $(T-2I)(v) = \vec{0}$;
+        that is, $$\begin{pmatrix}
+        1 & -4 & 0 \\
+        0 & -3 & 0 \\
+        0 & 6 & 0
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Hence $$x - 4y = -3y = 6y = 0$$ and we deduce $y = 0$ and
+        $x = 4y = 0$. Otherwise $z$ may be arbitrary and consequently
+        $$E_{2} = \left\{ \begin{pmatrix}0\\0\\z\end{pmatrix} \biggm| z \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}0\\0\\1\end{pmatrix} \right).$$
+
+        Finally, we determine $E_{3}$, so solve $(T-3I)(v) = \vec{0}$;
+        that is, $$\begin{pmatrix}
+        0 & -4 & 0 \\
+        0 & -4 & 0 \\
+        0 & 6 & -2
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Hence $$-4y = 6y - 2z = 0,$$ so $y = z = 0$, while $x$ may be
+        arbitrary. Therefore
+        $$E_{3} = \left\{ \begin{pmatrix}x\\0\\0\end{pmatrix} \biggm| x \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}1\\0\\0\end{pmatrix} \right).$$
+        We now have a basis of eigenvectors:
+        $$\mathscr{B}= \left\{ \begin{pmatrix}1\\1\\-2\end{pmatrix}, \begin{pmatrix}0\\0\\1\end{pmatrix},
+          \begin{pmatrix}1\\0\\0\end{pmatrix} \right\}.$$ As these are
+        eigenvectors for distinct eigenvalues, it is a linearly
+        independent set and hence a basis. The matrix of $T$ with
+        respect to $\mathscr{B}$ is
+        $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = \begin{pmatrix}
+        -1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 3
+        \end{pmatrix}.$$ The required change of basis matrix is
+        determined by writing the eigenvectors in $\mathscr{B}$ in terms
+        of the standard basis: $$\begin{array}{r@{}l@{}l@{}r}
+        \begin{pmatrix}1\\1\\-2\end{pmatrix} &{} = \vec{e}_{1} &{} + \vec{e}_{2} &{} -2\vec{e}_{3} \\
+        \begin{pmatrix}0\\0\\1\end{pmatrix} &{}= & &{} \vec{e}_{3} \\
+        \begin{pmatrix}1\\0\\0\end{pmatrix} &{}= \vec{e}_{1} & &
+        \end{array}$$ and so the required change of basis matrix $P$
+        consists of these coefficients: $$P = \begin{pmatrix}
+        1 & 0 & 1 \\
+        1 & 0 & 0 \\
+        -2 & 1 & 0
+        \end{pmatrix}.$$ Then $$P^{-1}AP = \begin{pmatrix}
+        -1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 3
+        \end{pmatrix}
+        = \operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T).$$
+
+    2.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $$A = \begin{pmatrix}
+        1 & 1 & -1 \\
+        -2 & 4 & -2 \\
+        0 & 1 & 0
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x-1 & -1 & 1 \\
+        2 & x-4 & 2 \\
+        0 & -1 & x
+        \end{pmatrix} \\
+        &= (x-1) \det \begin{pmatrix}
+        x-4 & 2 \\
+        -1 & x
+        \end{pmatrix}
+        -2 \det \begin{pmatrix}
+        -1 & 1 \\
+        -1 & x
+        \end{pmatrix} \\
+        &= (x-1) (x^{2}-4x+2) -2 (-x+1) \\
+        &= (x-1) (x^{2}-4x+2+2) \\
+        &= (x-1)(x^{2}-4x+4) \\
+        &= (x-1)(x-2)^{2}.\end{aligned}$$ Hence the eigenvalues of $T$
+        are $1$ and $2$, and the algebraic multiplicities are
+        $$a_{1} = 1 \qquad \text{and} \qquad a_{2} = 2.$$
+
+        The corresponding eigenspaces are non-zero, so from
+        $g_{\lambda} \leqslant
+        a_{\lambda}$ we deduce $g_{1} = 1$ and $g_{2} = 1$ or $2$ for
+        the geometric multiplicities. Let us find the
+        eigenspace $E_{2}$; that is, we solve $(T-2I)(v) = \vec{0}$:
+        $$\begin{pmatrix}
+        -1 & 1 & -1 \\
+        -2 & 2 & -2 \\
+        0 & 1 & -2
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        So $$-x + y - z = 0 \qquad \text{and} \qquad y - 2z = 0.$$ (Note
+        that the second row in the matrix on the left-hand side is a
+        scalar multiple of the first row.) Given arbitrary $z$, we
+        deduce $$y = 2z \qquad \text{and} \qquad x = y-z = z.$$ Hence
+        $$E_{2} = \left\{ \begin{pmatrix}z\\2z\\z\end{pmatrix} \biggm| z \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}1\\2\\1\end{pmatrix} \right).$$
+        Therefore $g_{2} = \dim E_{2} = 1$.
+
+        As $g_{2} < a_{2}$, we conclude $T$ is not diagonalisable.
+
+    3.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $$A = \begin{pmatrix}
+        5 & 2 & 2 \\
+        2 & 2 & -4 \\
+        2 & -4 & 2
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x-5 & -2 & -2 \\
+        -2 & x-2 & 4 \\
+        -2 & 4 & x-2
+        \end{pmatrix} \\
+        &= (x-5) \bigl( (x-2)^{2} - 16 \bigr) + 2 \bigl( -2(x-2) + 8 \bigr) -2
+        \bigl( -8 + 2(x-2) \bigr) \\
+        &= (x-5) (x^{2}-4x-12) -4(x-6) - 4(x-6) \\
+        &= (x-5)(x+2)(x-6) - 8(x-6) \\
+        &= (x-6) \bigl( (x-5)(x+2) - 8 \bigr) \\
+        &= (x-6) (x^{2} - 3x -10 - 8) \\
+        &= (x-6) (x^{2} - 3x -18) \\
+        &= (x-6)(x-6)(x+3) \\
+        &= (x-6)^{2}(x+3).\end{aligned}$$ Hence the eigenvalues of $T$
+        are $-3$ and $6$, with algebraic multiplicities
+        $$a_{-3} = 1 \qquad \text{and} \qquad a_{6} = 2.$$ Since
+        $0 < g_{-3} \leqslant a_{-3}$, we deduce $g_{-3} = 1$.
+
+        We need to determine the eigenspace $E_{6}$. We solve
+        $(T-6I)(v) =
+        \vec{0}$; that is, $$\begin{pmatrix}
+        -1 & 2 & 2 \\
+        2 & -4 & -4 \\
+        2 & -4 & -4
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}$$
+        and we deduce the three simultaneous equations are equivalent to
+        $$-x + 2y + 2z = 0.$$ Here $y$ and $z$ can be taken to be
+        arbitrary, so $x = 2y+2z$. Hence
+        $$E_{6} = \left\{ \begin{pmatrix}2y+2z\\y\\z\end{pmatrix} \biggm| y,z \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}2\\1\\0\end{pmatrix}, \begin{pmatrix}2\\0\\1\end{pmatrix} \right)$$
+        and we conclude $g_{6} = 2$.
+
+        We have now observed $g_{\lambda} = a_{\lambda}$ for each
+        eigenvalue $\lambda$, so $T$ is diagonalisable.
+
+        To find a basis of eigenvectors, it remains to find a basis for
+        the eigenspace $E_{-3}$. We solve $(T+3I)(v) = \vec{0}$; that
+        is, $$\begin{pmatrix}
+        8 & 2 & 2 \\
+        2 & 5 & -4 \\
+        2 & -4 & 5
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.
+        \label{eq:IV.Q2iii}$$ We perform the following row operations:
+        $$\begin{aligned}
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        8 & 2 & 2 \\
+        2 & 5 & -4 \\
+        2 & -4 & 5
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &\longrightarrow
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        8 & 2 & 2 \\
+        2 & 5 & -4 \\
+        0 & 9 & -9
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \mapsto r_{3} - r_{2} \\
+        &\longrightarrow
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        8 & 2 & 2 \\
+        2 & 5 & -4 \\
+        0 & 1 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{3} \mapsto -{\textstyle\frac{1}{9}}r_{3} \\
+        &\longrightarrow
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        8 & 0 & 4 \\
+        2 & 0 & 1 \\
+        0 & 1 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&\begin{array}{@{}r@{}l}
+        r_{1} &{} \mapsto r_{1} - 2r_{3} \\
+        r_{2} &{} \mapsto r_{2} - 5r_{3}
+        \end{array} \\
+        &\longrightarrow
+        \left( \begin{array}{c|c}
+        \begin{matrix}
+        0 & 0 & 0 \\
+        2 & 0 & 1 \\
+        0 & 1 & -1
+        \end{matrix} &
+        \begin{matrix} 0 \\ 0 \\ 0 \end{matrix}
+        \end{array} \right)
+        &&r_{1} \mapsto r_{1} - 4r_{2}\end{aligned}$$ Hence our
+        equation [\[eq:IV.Q2iii\]](#eq:IV.Q2iii){reference-type="eqref"
+        reference="eq:IV.Q2iii"} is equivalent to $$2x+z = y-z = 0.$$ So
+        given arbitrary $z$, we have $x = -\frac{1}{2}z$ and $y = z$.
+        Thus
+        $$E_{-3} = \left\{ \begin{pmatrix}-\frac{1}{2}z\\z\\z\end{pmatrix} \biggm| z \in \mathbb{R}
+        \right\} = \operatorname{Span} \left( \begin{pmatrix}-\frac{1}{2}\\1\\1\end{pmatrix} \right).$$
+        We now have our basis of eigenvectors
+        $$\mathscr{B}= \left\{ \begin{pmatrix}-\frac{1}{2}\\1\\1\end{pmatrix}, \begin{pmatrix}2\\1\\0\end{pmatrix},
+          \begin{pmatrix}2\\0\\1\end{pmatrix} \right\}.$$ (Note this set
+        *is* linearly independent, since firstly we have selected a
+        basis for each eigenspace and secondly eigenvectors for
+        different eigenvalues are linearly independent.) The matrix
+        of $T$ with respect to $\mathscr{B}$ is
+        $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = \begin{pmatrix}
+        -3 & 0 & 0 \\
+        0 & 6 & 0 \\
+        0 & 0 & 6
+        \end{pmatrix}.$$ The required change of basis matrix corresponds
+        to writing the eigenvectors in $\mathscr{B}$ in terms of the
+        standard basis: $$\begin{array}{r@{}l@{}l@{}l}
+        \begin{pmatrix}-\frac{1}{2}\\1\\1\end{pmatrix} &{}= -{\textstyle\frac{1}{2}}\vec{e}_{1} &{}+
+        \vec{e}_{2} &{} + \vec{e}_{3} \\
+        \begin{pmatrix}2\\1\\0\end{pmatrix} &{}= 2\vec{e}_{1} &{} + \vec{e}_{2} & \\
+        \begin{pmatrix}2\\0\\1\end{pmatrix} &{}= 2\vec{e}_{1} & &{} + \vec{e}_{3}
+        \end{array}$$ and so the required change of basis matrix $P$
+        consists of these coefficients: $$P = \begin{pmatrix}
+        -\frac{1}{2} & 2 & 2 \\
+        1 & 1 & 0 \\
+        1 & 0 & 1
+        \end{pmatrix}.$$ Then $$P^{-1}AP = \begin{pmatrix}
+        -3 & 0 & 0 \\
+        0 & 6 & 0 \\
+        0 & 0 & 6
+        \end{pmatrix}.$$
+
+    4.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $$A = \begin{pmatrix}
+        3 & 4 & 4 \\
+        1 & 3 & 0 \\
+        -2 & -4 & -1
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det\begin{pmatrix}
+        x-3 & -4 & -4 \\
+        -1 &x-3 & 0 \\
+        2 & 4 &x+1
+        \end{pmatrix} \\
+        &= -4 \det \begin{pmatrix}
+        -1 & x-3 \\
+        2 & 4
+        \end{pmatrix} + (x+1) \det \begin{pmatrix}
+        x-3 & -4 \\
+        -1 & x-3
+        \end{pmatrix} \\
+        & \text{[expanding over last column]} \\
+        &= -4 \bigl( -4 - 2(x-3) \bigr) + (x+1) \bigl( (x-3)^{3} - 4 \bigr) \\
+        &= 8(x-3+2) + (x+1)(x^{2}-6x+9-4) \\
+        &= 8(x-1) + (x+1)(x^{2}-6x+5) \\
+        &= 8(x-1) + (x+1)(x-1)(x-5) \\
+        &= (x-1) \bigl( 8 + (x+1)(x-5) \bigr) \\
+        &= (x-1) (8 + x^{2} - 4x - 5) \\
+        &= (x-1)(x^{2} - 4x + 3) \\
+        &= (x-1)(x-1)(x-3) \\
+        &= (x-1)^{2} (x-3).\end{aligned}$$ Hence the eigenvalues of $T$
+        are $1$ and $3$, and the algebraic multiplicities are
+        $$a_{1} = 2 \qquad \text{and} \qquad a_{3} = 1.$$ The geometric
+        multiplicity $g_{3}$ must then satisfy $g_{3} = 1$. To find the
+        geometric multiplicity $g_{1}$, we need to determine the
+        eigenspace $E_{1}$. We solve $(T-I)(v) = \vec{0}$; that is,
+        $$\begin{pmatrix}
+        2 & 4 & 4 \\
+        1 & 2 & 0 \\
+        -2 & -4 & -2
+        \end{pmatrix}
+        \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Therefore $$2x + 4y + 4z = x + 2y = -2x - 4y - 2z = 0.$$ Adding
+        the first and third of these equations gives $2z = 0$; that is,
+        $z = 0$. The three equations then all reduce to $x + 2y = 0$, so
+        $x =
+        -2y$. Hence
+        $$E_{1} = \left\{ \begin{pmatrix}-2y\\y\\0\end{pmatrix} \biggm| y \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}-2\\1\\0\end{pmatrix} \right).$$
+        Therefore $g_{1} = \dim E_{1} = 1$.
+
+        In particular, $g_{1} < a_{1}$ and hence $T$ is not
+        diagonalisable.
+
+    5.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $$A = \begin{pmatrix}
+        1 & 0 & 1 \\
+        0 & 2 & 1 \\
+        -1 & 0 & 3
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x-1 & 0 & -1 \\
+        0 & x-2 & -1 \\
+        1 & 0 & x-3
+        \end{pmatrix} \\
+        &= (x-1) \det \begin{pmatrix}
+        x-2 & -1 \\
+        0 & x-3
+        \end{pmatrix} - \det \begin{pmatrix}
+        0 & x-2 \\
+        1 & 0
+        \end{pmatrix} \\
+        &= (x-1)(x-2)(x-3) + (x-2) \\
+        &= (x-2) \bigl( (x-1)(x-3) + 1 \bigr) \\
+        &= (x-2) (x^{2} - 4x + 4) \\
+        &= (x-2) (x-2)^{2} \\
+        &= (x-2)^{3}.\end{aligned}$$ Hence the only eigenvalue of $T$
+        is $2$ with algebraic multiplicity $3$.
+
+        Now solve $(T-2I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        -1 & 0 & 1 \\
+        0 & 0 & 1 \\
+        -1 & 0 & 1
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Hence $x-z = z = 0$, so we deduce $x = z = 0$ and $y$ may be
+        arbitrary. Therefore
+        $$E_{2} = \left\{ \begin{pmatrix}0\\y\\0\end{pmatrix} \biggm| y \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}0\\1\\0\end{pmatrix} \right),$$
+        so $g_{2} = \dim E_{2} = 1$.
+
+        In particular, $g_{2} < a_{2}$ and so $T$ is not diagonalisable.
+
+    6.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $$A = \begin{pmatrix}
+        2 & -1 & 0 \\
+        0 & 2 & 0 \\
+        -1 & 1 & 2
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x-2 & 1 & 0 \\
+        0 & x-2 & 0 \\
+        1 & -1 & x-2
+        \end{pmatrix} \\
+        &= (x-2) \det \begin{pmatrix}
+        x-2 & 0 \\
+        -1 & x-2
+        \end{pmatrix} - \det \begin{pmatrix}
+        0 & 0 \\
+        1 & x-2
+        \end{pmatrix} \\
+        &= (x-2)(x-2)^{2} - 0 \\
+        &= (x-2)^{3}.\end{aligned}$$ Hence the only eigenvalue of $T$
+        is $2$ with algebraic multiplicity $a_{2} = 3$.
+
+        Now solve $(T-2I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        0 & -1 & 0 \\
+        0 & 0 & 0 \\
+        -1 & 1 & 0
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        Then $-y = -x + y = 0$, so $x = y = 0$, but $z$ can be
+        arbitrary. Thus
+        $$E_{2} = \left\{ \begin{pmatrix}0\\0\\z\end{pmatrix} \biggm| z \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}0\\0\\1\end{pmatrix} \right).$$
+        Hence $g_{2} = \dim E_{2} = 1$ and, as $g_{2} < a_{2}$,  $T$ is
+        not diagonalisable.
+
+    7.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $$A = \begin{pmatrix}
+        -2 & -3 & 0 \\
+        3 & 4 & 0 \\
+        6 & 6 & 1
+        \end{pmatrix},$$ so $$\begin{aligned}
+        c_{T}(x) = \det(xI-A) &= \det \begin{pmatrix}
+        x+2 & 3 & 0 \\
+        -3 & x-4 & 0 \\
+        -6 & -6 & x-1
+        \end{pmatrix} \\
+        &= (x-1) \det \begin{pmatrix}
+        x+2 & 3 \\
+        -3 & x-4
+        \end{pmatrix} \\
+        &= (x-1) \bigl( (x+2)(x-4) + 9 \bigr) \\
+        &= (x-1) (x^{2} - 2x - 8 + 9) \\
+        &= (x-1)(x^{2} - 2x + 1) \\
+        &= (x-1) (x-1)^{2} \\
+        &= (x-1)^{3}.\end{aligned}$$ Hence the only eigenvalue of $T$
+        is $1$ with algebraic multiplicity $a_{1} = 3$.
+
+        Now solve $(T-I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        -3 & -3 & 0 \\
+        3 & 3 & 0 \\
+        6 & 6 & 0
+        \end{pmatrix} \begin{pmatrix}x\\y\\z\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix}.$$
+        All three simultaneous equations reduce to $x+y = 0$. Hence
+        $$E_{1} = \left\{ \begin{pmatrix}x\\-x\\z\end{pmatrix} \biggm| x,z \in \mathbb{R}\right\} =
+        \operatorname{Span} \left( \begin{pmatrix}1\\-1\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\end{pmatrix} \right).$$
+        So $g_{1} = \dim E_{1} = 2$. In particular, $g_{1} < a_{1}$, so
+        $T$ is not diagaonalisable.
+    :::
+
 3.  []{#problem-09-03 label="problem-09-03"}
 
     ::: {.questionjupyter}
     For each matrix in
     Problem [2]({{< ref "09-diagonal#problem-09-02" >}}), determine the minimum polynomial of the
     corresponding transformation $T$.
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+
+    To find the minimum polynomial, we use the following facts:
+    $m_{T}(x)$ divides $c_{T}(x)$, these two polynomials have precisely
+    the same roots, and $T$ is diagonalisable if and only if
+    $m_{T}(x)$ is a product of distinct linear factors.
+
+    1.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x+1)(x-2)(x-3)$. Since $m_{T}(x)$ must have the
+        same roots, $$m_{T}(x) = (x+1)(x-2)(x-3).$$
+
+    2.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x-1)(x-2)^{2}$ and $T$ is not diagonalisable. Hence
+        $m_{T}(x)$ cannot consist of distinct linear factors, so
+        $$m_{T}(x) = (x-1) (x-2)^{2}.$$
+
+    3.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+        $c_{T}(x) = (x-6)^{2}(x+3)$ and $T$ is diagonalisable, so
+        $$m_{T}(x) = (x-6)(x+3).$$
+
+    4.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x-1)^{2}(x-3)$ and $T$ is not diagonalisable, so
+        $$m_{T}(x) = (x-1)^{2}(x-3).$$
+
+    5.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x-2)^{3}$ and $T$ is not diagonalisable, so there
+        remain two possibilities: the minimum polynomial is either
+        $(x-2)^{2}$ or $(x-2)^{3}$. Now $$(A-2I)^{2} = \begin{pmatrix}
+        -1 & 0 & 1 \\
+        0 & 0 & 1 \\
+        -1 & 0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+        -1 & 0 & 1 \\
+        0 & 0 & 1 \\
+        -1 & 0 & 1
+        \end{pmatrix} =
+        \begin{pmatrix}
+        0 & 0 & 0 \\
+        -1 & 0 & 1 \\
+        0 & 0 & 0
+        \end{pmatrix},$$ so $(T-2I)^{2} \neq 0$. Hence
+        $$m_{T}(x) = (x-2)^{3}.$$
+
+    6.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x-2)^{3}$ and $T$ is not diagonalisable, so
+        $m_{T}(x)$ is either $(x-2)^{2}$ or $(x-2)^{3}$. Now
+        $$(A-2I)^{2} =
+        \begin{pmatrix}
+        0 & -1 & 0 \\
+        0 & 0 & 0 \\
+        -1 & 1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+        0 & -1 & 0 \\
+        0 & 0 & 0 \\
+        -1 & 1 & 0
+        \end{pmatrix}
+        = \begin{pmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 1 & 0
+        \end{pmatrix},$$ so $(T-2I)^{2} \neq 0$. Hence
+        $$m_{T}(x) = (x-2)^{3}.$$
+
+    7.  **This solution is here for reference only, you should use a
+        computer to solve this type of problem in this course!**
+
+        $c_{T}(x) = (x-1)^{3}$ and $T$ is not diagonalisable, so
+        $m_{T}(x)$ is either $(x-1)^{2}$ or $(x-1)^{3}$. Now
+        $$(A-I)^{2} =
+        \begin{pmatrix}
+        -3 & -3 & 0 \\
+        3 & 3 & 0 \\
+        6 & 6 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+        -3 & -3 & 0 \\
+        3 & 3 & 0 \\
+        6 & 6 & 0
+        \end{pmatrix}
+        = \begin{pmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+        \end{pmatrix},$$ so $(T-I)^{2} = 0$. Hence
+        $m_{T}(x) = (x-1)^{2}$.
     :::
 
 4.  []{#problem-09-04 label="problem-09-04"}
@@ -1098,11 +1676,71 @@ easily using a Jupyter notebook:
     polynomial.
     :::
 
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+    $$\begin{aligned}
+    c_{A}(x) = \det(xI-A) &= \det \begin{pmatrix}
+    x-1 & -1 & 0 \\
+    0 & x-2 & 0 \\
+    0 & 0 & x-1
+    \end{pmatrix} \\
+    &= (x-1) \det \begin{pmatrix}
+    x-2 & 0 \\
+    0 & x-1
+    \end{pmatrix} \\
+    &= (x-1)^{2} (x-2)\end{aligned}$$ $$\begin{aligned}
+    c_{B}(x) = \det(xI-B) &= \det \begin{pmatrix}
+    x-2 & 0 & 0 \\
+    0 & x-2 & -2 \\
+    0 & 0 & x-1
+    \end{pmatrix} \\
+    &= (x-2) \det \begin{pmatrix}
+    x-2 & -2 \\
+    0 & x-1
+    \end{pmatrix} \\
+    &= (x-2)^{2}(x-1).\end{aligned}$$ Hence $c_{A}(x) \neq c_{B}(x)$.
+
+    $$(A-I)(A-2I) = \begin{pmatrix}
+    0 & 1 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+    -1 & 1 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & -1
+    \end{pmatrix}
+    = \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+    \end{pmatrix}$$ and $$(B-I)(B-2I) = \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 2 \\
+    0 & 0 & 0
+    \end{pmatrix}
+    \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 2 \\
+    0 & 0 & -1
+    \end{pmatrix}
+    = \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+    \end{pmatrix}.$$ Hence $m_{A}(x)$ and $m_{B}(x)$ both
+    divide $(x-1)(x-2)$. However, $m_{A}(x)$ must have the same roots
+    as $c_{A}(x)$ and the same holds for $m_{B}(x)$ relative
+    to $c_{B}(x)$. This forces $$m_{A}(x) = m_{B}(x) = (x-1)(x-2).$$
+    :::
+
 5.  []{#problem-09-05 label="problem-09-05"}
 
     ::: {.questionjupyter}
-    Let $T \colon \mathbb{R}^{4} \to \mathbb{R}^{4}$ be the linear
-    transformation given by the matrix $$A = \begin{pmatrix}
+    Let $T \colon \mathbb{R}^{4} \longrightarrow\mathbb{R}^{4}$ be the
+    linear transformation given by the matrix $$A = \begin{pmatrix}
             2 & 1 & 0 & -1 \\
             -2 & 5 & -1 & -7 \\
             -12 & 16 & -4 & -15 \\
@@ -1113,4 +1751,134 @@ easily using a Jupyter notebook:
 
     2.  By considering the minimum polynomial, or otherwise, determine
         whether or not $T$ is diagonalisable.
+    :::
+
+    <button type="button" class="collapsible">SOLUTION.</button>
+::: {.solution04}
+    **This solution is here for reference only, you should use a
+    computer to solve this type of problem in this course!**
+    $$\begin{aligned}
+    c_{T}(x) &= \det(xI-A) \\
+    &= \det \begin{pmatrix}
+    x-2 & -1 & 0 & 1 \\
+    2 & x-5 & 1 & 7 \\
+    12 & -16 & x+4 & 15 \\
+    2 & -3 & 1 & x+5
+    \end{pmatrix} \\
+    &= (x-2) \det \begin{pmatrix}
+    x-5 & 1 & 7 \\
+    -16 & x+4 & 15 \\
+    -3 & 1 & x+5
+    \end{pmatrix} +
+    \det \begin{pmatrix}
+    2 & 1 & 7 \\
+    12 & x+4 & 15 \\
+    2 & 1 & x+5
+    \end{pmatrix} \\
+    & - \det \begin{pmatrix}
+    2 & x-5 & 1 \\
+    12 & -16 & x+4 \\
+    2 & -3 & 1
+    \end{pmatrix} \\
+    &= (x-2) \left( (x-5) \det \begin{pmatrix}
+    x+4 & 15 \\
+    1 & x+5
+    \end{pmatrix} - \det \begin{pmatrix}
+    -16 & 15 \\
+    -3 & x+5
+    \end{pmatrix} \right. \\
+    &\qquad \left. \mbox{} + 7 \det \begin{pmatrix}
+    -16 & x+4 \\
+    -3 & 1
+    \end{pmatrix} \right) + 2 \det \begin{pmatrix}
+    x+4 & 15 \\
+    1 & x+5
+    \end{pmatrix} - \det \begin{pmatrix}
+    12 & 15 \\
+    2 & x+5
+    \end{pmatrix} \\
+    &\qquad \mbox{} + 7 \det \begin{pmatrix}
+    12 & x+4 \\
+    2 & 1
+    \end{pmatrix} - \left( 2 \det \begin{pmatrix}
+    -16 & x+4 \\
+    -3 & 1
+    \end{pmatrix} - (x-5) \det \begin{pmatrix}
+    12 & x+4 \\
+    2 & 1
+    \end{pmatrix} \right. \\
+    &\left. \qquad \mbox{} + \det \begin{pmatrix}
+    12 & -16 \\
+    2 & -3
+    \end{pmatrix} \right) \\
+    &= (x-2) \biggl( (x-5) \bigl( (x+4)(x+5) - 15 \bigr) - \bigl( -16(x+5)
+    + 45 \bigr) \biggr. \\
+    &\qquad \biggl. {} + 7 \bigl( -16 + 3(x+4) \bigr) \biggr) + 2 \bigl(
+    (x+4)(x+5) - 15 \bigr) - \bigl( 12 (x+5) - 30 \bigr) \\
+    &\qquad {} + 7 \bigl( 12 -
+    2(x+4) \bigr) - \biggl( 2 \bigl( - 16 + 3(x+4) \bigr) \biggr. \\
+    &\qquad\qquad\qquad\qquad \biggl. {}- (x-5) \bigl(
+    12 - 2(x+4) \bigr) - 36 + 32 \biggr) \\
+    &= (x-2) \bigl( (x-5)(x^{2} + 9x + 20 - 15) - (-16x - 80 + 45) + 7
+    (-16 + 3x + 12) \bigr) \\
+    &\qquad {} + 2(x^{2} + 9x + 20 -15) - (12x + 60 - 30) +
+    7(12 - 2x - 8) \\
+    &\qquad {} - \bigl( 2(-16 + 3x + 12) - (x-5) (12 - 2x - 8) - 4 \bigr) \\
+    &= (x-2) \bigl( (x-5)(x^{2}+9x+5) - (-16x - 35) + 7(3x-4) \bigr) +
+    2(x^{2}+9x+5) \\
+    &\qquad {} - (12x + 30) + 7(4-2x) - \bigl( 2(3x-4) - (x-5)(4-2x) -
+    4 \bigr) \\
+    &= (x-2) (x^{3} + 4x^{2} - 40x - 25 + 16x + 35 + 21x - 28) + 2x^{2} +
+    18 x + 10 \\
+    &\qquad {} - 12x - 30 + 28 - 14x - \bigl( 6x-8 - (-2x^{2} + 14x - 20 )
+    - 4 \bigr) \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - (6x - 12 +
+    2x^{2} - 14x + 20) \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) + 2x^{2} - 8x + 8 - 2x^{2} + 8x -
+    8 \\
+    &= (x-2) (x^{3} + 4x^{2} - 3x - 18) \\
+    &= (x-2)(x-2) (x^{2} + 6x + 9) \\
+    &= (x-2)^{2} (x+3)^{2}.\end{aligned}$$ For $T$ to be diagonalisable,
+    the minimum polynomial would have to be a product of distinct linear
+    factors; that is, it would have to be $(x-2)(x+3)$. We calculate
+    $$\begin{gathered}
+    (A-2I) (A+3I) = 
+    \begin{pmatrix}
+    0 & 1 & 0 & -1 \\
+    -2 & 3 & -1 & -7 \\
+    -12 & 16 & -6 & -15 \\
+    -2 & 3 & -1 & -7
+    \end{pmatrix}
+    \begin{pmatrix}
+    5 & 1 & 0 & -1 \\
+    -2 & 8 & -1 & -7 \\
+    -12 & 16 & -1 & -15 \\
+    -2 & 3 & -1 & -2
+    \end{pmatrix}
+     =
+    \begin{pmatrix}
+    0 & 5 & 0 & -5 \\
+    10 & -15 & 5 & 10 \\
+    10 & -25 & 5 & 20 \\
+    10 & -15 & 5 & 10
+    \end{pmatrix}.\end{gathered}$$ Hence $(T-2I)(T+3I) \neq 0$, so
+    $m_{T}(x) \neq (x-2)(x+3)$. Therefore the minimum polynomial is not
+    a product of distinct linear factors, so $T$ is not diagonalisable.
+
+    The remaining possibilities are
+    $$m_{T}(x) = (x-2)^{2}(x+3), \qquad (x-2)(x+3)^{2} \qquad \text{or}
+    \qquad c_{T}(x).$$ Calculating $$(A-2I)^{2}(A+3I) = \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    -50 & 75 & -25 & -50 \\
+    -50 & 75 & -25 & -50 \\
+    -50 & 75 & -25 & -50
+    \end{pmatrix}$$ and $$(A-2I)(A+3I)^{2} = \begin{pmatrix}
+    0 & 25 & 0 & -25 \\
+    0 & 0 & 0 & 0 \\
+    0 & -50 & 0 & 50 \\
+    0 & 0 & 0 & 0
+    \end{pmatrix}$$ (both probably more pleasantly done using a
+    computer) shows that $m_{T}(x)$ cannot be the first two
+    possibilities. Hence $$m_{T}(x) = c_{T}(x) = (x-2)^{2}(x+3)^{2}.
+    \square$$
     :::

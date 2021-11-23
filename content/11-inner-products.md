@@ -425,7 +425,8 @@ $e_{1} \in \operatorname{Span}(v_{1})$.
 Suppose that $\{
     e_{1},e_{2},\dots,e_{k-1} \}$ is an orthonormal set contained in
 $\operatorname{Span}(v_{1},v_{2},\dots,v_{k-1})$ for some $k \geq 2$.
-Set $$w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle.$$ If
+Set
+$$w_{k} = v_{k} - \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_i.$$ If
 $w_{k} = \vec{0}$, then $$\begin{aligned}
     v_{k} = \sum_{i=1}^{k-1} \langle v_{k},e_{i} \rangle e_{i} \in
     \operatorname{Span}(e_{1},\dots,e_{k-1}) \subseteq
@@ -435,7 +436,7 @@ $\{ v_{1},v_{2},\dots,v_{n} \}$ is linearly independent. Thus
 $w_{k} \neq \vec{0}$ and $e_{k} =
 \frac{1}{\|w_{k}\|}w_{k}$ is defined.
 
-By construction, $\|e_{k\|} = 1$ and $$\begin{aligned}
+By construction, $\|e_{k}\| = 1$ and $$\begin{aligned}
     e_{k}  = \frac{1}{\|w_{k}\|} \biggl( v_{k} - \sum_{i=1}^{k-1}
     \langle v_{k},e_{i} \rangle e_{i} \biggr)                         
     \in \operatorname{Span}( e_{1}, \dots, e_{k-1}, v_{k})                 
@@ -704,6 +705,24 @@ $P_U$ is defined by $$P_{U}(v) = u$$ where $v = u+w$ is the unique
 decomposition of $v$ with $u \in U$ and $w \in U^{\perp}$.
 
 ::: {.thm}
+[]{#thm-pythagorus label="thm-pythagorus"} If $u$ and
+$v$ are orthogonal vectors in an inner product space, then
+$$\|u + v\| ^ 2 = \|u\|^ 2 + \|v\| ^ 2.$$
+:::
+
+::: {.proof}
+*Proof.* $$\begin{aligned}
+    \|u + v\| ^ 2 & = \langle u + v, u + v \rangle & \text{(by definition of
+    norm)} \\
+                  & = \langle u, u\rangle + \langle u, v\rangle + \langle v,
+    u\rangle + \langle v, v\rangle & \text{(by additivity of inner products)} \\
+                                   & = \langle u, u\rangle + \langle v, v
+    \rangle & \text{(since $\langle u, v\rangle =\langle v, u\rangle=0$)}\\
+            & = \|u\| ^ 2 + \|v\| ^ 2. \square
+  \end{aligned}$$ ◻
+:::
+
+::: {.thm}
 Let $V$ be a finite-dimensional inner product space and $U$ be a
 subspace of $V$. Let $P_{U}:V \to V$ be the projection map onto $U$
 associated to the direct sum decomposition $V = U \oplus
@@ -713,28 +732,22 @@ closest vector in $U$ to $v$.)
 :::
 
 ::: {.proof}
-*Proof.* Since $V = U \oplus U^{\perp}$, we can write
-$v = u_{0} + w_{0}$ where $u_{0} \in U$ and $w_{0} \in U^{\perp}$, so
-that $P_{U}(v) = u_{0}$. Then if $u$ is any vector in $U$,
+*Proof.* Let $v\in V$ and $u\in U$ be arbitrary. Then there exist
+$u_0\in U$ and $w_0
+  \in U^ {\perp}$ such that $v = u_0 + w_0$ and $P_U(v) = u_0$. Hence
 $$\begin{aligned}
-  \|v-u\|^{2} & = \|v-u_{0}\| + (u_{0} - u)^{2} 
-                   & (v - u = v-u_{0} + (u_{0} - u)) \\
-                   & = \|w_{0}\| + (u_{0} - u)^{2}  & (v - u_0 = w_0) \\
-                   & = \langle w_{0} + (u_{0}-u), w_{0} + (u_{0}-u) \rangle 
-                   & (\text{definition of the norm}) \\
-                   & = \langle w_{0},w_{0} \rangle 
-                       + \langle w_{0},u_{0}-u \rangle 
-                       + \langle u_{0}-u, w_{0} \rangle 
-                       + \langle u_{0}-u, u_{0}-u \rangle 
-                   & (\text{additivity})\\
-                   & = \|w_{0}\|^{2} + \|u_{0} - u \|^{2} 
-                   & \text{(since $w_{0}$ is orthogonal to $u_{0}-u \in U$)} \\
-                   & \geq \|w_{0}\|^{2} 
-                   & \text{(since $\|u_{0} - u\| \geq 0$)} \\
-                   & = \|v - u_{0}\|^{2} \\
-                   & = \|v - P_{U}(v)\|^{2}.
-  \end{aligned}$$ Hence $\|v-u\| \geq \|v -
-  P_{U}(v)\|$ for all $u \in U$. ◻
+    \|v - P_U(v)\| ^ 2 & \leq \|v - P_U(v)\| ^ 2 + \|P_U(v) - u\| ^ 2 
+                       & \text{(since  $\|P_U(v) - u\| ^ 2\geq 0$).}
+  \end{aligned}$$ But
+$P_U(v) - v = u_0 - (u_0 + w_0) = w_0 \in U^ {\perp}$ and $P_U(v) - u =
+  u_0 - u \in U$. In other words, $P_U(v) - v$ and $P_U(v) - u$ are
+orthogonal, and so
+[Theorem 11.5.4]({{< ref "11-inner-products#thm-pythagorus" >}}) implies that $$\begin{aligned}
+     \|v - P_U(v)\| ^ 2 & \leq \|v - P_U(v)\| ^ 2 + \|P_U(v) - u\| ^ 2 \\
+                       & =  \|v - P_U(v) + P_U(v) - u\| ^ 2\\
+                       & = \|v - u \| ^ 2.
+  \end{aligned}$$ Hence $\|v-u\| \geq \|v - P_{U}(v)\|$ for all
+$u \in U$. ◻
 :::
 
 ::: {.exampjupyter}

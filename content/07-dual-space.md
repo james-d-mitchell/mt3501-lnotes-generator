@@ -651,8 +651,9 @@ easily using a Jupyter notebook:
             \circ \iota = f \circ \iota = f$ and so
         $f\in \operatorname{im}\iota ^ *$. Since $f\in
             U ^*$ was arbitrary, it follows that
-        $\operatorname{im}\iota ^ * = U$, and so $\dim \operatorname{im}
-            \iota ^ * = \dim U$.
+        $\operatorname{im}\iota ^ * = U ^ *$, and so
+        $\dim \operatorname{im}
+            \iota ^ * =\dim U ^* = \dim U$.
 
         Thus by the equation above, it follows that
         $$\dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ * 
