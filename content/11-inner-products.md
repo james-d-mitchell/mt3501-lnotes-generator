@@ -803,7 +803,7 @@ $\gamma = 1$,  $\alpha = -1 + 3\gamma = 2$ and $\beta = 5 -
                  & = P_{U}(\vec{w}_{0}) + \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix}.
   \end{aligned}$$ We know $P_{U}(\vec{w}_{0})$ is the nearest vector
 in $U$ to $\vec{w}_{0}$, so the distance of $\vec{w}_{0}$ to $U$ is
-$$\|\vec{w}_{0}\| - P_{U}(\vec{w}_{0}) = \left\|
+$$\|\vec{w}_{0}- P_{U}(\vec{w}_{0})\|  = \left\|
     \begin{pmatrix} -3 \\ 2 \\ 1 \\ \end{pmatrix} \right\| = \sqrt{(-3)^{2} + 2^{2} + 1^{2}} =
     \sqrt{14}.$$
 :::

@@ -71,7 +71,7 @@ If $$A =
 
 5.  the eigenvalues of $A$ are $\alpha_{11}, \alpha_{22}, \ldots,
               \alpha_{nn}$ and the associated eigenvectors are the
-    standard basis vectors $ec{e}_1, \ldots, \vec{e}_n$, respectively;
+    standard basis vectors $\vec{e}_1, \ldots, \vec{e}_n$, respectively;
 
 6.  the characteristic polynomial $c_A(x)$ is $(x - \alpha_{11})(x -
                 \alpha_{22})\cdots(x - \alpha_{nn})$.
@@ -261,8 +261,9 @@ multiplicities.
 
 **(2).** Let $\lambda$ be an eigenvalue of $T$. Then the geometric
 multiplicity $g_{\lambda}$ of $\lambda$ is defined to be the dimension
-of the eigenspace $E_{\lambda} = \ker(T-\lambda I)$. Since eigenvectors
-are not allowed to be $\vec{0}$, it follows that $g_{\lambda} \geqslant
+of the eigenspace $E_{\lambda} = \ker(T-\lambda \operatorname{id})$.
+Since eigenvectors are not allowed to be $\vec{0}$, it follows that
+$g_{\lambda} \geqslant
   1$. Choose a basis $\{ v_{1},v_{2},\dots,v_{g_{\lambda}} \}$
 for $E_{\lambda}$ and extend to a basis $\mathscr{B} = \{
     v_{1},v_{2},\dots,v_{g_{\lambda}},v_{g_{\lambda}+1},\dots,v_{n} \}$
@@ -468,7 +469,29 @@ $m_T(x) =  (x-\lambda)f(x)$ for some polynomial $f$ with degree
 $\deg m_T(x) - 1$. By part (2), $m_T(x)$ divides $c_T(x)$ and so
 $c_T(x) = m_T(x) g(x)$ for some polynomial $g$. It follows that
 $$c_T(x) = m_T(x)\ g(x) = (x-\lambda)\ f(x)\ g(x)$$ and so $\lambda$ is
-a root of $c_T(x)$ also. ◻
+a root of $c_T(x)$ also.
+
+We conclude the proof by showing that every root of $c_T(x)$ is also a
+root of $m_T(x)$. Suppose that
+$$m_T(x) = \alpha_0 + \alpha_1x + \alpha_2 x^ 2 + \cdots + \alpha_{m - 1} x ^
+    {m -1} + x ^ m.$$ If $\lambda$ is a root of $c_T(x)$, then $\lambda$
+is an eigenvalue of $T$ and so there exists an eigenvector
+$v\in V\setminus\{\vec{0}\}$ such that $T(v) = \lambda v$. Repeatedly
+applying $T$ to the equality $T(v)
+  = \lambda v$ yields $T ^ j (v) = \lambda ^ j v$ for all
+$j\geqslant 1$. Hence $$\begin{aligned}
+    \vec{0} = m_T(T)(v) & = (\alpha_0\operatorname{id}+ \alpha_1T + \alpha_2 T^ 2 + \cdots +
+      \alpha_{m - 1} T ^ {m -1} + T ^ m )(v)\\
+                  & = \alpha_0\operatorname{id}(v) + \alpha_1T(v) + \alpha_2 T^ 2(v) + \cdots +
+                  \alpha_{m - 1} T ^ {m -1}(v) + T ^ m (v) \\
+                  & = \alpha_0v + \alpha_1\lambda v + \alpha_2\lambda ^ 2 v +
+                  \cdots + \alpha_{m - 1} \lambda ^ {m - 1}v + \alpha_{m}v \\
+                  & = (\alpha_0 + \alpha_1\lambda  + \alpha_2\lambda ^ 2  +
+                  \cdots + \alpha_{m - 1} \lambda ^ {m - 1} + \alpha_{m})v \\
+                  & = m_T(\lambda)v.
+  \end{aligned}$$ Since $m_T(\lambda)v = \vec{0}$ but $v\not=\vec{0}$,
+it follows that $m_T(\lambda) = 0$ and so $\lambda$ is a root of
+$m_T(x)$ also. ◻
 :::
 
 ::: {.lemma}
@@ -546,29 +569,32 @@ Hence $$(A-\lambda_{1}I) (A-\lambda_{2}I) \cdots (A-\lambda_{k}I)
       \vdots &        & \vdots \\
       0      & \cdots & 0
     \end{pmatrix} = 0,$$ so
-$$(T-\lambda_{1}I) (T-\lambda_{2}I) \cdots (T-\lambda_{k}I) = 0.$$ Thus
-$m_{T}(x)$ divides $(x-\lambda_{1})(x-\lambda_{2})\cdots(x-\lambda_{k})$
-by [Proposition 9.4.2]({{< ref "09-diagonal#prop-m-divide" >}})(2). Hence $m_{T}(x)$ is a product of distinct
+$$(T-\lambda_{1}\operatorname{id}) (T-\lambda_{2}\operatorname{id}) \cdots (T-\lambda_{k}\operatorname{id}) = 0.$$
+Thus $m_{T}(x)$ divides
+$(x-\lambda_{1})(x-\lambda_{2})\cdots(x-\lambda_{k})$ by
+[Proposition 9.4.2]({{< ref "09-diagonal#prop-m-divide" >}})(2). Hence $m_{T}(x)$ is a product of distinct
 linear factors.
 
 ($\Leftarrow$) Suppose that the minimum polynomial of $T$ consists of
 distinct linear factors. Then
-$$m_T(T) = (T - \lambda_1 I)\cdots (T - \lambda_k I)$$ for some
-$\lambda_1, \lambda_2, \ldots, \lambda_k\in F$. Also by the definition
-of the minimum polynomial $m_T(T)$ is the zero linear transformation.
-Hence $$\begin{array}{rclr}
+$$m_T(T) = (T - \lambda_1\operatorname{id})\cdots (T - \lambda_k \operatorname{id})$$
+for some $\lambda_1, \lambda_2, \ldots, \lambda_k\in F$. Also by the
+definition of the minimum polynomial $m_T(T)$ is the zero linear
+transformation. Hence $$\begin{array}{rclr}
       \dim V
-       & =                                                        & \dim\ker (T - \lambda_1 I)\cdots (T - \lambda_k I)
-       & (T - \lambda_1 I)\cdots (T - \lambda_k I)
-      \text{ is the zero map}                                                                                                                               \\
-       & \le                                                      & \dim \ker (T - \lambda_1 I) + \cdots +
-      \dim \ker(T - \lambda_k I)
+       & =                                                        & \dim\ker (T
+       - \lambda_1 \operatorname{id})\cdots (T - \lambda_k \operatorname{id})
+       & (T - \lambda_1 \operatorname{id})\cdots (T - \lambda_k \operatorname{id})
+      \text{ is the zero map}\\
+       & \le                                                      & \dim \ker
+       (T - \lambda_1 \operatorname{id}) + \cdots +
+      \dim \ker(T - \lambda_k \operatorname{id})
        & \text{by \cref{lem:kernel-bound}}
       \\
        & =                                                        & \dim E_{\lambda_1} + \cdots + \dim E_{\lambda_k}
-       & E_{\lambda_i} = \ker(T - \lambda_i I) \text{ for all } i
+       & E_{\lambda_i} = \ker(T - \lambda_i \operatorname{id}) \text{ for all } i
       \\
-       & =                                                        & g_1 + \cdots + g_k
+       & =                                                  & g_1 + \cdots + g_k
        & \text{by definition of the geometric multiplicity}
       \\
        & \leqslant& a_1 + \cdots + a_k                                                                                                                                                         & \text{by \cref{prop-alg-geo}(2)} \\
@@ -793,7 +819,7 @@ all $v\in \mathbb{R} ^ 3$.
     $a_{2} = g_{2} = 2$.
 
     $\mathbf{\lambda = -1.}$ We want to find
-    $g_{-1} = \dim E_{-1} = \dim \ker (T + I)$. Since
+    $g_{-1} = \dim E_{-1} = \dim \ker (T + \operatorname{id})$. Since
     $g_{-1} \leqslant a_{-1} = 1$, it suffices to show that $g_{-1}
                 \not= 0$. But $$(A + I)
                 =
@@ -804,27 +830,29 @@ all $v\in \mathbb{R} ^ 3$.
                 \end{pmatrix}$$ and clearly the row rank of $A + I$ is
     $2$. Hence the column rank of $A + I$ is strictly less than $3$, and
     so $\dim \operatorname{im} (T
-              + I) < 3$ by
+              + \operatorname{id}) < 3$ by
     [Theorem 4.2.3]({{< ref "04-linear-transf#thm-column-space-is-image" >}})(1) (the column rank of
     $\operatorname{Mat}_{\mathscr{B}, \mathscr{B}}(T) = A$ equals
     $\dim\operatorname{im} T$). Hence, by the Rank-Nullity Theorem,
     $\dim
-              \ker (T + I) > 0$, and so $g_{-1} = 1$.
+              \ker (T + \operatorname{id}) > 0$, and so $g_{-1} = 1$.
 
     \[Note that an alternative (longer) solution to this would be to
     calculate the dimension of $\dim E_{-1}$ by finding a basis for it
     explicitly.\]
 
     $\mathbf{\lambda = 2.}$ In this case, we want to find
-    $g_2 = \dim E_{2} = \dim \ker (T - 2I)$. As in the previous case,
-    $$(A - 2I)
+    $g_2 = \dim E_{2} = \dim \ker (T - 2\operatorname{id})$. As in the
+    previous case, $$(A - 2I)
                 \begin{pmatrix}
                   6  & 6  & 0 \\
                   -9 & -9 & 0 \\
                   3  & 3  & 0
                 \end{pmatrix}$$ and the column rank of $A - 2I$ is
-    clearly $1$. Hence $\dim \operatorname{im} (T - 2I)
-                = 1$, and so $g_2 = \dim \ker (T - 2I) = 2$.
+    clearly $1$. Hence $\dim
+              \operatorname{im} (T - 2\operatorname{id})
+                = 1$, and so
+    $g_2 = \dim \ker (T - 2\operatorname{id}) = 2$.
 
     It follows that $T$ is diagonalisable, and that $$D =
                 \begin{pmatrix}
@@ -1142,7 +1170,8 @@ easily using a Jupyter notebook:
 
         To find the required matrix $P$, we need to find a basis for
         each eigenspace. First consider the eigenspace $E_{-1}$. We
-        solve $(T+I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        solve $(T+\operatorname{id})(v) = \vec{0}$; that is,
+        $$\begin{pmatrix}
         4 & -4 & 0 \\
         0 & 0 & 0 \\
         0 & 6 & 3
@@ -1420,8 +1449,8 @@ easily using a Jupyter notebook:
         $$a_{1} = 2 \qquad \text{and} \qquad a_{3} = 1.$$ The geometric
         multiplicity $g_{3}$ must then satisfy $g_{3} = 1$. To find the
         geometric multiplicity $g_{1}$, we need to determine the
-        eigenspace $E_{1}$. We solve $(T-I)(v) = \vec{0}$; that is,
-        $$\begin{pmatrix}
+        eigenspace $E_{1}$. We solve
+        $(T-\operatorname{id})(v) = \vec{0}$; that is, $$\begin{pmatrix}
         2 & 4 & 4 \\
         1 & 2 & 0 \\
         -2 & -4 & -2
@@ -1536,7 +1565,8 @@ easily using a Jupyter notebook:
         &= (x-1)^{3}.\end{aligned}$$ Hence the only eigenvalue of $T$
         is $1$ with algebraic multiplicity $a_{1} = 3$.
 
-        Now solve $(T-I)(v) = \vec{0}$; that is, $$\begin{pmatrix}
+        Now solve $(T-\operatorname{id})(v) = \vec{0}$; that is,
+        $$\begin{pmatrix}
         -3 & -3 & 0 \\
         3 & 3 & 0 \\
         6 & 6 & 0
@@ -1655,7 +1685,7 @@ easily using a Jupyter notebook:
         0 & 0 & 0 \\
         0 & 0 & 0 \\
         0 & 0 & 0
-        \end{pmatrix},$$ so $(T-I)^{2} = 0$. Hence
+        \end{pmatrix},$$ so $(T-\operatorname{id})^{2} = 0$. Hence
         $m_{T}(x) = (x-1)^{2}$.
     :::
 

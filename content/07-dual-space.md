@@ -291,8 +291,19 @@ transformation.
 ::: {.defn}
 If $A$ is a matrix with entries in a field $F$, then the ***transpose***
 $A ^ *$ of $A$ is the matrix obtained by swapping the rows and columns
-of $A$. More precisely, if $A = [\alpha_{ij}]$, then $A
-  ^ * = [\alpha_{ji}]$.
+of $A$. More precisely, if $$A = [\alpha_{ij}] =
+    \begin{pmatrix}
+      \alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
+      \alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
+      \vdots      & \vdots      & \ddots & \vdots      \\
+      \alpha_{m1} & \alpha_{m2} & \cdots & \alpha_{mn}
+    \end{pmatrix},$$ then $$A ^ * = [\alpha_{ji}] =
+    \begin{pmatrix}
+      \alpha_{11} & \alpha_{21} & \cdots & \alpha_{m1} \\
+      \alpha_{12} & \alpha_{22} & \cdots & \alpha_{m2} \\
+      \vdots      & \vdots      & \ddots & \vdots      \\
+      \alpha_{1n} & \alpha_{2n} & \cdots & \alpha_{mn}
+    \end{pmatrix}.$$
 :::
 
 ::: {.example}
@@ -457,8 +468,9 @@ The row rank of the matrix (from
 []{#lemma-rank-im-dual-transf label="lemma-rank-im-dual-transf"} Let $V$ and $W$ are
 finite-dimensional vector spaces over a field $F$. If $T
   : V \longrightarrow W$ is a linear transformation, then
-$\dim \operatorname{im} T = \dim \operatorname{im} T ^ *$ where
-$T ^ *: W ^ * \longrightarrow V ^ *$ is the dual transformation of $T$.
+$\dim \operatorname{im} T = \dim
+  \operatorname{im} T ^ *$ where $T ^ *: W ^ * \longrightarrow V ^ *$ is
+the dual transformation of $T$.
 :::
 
 ::: {.proof}
@@ -620,45 +632,18 @@ easily using a Jupyter notebook:
         ------------------------------------------------------------------------
         :::
 
-    2.  Since $U$ is a vector space in its own right, let
-        $\iota:U \longrightarrow V$ be defined by $\iota(u) = u$ for all
-        $u\in U$. Clearly, $\iota$ is a linear transformation (it's just
-        the identity on $U$). If $\iota ^ * : V ^ * \longrightarrow U
-            ^ *$ is the dual transformation of $\iota$, then it follows,
-        by the Rank-Nullity Theorem
-        ([Theorem 4.1.7]({{< ref "04-linear-transf#thm-rank-nullity" >}})), that
-        $$\label{eq-sheet-v-problem-2-b}
-              \dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ *.$$
-        If $f\in \ker \iota ^ *$, then
-        $\iota ^ *(f) = f\circ \iota = \vec{0}_{U ^*}
-            \in U ^ *$ (the linear transformation mapping every element
-        of $U$ to $0
-              \in F$). It follows that if $f\in \ker \iota ^ *$, then
-        $f\in V ^ *$ and if $u\in
-            U$, then $f(u) = f(\iota(u)) = \iota ^ *(f)(u) = 0$ and so
-        $f \in U ^ 0$. Conversely, if $f \in U ^ 0$ and $u\in U$, then
-        $\iota ^*(f)(u) = (f \circ \iota)(u) = f(\iota(u)) = f(u) = 0$,
-        and so $f\in \ker \iota ^ *$. We have shown that
-        $\ker \iota ^ * = U ^ 0$ and so
-        $\dim \ker \iota ^ * = \dim U ^ 0$.
+    2.  If $f: X \longrightarrow Y$ is any function, and $Z\subseteq X$,
+        then we denote by $f|_{Z}: Z \longrightarrow Y$ the function $f$
+        *restricted* to the set $Z$ (i.e. $f$ and $f|_{Z}$ coincide on
+        $Z$ but $f|_{Z}$ is just not defined outside $Z$.
 
-        If $f\in U ^ *$, then $f$ can be extended to a linear functional
-        $\hat f: V
-            \longrightarrow F$ (by extending any basis for $U$ to a
-        basis $\mathscr{B}$ for $V$, defining $\hat f$ to equal $f$ on
-        the basis for $U$, and to be arbitrary on the remaining vectors
-        in $\mathscr{B}$). It follows that $\iota ^ * (\hat f) = \hat f
-            \circ \iota = f \circ \iota = f$ and so
-        $f\in \operatorname{im}\iota ^ *$. Since $f\in
-            U ^*$ was arbitrary, it follows that
-        $\operatorname{im}\iota ^ * = U ^ *$, and so
-        $\dim \operatorname{im}
-            \iota ^ * =\dim U ^* = \dim U$.
-
-        Thus by the equation above, it follows that
-        $$\dim V ^ * = \dim\ker \iota ^ * + \dim\operatorname{im}\iota ^ * 
-                         = \dim U ^ 0 + \dim U.$$ This was probably an
-        unreasonably hard problem.
+        We define $\phi: V ^ * \longrightarrow U ^*$ by
+        $\phi(f) = f|_{U}$. Then $\operatorname{im}\phi = U
+            ^ *$ and
+        $\ker(\phi) = \{\,f\in V ^ *\mid\phi(f) = \vec{0}_{U}\,\} = U ^ 0$.
+        Hence by the Rank-Nullity Theorem
+        $$\dim V ^ * = \dim \operatorname{im}(\phi) + \dim \ker(\phi) 
+              = \dim U ^ * + \dim U ^ 0.\square$$
 
         ::: {.center}
 
@@ -827,8 +812,8 @@ easily using a Jupyter notebook:
     Suppose that $A = [\alpha_{ij}]$ and $B = [\beta_{jk}]$.
 
     1.  By definition, $A + B  = [\alpha_{ij} + \beta_{ij}]$ and so
-        $(A + B) ^ T = [\alpha_{ji} + \beta_{ji}] = [\alpha_{ji}] + [\beta_{ji}]
-              = A ^ T + B ^ T$, as required.
+        $(A + B) ^ * = [\alpha_{ji} + \beta_{ji}] = [\alpha_{ji}] + [\beta_{ji}]
+              = A ^ * + B ^ *$, as required.
 
         ::: {.center}
 
@@ -836,8 +821,8 @@ easily using a Jupyter notebook:
         :::
 
     2.  Again, $\gamma A = [\gamma \alpha_{ij}]$ and so
-        $(\gamma A) ^ T = [\gamma
-              \alpha_{ji}] = \gamma [\alpha_{ji}] = \gamma A ^ T$.
+        $(\gamma A) ^ * = [\gamma
+              \alpha_{ji}] = \gamma [\alpha_{ji}] = \gamma A ^ *$.
 
         ::: {.center}
 
@@ -851,16 +836,17 @@ easily using a Jupyter notebook:
         Then $T\circ S : F ^ k \longrightarrow F ^ m$ is a linear
         transformation, whose matrix, with respect to the standard bases
         for $F ^ k$ and $F ^ m$ is $AB$. If
-        $T ^ *: (F ^ m) ^ * \longrightarrow(F ^ n) ^ *$ and $S ^ *: 
-              (F ^ n) ^ * \longrightarrow(F ^ k) ^ *$ are the dual
-        transformations of $T$ and $S$ respectively, then
+        $T ^ *: (F ^ m) ^ * \longrightarrow(F ^ n) ^ *$ and
+        $S ^ *: (F ^ n) ^ * \longrightarrow
+              (F ^ k) ^ *$ are the dual transformations of $T$ and $S$
+        respectively, then
         $S ^ * \circ T ^ *: (F ^ m) ^ * \longrightarrow(F ^ k) ^ *$ and
-        $S ^ * \circ T ^ * = (T\circ S) ^ *$ (by Problem 1(c) on this
-        sheet). It follows by
-        [Theorem 7.4.4]({{< ref "07-dual-space#thm-transpose" >}}) that the matrix of $(T\circ S)
-              ^ *$ is $(AB) ^ T$, while the matrix of
-        $S ^ * \circ T ^ *$ is $B ^ T A ^
-              T$, as required.
+        $S ^ * \circ T
+              ^ * = (T\circ S) ^ *$ (by Problem 1(c) on this sheet). It
+        follows by
+        [Theorem 7.4.4]({{< ref "07-dual-space#thm-transpose" >}}) that the matrix of $(T\circ S) ^ *$
+        is $(AB) ^ *$, while the matrix of $S ^ * \circ T ^ *$ is
+        $B ^ * A ^ *$, as required.
     :::
 
 6.  []{#problem-07-06 label="problem-07-06"}
@@ -1042,7 +1028,7 @@ easily using a Jupyter notebook:
           \mathscr{C}}(T) 
           =  
           \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
-          (\text{Mat}_{\mathscr{B}, \mathscr{C}}(T)) ^ t
+          (\text{Mat}_{\mathscr{B}, \mathscr{C}}(T)) ^ *
           = 
           \text{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *} ^ {-1}
           (\operatorname{Mat}_{\mathscr{C} ^ *, \mathscr{B}^ *}(T ^ *))

@@ -706,8 +706,8 @@ We now want to find a basis $\mathscr{B} = \{ \vec{v}_{1}, \vec{v}_{2},
 that $\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) = J$. In
 particular, $\vec{v}_{1}$ and $\vec{v}_{4}$ are required to be
 eigenvectors with eigenvalue $1$. Let us first find the
-eigenspace $E_{1}$ by solving $(T-I)(\vec{v}) = \vec{0}$; that is,
-$$\begin{pmatrix}
+eigenspace $E_{1}$ by solving
+$(T-\operatorname{id})(\vec{v}) = \vec{0}$; that is, $$\begin{pmatrix}
       0  & 0 & -1 & 0 & 8   \\
       0  & 0 & 4  & 0 & 29  \\
       -1 & 0 & 0  & 1 & 5   \\
@@ -730,9 +730,9 @@ we can read off a basis for the eigenspace $E_{1}$, but this does not
 tell us which vector to take as $\vec{v}_{1}$. We need $\vec{v}_{1}$ to
 be a suitable choice of eigenvector so that
 $T(\vec{v}_{2}) = \vec{v}_{1} + \vec{v}_{2}$, that is,
-$(T-I)(\vec{v}_{2}) = \vec{v}_{1}$, is possible. We solve for
-$(T-I)(\vec{v}) = \vec{w}$ where $\vec{w}$ is a typical vector
-in $E_{1}$. So consider $$\begin{pmatrix}
+$(T-\operatorname{id})(\vec{v}_{2}) = \vec{v}_{1}$, is possible. We
+solve for $(T-\operatorname{id})(\vec{v}) = \vec{w}$ where $\vec{w}$ is
+a typical vector in $E_{1}$. So consider $$\begin{pmatrix}
       0  & 0 & -1 & 0 & 8   \\
       0  & 0 & 4  & 0 & 29  \\
       -1 & 0 & 0  & 1 & 5   \\
@@ -763,7 +763,7 @@ $$\vec{v}_{2} = \begin{pmatrix}
     \end{pmatrix}.$$ The vector $\vec{v}_{3}$ is required to satisfy
 $T(\vec{v}_{3}) =
     \vec{v}_{2} + \vec{v}_{3}$, so to find $\vec{v}_{3}$ we solve
-$(T-I)(\vec{v}) = \vec{v}_{2}$: $$\begin{pmatrix}
+$(T-\operatorname{id})(\vec{v}) = \vec{v}_{2}$: $$\begin{pmatrix}
       0  & 0 & -1 & 0 & 8   \\
       0  & 0 & 4  & 0 & 29  \\
       -1 & 0 & 0  & 1 & 5   \\
@@ -907,7 +907,7 @@ geometric multiplicity $g_{\lambda} =
   \dim E_{\lambda} = 3$. To deal with such possible Jordan normal forms
 one needs to generalise [Proposition 10.2.1]({{< ref "10-jnf#prop-JNF" >}})(3) to consider the dimension of generalisations of
 eigenspaces:
-$$\dim \ker (T-\lambda I)^{2}, \quad \dim \ker (T-\lambda I)^{3}, \quad
+$$\dim \ker (T-\lambda \operatorname{id})^{2}, \quad \dim \ker (T-\lambda \operatorname{id})^{3}, \quad
   \dots.$$ We leave the details to the interested and enthused student.
 
 ## Problems {#problems-10-jnf}
@@ -1958,8 +1958,8 @@ easily using a Jupyter notebook:
         $$E_{-1} = \left\{ \begin{pmatrix}0\\y\\0\\0\end{pmatrix} \biggm| y \in \mathbb{R}\right\} =
         \operatorname{Span} \left( \begin{pmatrix}0\\1\\0\\0\end{pmatrix} \right),$$
         so we take $$v_{3} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix}.$$
-        Finally to find $v_{4}$, we solve $(T+I)(v) = v_{3}$:
-        $$\begin{pmatrix}
+        Finally to find $v_{4}$, we solve
+        $(T+\operatorname{id})(v) = v_{3}$: $$\begin{pmatrix}
         2 & 0 & 0 & 0 \\
         -6 & 0 & 1 & 0 \\
         -4 & 0 & 0 & 0 \\

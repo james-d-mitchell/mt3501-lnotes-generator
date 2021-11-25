@@ -865,37 +865,20 @@ easily using a Jupyter notebook:
 
     <button type="button" class="collapsible">SOLUTION.</button>
 ::: {.solution04}
-    Let $\mathscr{A}$ be a subset of the basis $\mathscr{B}$. Let
-    $\mathscr{A}= \{
-    v_{1},v_{2},\dots,v_{m} \}$ and $\mathscr{B}\setminus\mathscr{A}= \{
-    v_{m+1},\dots,v_{n} \}$. Let
-    $$U = \operatorname{Span}(\mathscr{A}) \qquad \text{and} \qquad W = \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}).$$
-
-    Let $v \in V$. Since $\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}$ is
-    a basis, there exist scalars $\alpha_{1}$, $\alpha_{2}$,
-    ..., $\alpha_{n}$ such that $$v = \sum_{i=1}^{n} \alpha_{i} v_{i}.$$
-    Then
-    $$u = \sum_{i=1}^{m} \alpha_{i} v_{i} \in U \qquad \text{and} \qquad w =
-    \sum_{i=m+1}^{n} \alpha_{i} v_{i} \in W$$ with $$v = u+w.$$ We
-    conclude that $V = U+W$ (that is, every vector in $V$ is expressible
-    as the sum of a vector in $U$ and a vector in $W$).
-
-    Now let $v \in U \cap W$. Then as
-    $v \in \operatorname{Span}(\mathscr{A})$, there exist scalars
-    $\beta_{1}$, $\beta_{2}$, ..., $\beta_{m}$ such that
-    $$v = \sum_{i=1}^{m} \beta_{i} v_{i}.$$ Similarly, as
-    $v \in \operatorname{Span}(\mathscr{B}\setminus\mathscr{A})$, there
-    exist scalars $\gamma_{m+1}$, ..., $\gamma_{n}$ such that
-    $$v = \sum_{i=m+1}^{n} \gamma_{i} v_{i}.$$ Rearranging the equation
-    $$v = \sum_{i=1}^{m} \beta_{i} v_{i} = \sum_{i=m+1}^{n} \gamma_{i} v_{i}$$
-    gives
-    $$\sum_{i=1}^{m} \beta_{i} v_{i} + \sum_{i=m+1}^{n} (-\gamma_{i})v_{i} = \vec{0}.$$
-    Since $\mathscr{B}= \{ v_{1},v_{2},\dots,v_{n} \}$ is linearly
-    independent, we conclude
-    $$\beta_{1} = \beta_{2} = \dots = \beta_{m} = \gamma_{m+1} = \dots =
-    \gamma_{n} = 0.$$ Hence
-    $$v = \sum_{i=1}^{m} \beta_{i} v_{i} = \vec{0}.$$ This shows
-    $U \cap W = \{\vec{0}\}$. We conclude $V = U \oplus W$.
+    Let $\mathscr{A}$ be a subset of the basis $\mathscr{B}$ and set
+    $U_1 = \operatorname{Span}(()\mathscr{A})$ and $U_2 =
+      \operatorname{Span}(()\mathscr{B}\setminus \mathscr{A})$. Then
+    $\mathscr{B}_1 = \mathscr{A}$ is a linearly independent spanning set
+    for $U_1 = \operatorname{Span}(()\mathscr{A})$. In other words,
+    $\mathscr{A}$ is a basis for $U_1$. Similarly,
+    $\mathscr{B}_2 = \mathscr{B}\setminus \mathscr{A}$ is a linearly
+    independent spanning set for $U_2$. By definition
+    $\mathscr{B}_1\cap \mathscr{B}_2 = \varnothing$, and
+    $\mathscr{B}_1\cup
+      \mathscr{B}_2 = \mathscr{B}$ is a basis for $V$. Hence
+    [Proposition 6.1.3]({{< ref "06-direct-sums#prop-dirsum-basis" >}}) implies that
+    $$V = U_1 \oplus U_2 = \operatorname{Span}(\mathscr{A}) \oplus
+        \operatorname{Span}(\mathscr{B}\setminus\mathscr{A}). \square$$
     :::
 
 4.  []{#problem-06-04 label="problem-06-04"}

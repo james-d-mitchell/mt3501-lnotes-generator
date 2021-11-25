@@ -29,8 +29,9 @@ $\lambda$ is the subspace of $V$ consisting of all of the eigenvectors
 for $\lambda$ and the zero vector $\vec{0}_V$.
 :::
 
-Note that $T-\lambda I$ is a linear transformation and so
-$E_{\lambda}=\ker(T-\lambda I)$ is a subspace of $V$ by
+Note that $T-\lambda \operatorname{id}$ is a linear transformation and
+so $E_{\lambda}=\ker(T-\lambda \operatorname{id})$ is a subspace of $V$
+by
 [Proposition 4.1.5]({{< ref "04-linear-transf#prop-image-kernel-subspaces" >}}).
 
 ## Characteristic polynomial
@@ -945,12 +946,12 @@ easily using a Jupyter notebook:
     $$\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S+T) = [\beta_{ij}+\alpha_{ij}] = \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(S) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T).$$
 
     We now put this all together: $$\begin{aligned}
-        \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I + a_{1}T + a_{2}T^{2} +
+        \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(f(T)) &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}\operatorname{id}+ a_{1}T + a_{2}T^{2} +
         \dots + a_{k}T^{k}) \\
-        &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}I) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
+        &= \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{0}\operatorname{id}) + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{1}T) +
         \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{2}T^{2}) \\
         &\hspace{4cm} \mbox{} + \dots + \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(a_{k}T^{k}) \\
-        &= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(I) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
+        &= a_{0} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(\operatorname{id}) + a_{1}\operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T) + a_{2}
         \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{2}) \\
         &\hspace{4cm} \mbox{} + \dots + a_{k} \operatorname{Mat}_{\mathscr{B},\mathscr{B}}(T^{k}) \\
         &= a_{0} I + a_{1}A + a_{2}A^{2} + \dots + a_{k}A^{k} \\

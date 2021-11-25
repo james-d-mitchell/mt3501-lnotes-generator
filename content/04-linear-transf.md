@@ -1393,10 +1393,11 @@ easily using a Jupyter notebook:
     $F$. An *isomorphism* between $V$ and $W$ is a linear transformation
     $T \colon V \longrightarrow W$ which is invertible (that is, there
     is an inverse, a linear transformation
-    $S \colon W \longrightarrow V$ such that $ST = I$ and $TS
-    = I$ are the identity maps). We say that $V$ and $W$ are
-    *isomorphic*, written $V \cong W$, if there exists an isomorphism
-    $V \longrightarrow W$.
+    $S \colon W \longrightarrow V$ such that $ST = \operatorname{id}$
+    and $TS
+    = \operatorname{id}$ are the identity maps). We say that $V$ and $W$
+    are *isomorphic*, written $V \cong W$, if there exists an
+    isomorphism $V \longrightarrow W$.
 
     1.  Show that a linear transformation $T \colon V \longrightarrow W$
         is injective (that is, $T(u) = T(v)$ implies $u = v$) if and
